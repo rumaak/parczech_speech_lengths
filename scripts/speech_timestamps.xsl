@@ -1,5 +1,13 @@
 <?xml version="1.0"?>
 
+<!--
+    This script extracts time related data about every word together with 
+    basic info about speaker.
+    
+    The resulting file consists of header row followed by a single row
+    for each spoken word. Columns are comma-separated.
+-->
+
 <xsl:stylesheet 
     version="1.0" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -9,27 +17,27 @@
 
     <!-- Header row -->
     <xsl:template match="/">
-        <xsl:text>id, word, start, start since, end, end since, speaker, role</xsl:text>
+        <xsl:text>id, word, start, start absolute, start file, end, end absolute, end file, speaker, role</xsl:text>
         <xsl:text>&#xA;</xsl:text>
         <xsl:apply-templates/>
     </xsl:template>
 
     <!-- Word row -->
     <xsl:template match="//tei:w">
-        <!-- id, preceding anchor id, following anchor id variables -->
+        <!-- id, preceding anchor, following anchor related variables -->
         <xsl:variable name="word_id" select="@xml:id"/>
+
         <xsl:variable name="word_start"><xsl:value-of select="$word_id"/>.ab</xsl:variable>
+        <xsl:variable name="word_start_since_hash">
+            <xsl:value-of select="following::tei:when[@xml:id=$word_start]/@since"/>
+        </xsl:variable>
+        <xsl:variable name="word_start_since" select="substring($word_start_since_hash,2)"/>
+
         <xsl:variable name="word_end"><xsl:value-of select="$word_id"/>.ae</xsl:variable>
-
-        <!-- TODO 
-            - preceding and following anchor audio id variables
-            - variables will be acquired analogously to start since, end since 
-        -->
-
-        <!-- TODO 
-            - possibly don't need to replace `start since` below; we might wish to
-              to preserve the info about the audio origin
-        -->
+        <xsl:variable name="word_end_since_hash">
+            <xsl:value-of select="following::tei:when[@xml:id=$word_end]/@since"/>
+        </xsl:variable>
+        <xsl:variable name="word_end_since" select="substring($word_end_since_hash,2)"/>
 
         <!-- id -->
         <xsl:value-of select="$word_id"/>
@@ -39,36 +47,36 @@
         <xsl:value-of select="."/>
         <xsl:text>,</xsl:text>
 
-        <!-- TODO get rid of `start since`, replace by `start absolute` using 
-            variables introduced above
-        -->
-
         <!-- start -->
         <xsl:value-of select="following::tei:when[@xml:id=$word_start]/@interval"/>
         <xsl:text>,</xsl:text>
 
-        <!-- start since -->
-        <xsl:value-of select="following::tei:when[@xml:id=$word_start]/@since"/>
+        <!-- start absolute -->
+        <xsl:value-of select="following::tei:when[@xml:id=$word_start_since]/@absolute"/>
         <xsl:text>,</xsl:text>
 
-        <!-- TODO get rid of `end since`, replace by `end absolute` using 
-            variables introduced above
-        -->
+        <!-- start audio file -->
+        <xsl:value-of select="substring(following::tei:timeline[@origin=$word_start_since_hash]/@corresp,2)"/>
+        <xsl:text>,</xsl:text>
 
         <!-- end -->
         <xsl:value-of select="following::tei:when[@xml:id=$word_end]/@interval"/>
         <xsl:text>,</xsl:text>
 
-        <!-- end since -->
-        <xsl:value-of select="following::tei:when[@xml:id=$word_end]/@since"/>
+        <!-- end absolute -->
+        <xsl:value-of select="following::tei:when[@xml:id=$word_end_since]/@absolute"/>
+        <xsl:text>,</xsl:text>
+
+        <!-- end audio file -->
+        <xsl:value-of select="substring(following::tei:timeline[@origin=$word_end_since_hash]/@corresp,2)"/>
         <xsl:text>,</xsl:text>
 
         <!-- speaker -->
-        <xsl:value-of select="ancestor::tei:u/@who"/>
+        <xsl:value-of select="substring(ancestor::tei:u/@who,2)"/>
         <xsl:text>,</xsl:text>
 
         <!-- role -->
-        <xsl:value-of select="ancestor::tei:u/@ana"/>
+        <xsl:value-of select="substring(ancestor::tei:u/@ana,2)"/>
         <xsl:text>&#xA;</xsl:text>
     </xsl:template>
 
