@@ -18,6 +18,11 @@
     <!-- Absolute path to the timeline element -->
     <xsl:variable name="timeline_path" select="/tei:TEI/tei:text/tei:body/tei:timeline"/>
 
+    <!-- Tab for each timeline data column
+         - start, end, absolute, audio_id, audio_source, audio_url
+    -->
+    <xsl:variable name="timeline_empty" select="'&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;'"/>
+
     <!-- Header row -->
     <xsl:template match="/">
         <xsl:text>id&#x9;</xsl:text>
@@ -48,10 +53,16 @@
         <xsl:text>&#x9;</xsl:text>
 
         <!-- time-related data -->
-        <!-- TODO handle no timeline (prolly just fill with tabs?) -->
-        <xsl:apply-templates select="$timeline_path" mode="called">
-            <xsl:with-param name="word_id" select="$word_id"/>
-        </xsl:apply-templates>
+        <xsl:choose>
+            <xsl:when test="$timeline_path">
+                <xsl:apply-templates select="$timeline_path" mode="called">
+                    <xsl:with-param name="word_id" select="$word_id"/>
+                </xsl:apply-templates>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$timeline_empty"/>
+            </xsl:otherwise>
+        </xsl:choose>
 
         <!-- speaker -->
         <xsl:value-of select="substring(ancestor::tei:u/@who,2)"/>
@@ -65,12 +76,6 @@
     <!-- Timeline data template -->
     <!-- For some reason, using `$timeline_path` in the `match` attribute doesn't work -->
     <xsl:template match="/tei:TEI/tei:text/tei:body/tei:timeline" mode="called">
-
-        <!-- TODO 
-            - does this timeline `origin` attribute match `since` of the word?
-            - if not, this whole template should be skipped
-        -->
-
         <xsl:param name="word_id"/>
 
         <xsl:variable name="word_start"><xsl:value-of select="$word_id"/>.ab</xsl:variable>
@@ -97,6 +102,27 @@
         </xsl:variable>
 
         <xsl:variable name="since" select="substring($since_hash,2)"/>
+
+        <!-- Check if this is the proper timeline-->
+        <xsl:choose>
+            <xsl:when test="./@origin=$since_hash">
+                <xsl:call-template name="timeline">
+                    <xsl:with-param name="word_start" select="$word_start"/>
+                    <xsl:with-param name="word_end" select="$word_end"/>
+                    <xsl:with-param name="since" select="$since"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$timeline_empty"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
+    <!-- Timeline data -->
+    <xsl:template name="timeline">
+        <xsl:param name="word_start"/>
+        <xsl:param name="word_end"/>
+        <xsl:param name="since"/>
 
         <!-- start -->
         <xsl:value-of select="tei:when[@xml:id=$word_start]/@interval"/>
@@ -130,7 +156,6 @@
         <!-- audio_url -->
         <xsl:value-of select="$media_path/tei:media[@xml:id=$corresp]/@url"/>
         <xsl:text>&#x9;</xsl:text>
-
     </xsl:template>
 
     <!-- Remove everything else -->
