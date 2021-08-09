@@ -1,0 +1,4 @@
+speaker,role,word,sentence,paragraph,continuous
+JanHamacek.1978,chair,104640.0,0,0,168340.0
+RichardBrabec.1966,regular,63720.0,0,0,78270.0
+VaclavZemek.1974,regular,30550.0,0,0,48760.0
