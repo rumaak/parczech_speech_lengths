@@ -22,10 +22,33 @@ class Parser:
         # TODO in future maybe replace directly by dataframe
         self.statistics = dict()
 
-        self.last_speaker = None
-        self.last_role = None
-        self.last_beg = None
-        self.last_end = None
+        self.last_continuous = {
+            "speaker": None,
+            "role": None,
+            "beg": None,
+            "end": None
+        }
+
+        self.last_segment = {
+            "sentence": {
+                "speaker": None,
+                "role": None,
+                "beg": None,
+                "end": None
+            },
+            "paragraph": {
+                "speaker": None,
+                "role": None,
+                "beg": None,
+                "end": None
+            },
+            "utterance": {
+                "speaker": None,
+                "role": None,
+                "beg": None,
+                "end": None
+            }
+        }
 
         self.last = None
 
@@ -71,10 +94,32 @@ class Parser:
 
     def finish(self):
         # finish continuous
-        if self.last_speaker is not None:
-            if self.last_beg is not None:
-                length = (self.last_end - self.last_beg).total_seconds()*1000
-                self.statistics[self.last_speaker][self.last_role]["continuous"] += length
+        speaker_l = self.last_continuous["speaker"]
+        role_l = self.last_continuous["role"]
+        beg_l = self.last_continuous["beg"]
+        end_l = self.last_continuous["end"]
+
+        if speaker_l is not None:
+            if beg_l is not None:
+                length = (end_l - beg_l).total_seconds()*1000
+                self.statistics[speaker_l][role_l]["continuous"] += length
+
+        # finish sentence, paragraph, utterance
+        self.finish_segment("sentence")
+        self.finish_segment("paragraph")
+        self.finish_segment("utterance")
+
+    def finish_segment(self, seg_name):
+        # finish continuous
+        speaker_l = self.last_segment[seg_name]["speaker"]
+        role_l = self.last_segment[seg_name]["role"]
+        beg_l = self.last_segment[seg_name]["beg"]
+        end_l = self.last_segment[seg_name]["end"]
+
+        if speaker_l is not None:
+            if beg_l is not None:
+                length = (end_l - beg_l).total_seconds()*1000
+                self.statistics[speaker_l][role_l][seg_name] += length
         
     def parse_row(self, row):
         self.check_speaker_role(row["speaker"], row["role"])
@@ -85,15 +130,22 @@ class Parser:
         pc = ".".join(id_parts[:3])
         sc = ".".join(id_parts[:4])
 
+        # last utterance, paragraph, sentence
+        sl,pl,ul = None, None, None
+        if self.last is not None:
+            id_parts = self.last.split(".")
+            ul = ".".join(id_parts[:2])
+            pl = ".".join(id_parts[:3])
+            sl = ".".join(id_parts[:4])
+
         start = self.to_absolute(row["start"], row["absolute"])
         end = self.to_absolute(row["end"], row["absolute"])
 
         self.update_word(start, end, row["speaker"], row["role"])
+        self.update_segment(start, end, row["speaker"], row["role"], sc, sl, "sentence")
+        self.update_segment(start, end, row["speaker"], row["role"], pc, pl, "paragraph")
+        self.update_segment(start, end, row["speaker"], row["role"], uc, ul, "utterance")
         self.update_continuous(start, end, row["speaker"], row["role"])
-
-        # TODO sentences
-        # TODO paragraphs
-        # TODO utterances
 
         self.last = row["id"]
 
@@ -122,33 +174,71 @@ class Parser:
             word_length = (end - start).total_seconds()*1000
             self.statistics[speaker][role]["word"] += word_length
 
-    def update_continuous(self, start, end, speaker, role):
-        # same speaker -> update start / end anchor
-        if speaker == self.last_speaker and role == self.last_role:
+    def update_segment(self, start, end, speaker, role, sc, sl, seg_name):
+        speaker_l = self.last_segment[seg_name]["speaker"]
+        role_l = self.last_segment[seg_name]["role"]
+        beg_l = self.last_segment[seg_name]["beg"]
+        end_l = self.last_segment[seg_name]["end"]
+
+        # same segment -> update start / end anchor
+        if sc == sl:
             # missing beginning anchor
-            if self.last_beg is None:
+            if beg_l is None:
                 if start is not None:
-                    self.last_beg = start
+                    self.last_segment[seg_name]["beg"] = start
                 elif end is not None:
-                    self.last_beg = end
+                    self.last_segment[seg_name]["beg"] = end
 
             # update ending anchor
             if end is not None:
-                self.last_end = end
+                self.last_segment[seg_name]["end"] = end
             elif start is not None:
-                self.last_end = start
+                self.last_segment[seg_name]["end"] = start
+
+        # different segment - finish last one, initialize values for new one
+        else:
+            if speaker_l is not None:
+                if beg_l is not None:
+                    length = (end_l - beg_l).total_seconds()*1000
+                    self.statistics[speaker_l][role_l][seg_name] += length
+
+            self.last_segment[seg_name]["speaker"] = speaker
+            self.last_segment[seg_name]["role"] = role
+            self.last_segment[seg_name]["beg"] = None
+            self.last_segment[seg_name]["end"] = None
+
+    def update_continuous(self, start, end, speaker, role):
+        speaker_l = self.last_continuous["speaker"]
+        role_l = self.last_continuous["role"]
+        beg_l = self.last_continuous["beg"]
+        end_l = self.last_continuous["end"]
+
+        # same speaker -> update start / end anchor
+        if speaker == speaker_l and role == role_l:
+            # missing beginning anchor
+            if beg_l is None:
+                if start is not None:
+                    self.last_continuous["beg"] = start
+                elif end is not None:
+                    self.last_continuous["beg"] = end
+
+            # update ending anchor
+            if end is not None:
+                self.last_continuous["end"] = end
+            elif start is not None:
+                self.last_continuous["end"] = start
 
         # different speaker - finish last one, initialize values for new one
         else:
-            if self.last_speaker is not None:
-                if self.last_beg is not None:
-                    length = (self.last_end - self.last_beg).total_seconds()*1000
-                    self.statistics[self.last_speaker][self.last_role]["continuous"] += length
+            if speaker_l is not None:
+                if beg_l is not None:
+                    length = (end_l - beg_l).total_seconds()*1000
+                    self.statistics[speaker_l][role_l]["continuous"] += length
 
-            self.last_speaker = speaker
-            self.last_role = role
-            self.last_beg = None
-            self.last_end = None
+            self.last_continuous["speaker"] = speaker
+            self.last_continuous["role"] = role
+            self.last_continuous["beg"] = None
+            self.last_continuous["end"] = None
 
     def to_absolute(self, interval, absolute):
         # check if either value is not nan
