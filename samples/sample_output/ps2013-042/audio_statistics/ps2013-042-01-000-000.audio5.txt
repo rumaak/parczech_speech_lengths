@@ -1,0 +1,3 @@
+speaker,role,word,sentence,paragraph,utterance,continuous
+JanFarsky.1979,regular,102760.0,130430.0,139390.0,143180.0,143180.0
+JanHamacek.1978,chair,225120.0,272360.0,378520.0,561010.0,561010.0

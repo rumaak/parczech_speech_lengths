@@ -1,0 +1,4 @@
+speaker,role,word,sentence,paragraph,utterance,continuous
+FrantisekLaudat.1960,regular,388560.0,459190.0,499110.0,513740.0,513740.0
+JanHamacek.1978,chair,5320.0,4450.0,5450.0,5450.0,5450.0
+JanFarsky.1979,regular,60660.0,70870.0,78250.0,80770.0,80770.0

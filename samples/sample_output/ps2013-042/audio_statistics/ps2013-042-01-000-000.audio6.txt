@@ -1,0 +1,2 @@
+speaker,role,word,sentence,paragraph,utterance,continuous
+JanHamacek.1978,chair,151970.0,188640.0,256240.0,302400.0,302400.0

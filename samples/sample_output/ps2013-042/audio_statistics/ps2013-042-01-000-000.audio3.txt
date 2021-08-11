@@ -1,0 +1,7 @@
+speaker,role,word,sentence,paragraph,utterance,continuous
+JanHamacek.1978,chair,20490.0,19600.0,20610.0,20610.0,20610.0
+JiriMihola.1972,regular,31280.0,34720.0,37320.0,37320.0,37320.0
+MartinLank.1976,regular,136210.0,141620.0,159890.0,165860.0,165860.0
+ZdenekOndracek.1969,regular,127160.0,153930.0,162170.0,166990.0,166990.0
+VladislavVilimec.1963,regular,77290.0,98460.0,102490.0,104040.0,104040.0
+FrantisekLaudat.1960,regular,44280.0,63360.0,64660.0,67020.0,67020.0

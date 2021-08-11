@@ -1,0 +1,4 @@
+speaker,role,word,sentence,paragraph,utterance,continuous
+JanHamacek.1978,chair,32940.0,37530.0,64680.0,65540.0,65540.0
+AndrejBabis.1954,guest,144100.0,169190.0,177870.0,183120.0,183120.0
+JanVolny.1959,regular,40650.0,57430.0,60110.0,60110.0,60110.0
