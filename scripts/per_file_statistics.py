@@ -51,7 +51,11 @@ class Parser:
         }
 
         self.last = None
+
         self.previous_audio = None
+        self.audio_start = None
+        self.audio_first_anchor = None
+        self.audio_last_anchor = None
 
     def parse(self):
         data_df = pd.read_csv(self.file_in, sep="\t")
@@ -66,6 +70,9 @@ class Parser:
         statistics_df = pd.DataFrame(columns=[
             "speaker",
             "role",
+            "audio_start",
+            "first_anchor",
+            "last_anchor",
             "word",
             "sentence",
             "paragraph",
@@ -80,6 +87,9 @@ class Parser:
                 statistics_df = statistics_df.append({
                     "speaker": name,
                     "role": role,
+                    "audio_start": self.audio_start,
+                    "first_anchor": self.audio_first_anchor,
+                    "last_anchor": self.audio_last_anchor,
                     "word": role_stats["word"],
                     "sentence": role_stats["sentence"],
                     "paragraph": role_stats["paragraph"],
@@ -163,6 +173,20 @@ class Parser:
         # for words missing audio_id, assume previous audio_id
         if type(row["audio_id"]) != float: 
             self.previous_audio = row["audio_id"]
+            self.audio_start = row["absolute"]
+            self.update_audio_anchors(start, end)
+
+    def update_audio_anchors(self, start, end):
+        if self.audio_first_anchor is None: 
+            if start is not None:
+                self.audio_first_anchor = start.strftime("%Y-%m-%dT%H:%M:%S")
+            elif end is not None:
+                self.audio_first_anchor = end.strftime("%Y-%m-%dT%H:%M:%S")
+
+        if end is not None:
+            self.audio_last_anchor = end.strftime("%Y-%m-%dT%H:%M:%S")
+        elif start is not None:
+            self.audio_last_anchor = start.strftime("%Y-%m-%dT%H:%M:%S")
 
     def check_audio(self, audio_id):
         # different audio
