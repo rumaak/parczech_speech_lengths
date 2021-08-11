@@ -1,2 +1,5 @@
 data/
 out/
+
+# we don't need those samples rn
+ps2013-042/

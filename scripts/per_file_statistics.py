@@ -2,6 +2,7 @@
 
 import sys
 import os
+import os.path
 import math
 from datetime import datetime, timedelta
 
@@ -15,11 +16,10 @@ import pandas as pd
 # - difference between first and last anchor of an uninterrupted speech
 
 class Parser:
-    def __init__(self, file_in, file_out):
+    def __init__(self, file_in, dir_out):
         self.file_in = file_in
-        self.file_out = file_out
+        self.dir_out = dir_out
 
-        # TODO in future maybe replace directly by dataframe
         self.statistics = dict()
 
         self.last_continuous = {
@@ -51,19 +51,16 @@ class Parser:
         }
 
         self.last = None
+        self.previous_audio = None
 
     def parse(self):
         data_df = pd.read_csv(self.file_in, sep="\t")
 
         # extract data from each row
         data_df.apply(self.parse_row, axis=1)
-        self.finish()
-
-        # create dataframe from computed values
-        statistics_df = self.create_statistics_df()
 
         # write statistics to a file
-        statistics_df.to_csv(self.file_out, index=False)
+        self.save_audio()
 
     def create_statistics_df(self):
         statistics_df = pd.DataFrame(columns=[
@@ -92,8 +89,13 @@ class Parser:
 
         return statistics_df
 
-    def finish(self):
-        # finish continuous
+    def finish(self, speaker, role):
+        self.finish_continuous(speaker, role)
+        self.finish_segment("sentence", speaker, role)
+        self.finish_segment("paragraph", speaker, role)
+        self.finish_segment("utterance", speaker, role)
+
+    def finish_continuous(self, speaker, role):
         speaker_l = self.last_continuous["speaker"]
         role_l = self.last_continuous["role"]
         beg_l = self.last_continuous["beg"]
@@ -104,13 +106,12 @@ class Parser:
                 length = (end_l - beg_l).total_seconds()*1000
                 self.statistics[speaker_l][role_l]["continuous"] += length
 
-        # finish sentence, paragraph, utterance
-        self.finish_segment("sentence")
-        self.finish_segment("paragraph")
-        self.finish_segment("utterance")
+        self.last_continuous["speaker"] = speaker
+        self.last_continuous["role"] = role
+        self.last_continuous["beg"] = None
+        self.last_continuous["end"] = None
 
-    def finish_segment(self, seg_name):
-        # finish continuous
+    def finish_segment(self, seg_name, speaker, role):
         speaker_l = self.last_segment[seg_name]["speaker"]
         role_l = self.last_segment[seg_name]["role"]
         beg_l = self.last_segment[seg_name]["beg"]
@@ -120,8 +121,14 @@ class Parser:
             if beg_l is not None:
                 length = (end_l - beg_l).total_seconds()*1000
                 self.statistics[speaker_l][role_l][seg_name] += length
+
+        self.last_segment[seg_name]["speaker"] = speaker
+        self.last_segment[seg_name]["role"] = role
+        self.last_segment[seg_name]["beg"] = None
+        self.last_segment[seg_name]["end"] = None
         
     def parse_row(self, row):
+        self.check_audio(row["audio_id"])
         self.check_speaker_role(row["speaker"], row["role"])
 
         # current utterance, paragraph, sentence
@@ -138,6 +145,10 @@ class Parser:
             pl = ".".join(id_parts[:3])
             sl = ".".join(id_parts[:4])
 
+        # TODO absolute timestamps are unnecessary after we switched from
+        # counting over single TEI file to counting over single audio file
+
+        # use absolute timestamps
         start = self.to_absolute(row["start"], row["absolute"])
         end = self.to_absolute(row["end"], row["absolute"])
 
@@ -148,6 +159,72 @@ class Parser:
         self.update_continuous(start, end, row["speaker"], row["role"])
 
         self.last = row["id"]
+
+        # for words missing audio_id, assume previous audio_id
+        if type(row["audio_id"]) != float: 
+            self.previous_audio = row["audio_id"]
+
+    def check_audio(self, audio_id):
+        # different audio
+        if (self.previous_audio != audio_id) and (type(audio_id) != float):
+            self.save_audio()
+
+    def save_audio(self):
+        if self.previous_audio is not None:
+            # finish counting
+            self.finish_continuous(
+                self.last_continuous["speaker"],
+                self.last_continuous["role"]
+            )
+            self.finish_segment("sentence",
+                self.last_segment["sentence"]["speaker"],
+                self.last_segment["sentence"]["role"]
+            )
+            self.finish_segment("paragraph",
+                self.last_segment["paragraph"]["speaker"],
+                self.last_segment["paragraph"]["role"]
+            )
+            self.finish_segment("utterance",
+                self.last_segment["utterance"]["speaker"],
+                self.last_segment["utterance"]["role"]
+            )
+
+            # audio already exists -> update statistics
+            path = os.path.join(self.dir_out, self.previous_audio + ".txt")
+            if os.path.exists(path):
+                self.update_from_existing(path)
+
+            # create dataframe from computed values, save
+            statistics_df = self.create_statistics_df()
+            statistics_df.to_csv(path, index=False)
+
+            # reset statistics
+            self.statistics = dict()
+
+    def update_from_existing(self, path):
+        existing_df = pd.read_csv(path)
+        existing_df.apply(self.update_from_row, axis=1)
+
+    def update_from_row(self, row):
+        speaker = row["speaker"]
+        role = row["role"]
+
+        # ensure given speaker + role exist
+        self.check_speaker_role(speaker, role)
+
+        # get current values
+        word = self.statistics[speaker][role]["word"]
+        sentence = self.statistics[speaker][role]["sentence"]
+        paragraph = self.statistics[speaker][role]["paragraph"]
+        utterance = self.statistics[speaker][role]["utterance"]
+        continuous = self.statistics[speaker][role]["continuous"]
+
+        # update with values from file
+        self.statistics[speaker][role]["word"] = word + row["word"]
+        self.statistics[speaker][role]["sentence"] = word + row["sentence"]
+        self.statistics[speaker][role]["paragraph"] = word + row["paragraph"]
+        self.statistics[speaker][role]["utterance"] = word + row["utterance"]
+        self.statistics[speaker][role]["continuous"] = word + row["continuous"]
 
     def check_speaker_role(self, speaker, role):
         if not (speaker in self.statistics):
@@ -197,15 +274,7 @@ class Parser:
 
         # different segment - finish last one, initialize values for new one
         else:
-            if speaker_l is not None:
-                if beg_l is not None:
-                    length = (end_l - beg_l).total_seconds()*1000
-                    self.statistics[speaker_l][role_l][seg_name] += length
-
-            self.last_segment[seg_name]["speaker"] = speaker
-            self.last_segment[seg_name]["role"] = role
-            self.last_segment[seg_name]["beg"] = None
-            self.last_segment[seg_name]["end"] = None
+            self.finish_segment(seg_name, speaker, role)
 
     def update_continuous(self, start, end, speaker, role):
         speaker_l = self.last_continuous["speaker"]
@@ -230,15 +299,7 @@ class Parser:
 
         # different speaker - finish last one, initialize values for new one
         else:
-            if speaker_l is not None:
-                if beg_l is not None:
-                    length = (end_l - beg_l).total_seconds()*1000
-                    self.statistics[speaker_l][role_l]["continuous"] += length
-
-            self.last_continuous["speaker"] = speaker
-            self.last_continuous["role"] = role
-            self.last_continuous["beg"] = None
-            self.last_continuous["end"] = None
+            self.finish_continuous(speaker, role)
 
     def to_absolute(self, interval, absolute):
         # check if either value is not nan
@@ -249,7 +310,8 @@ class Parser:
             return None
 
 if __name__ == "__main__":
-    # The script expects paths to input and output file as arguments
+    # The script expects path to the input file as well as a path to a
+    # directory where statistics for each audio should be stored
     args = sys.argv[1:]
     if len(args) == 2:
         parser = Parser(args[0], args[1])
