@@ -186,6 +186,8 @@ class Parser:
             self.audio_start_end(row["audio_url"])
             self.update_audio_anchors(start, end)
 
+    # TODO this time of time striping is used in both scripts, consider
+    #      creating a shared helper module
     def audio_start_end(self, audio_url):
         datetime_string = audio_url.split("/")[-1]
 
