@@ -1,0 +1,2 @@
+speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous
+RichardBrabec.1966,regular,2016-03-02T15:48:00,2016-03-02T16:02:00,436150.0,559980.0,582860.0,594940.0,594940.0

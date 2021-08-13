@@ -1,0 +1,3 @@
+speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous
+PetrGazdik.1974,chair,2016-03-04T11:28:00,2016-03-04T11:42:00,7450.0,7630.0,12590.0,12590.0,12590.0
+LukasPleticha.1974,regular,2016-03-04T11:28:00,2016-03-04T11:42:00,395900.0,466490.0,516280.0,588790.0,588790.0

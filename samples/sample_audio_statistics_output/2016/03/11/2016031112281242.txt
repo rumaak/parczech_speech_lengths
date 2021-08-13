@@ -1,0 +1,3 @@
+speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous
+JanBartosek.1971,chair,2016-03-11T12:28:00,2016-03-11T12:42:00,2960.0,2880.0,3110.0,3110.0,3110.0
+JiriDienstbier.1969,regular,2016-03-11T12:28:00,2016-03-11T12:42:00,461390.0,535110.0,567270.0,584200.0,584200.0

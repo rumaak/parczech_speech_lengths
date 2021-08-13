@@ -1,0 +1,2 @@
+speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous
+ZbynekStanjura.1964,regular,2016-03-11T12:08:00,2016-03-11T12:22:00,464810.0,555360.0,616890.0,639960.0,639960.0

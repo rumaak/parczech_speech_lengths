@@ -2,46 +2,42 @@
 Compute speech lengths of members of parliament.
 
 ### Examples
-An example corpus file is in `samples/sample_input`. Running
+An example of corpus data is available in the `samples/sample_input`
+directory. To apply XSLT transformation extracting time-related data
+from the sample, execute the `scripts/xslt_apply.sh` script in the root
+of the repository. An example of this, where the time spent on the execution
+is also measured, can be seen below.
 
 ```
-xsltproc scripts/speech_timestamps.xsl samples/sample_input/ps2013-042-03-007-144.ana.xml > samples/sample_output/ps2013-042-03-007-144.ana.txt
+[rumaak@rumaak parczech_speech_lengths]$ time scripts/xslt_apply.sh "samples/sample_input/ps2013-042" "samples/sample_xslt_output/ps2013-042"
+
+real	198m6.457s
+user	197m44.984s
+sys	0m6.407s
 ```
 
-in the root directory of this repository results in a `.txt` file in
-`samples/sample_output` directory which contains extracted time-related
-data about words in the corpus.
+The script takes two arguments - input data source directory (is expected
+to contain zero or more xml files) and output directory (a single `.txt` file
+is created for every `.xml` file).
 
-Having extracted time-related data from the original `.xml` file, running
-
-```
-scripts/per_file_statistics.py samples/sample_output/ps2013-042-03-007-144.ana.txt samples/sample_output
-```
-
-will create another output file in `samples/sample_out` directory, this
-time with very simple statistics of speech lengths computed from the output
-of the XSLT script. Details about what is computed are given in the script
-file itself. The statistics themselves aren't computed over the TEI file
-itself, but rather over audio files it contains.
-
-It is important to note that the script takes into account existing files
-with statistics. Running the script repeatedly without deleting generated
-files first results in the statistics accumulating (which is not desired
-behavior).
-
-To observe how the script behaves when multiple timelines are present in a
-TEI file, we first use the XSLT script to convert the TEI files in
-`samples/sample_input/ps2013-042` to the `samples/sample_output/ps2013-042`
-directory and then use the python script on them; we choose
-`samples/sample_output/ps2013-042/audio_statistics/` as the output directory.
+Having extracted the time-related data, we can proceed to per-audio
+statistics. For that, we are going to use the `per_file_statistics.py` python
+script. An example of usage can be seen below.
 
 ```
-xsltproc scripts/speech_timestamps.xsl samples/sample_input/ps2013-042/ps2013-042-01-000-000.ana.xml > samples/sample_output/ps2013-042/ps2013-042-01-000-000.ana.txt
-xsltproc scripts/speech_timestamps.xsl samples/sample_input/ps2013-042/ps2013-042-01-001-001.ana.xml > samples/sample_output/ps2013-042/ps2013-042-01-001-001.ana.txt
-scripts/per_file_statistics.py samples/sample_output/ps2013-042/ps2013-042-01-000-000.ana.txt samples/sample_output/ps2013-042/audio_statistics
-scripts/per_file_statistics.py samples/sample_output/ps2013-042/ps2013-042-01-001-001.ana.txt samples/sample_output/ps2013-042/audio_statistics
+(venv) [rumaak@rumaak parczech_speech_lengths]$ time scripts/per_file_statistics.py "samples/sample_xslt_output/ps2013-042/*" samples/sample_audio_statistics_output
+
+real	0m39.421s
+user	0m39.262s
+sys	0m0.728s
 ```
 
-
+First, note that we are using virtual environment with packages specified
+in the `requirements.txt` file. Next, notice that even though there is an
+asterisk in the first argument, it is not actually used for shell pattern
+matching, as there are quotes around the first argument. Rather, pattern
+matching is implemented in the python script itself. Last, it is important
+to note that the script accumulates statistics; running it multiple times
+without deleting previously generated output thus leads to wrong results.
 
 

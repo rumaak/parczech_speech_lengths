@@ -4,7 +4,9 @@ import sys
 import os
 import os.path
 import math
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date, time
+from pathlib import Path
+from glob import glob
 
 import pandas as pd
 
@@ -14,6 +16,9 @@ import pandas as pd
 # - difference between first and last anchor of a paragraph
 # - difference between first and last anchor of an utterance
 # - difference between first and last anchor of an uninterrupted speech
+
+# TODO should we also include audio start / audio end if it can be inferred
+#      from the name of the file?
 
 class Parser:
     def __init__(self, file_in, dir_out):
@@ -54,6 +59,7 @@ class Parser:
 
         self.previous_audio = None
         self.audio_start = None
+        self.audio_end = None
         self.audio_first_anchor = None
         self.audio_last_anchor = None
 
@@ -71,8 +77,10 @@ class Parser:
             "speaker",
             "role",
             "audio_start",
-            "first_anchor",
-            "last_anchor",
+            "audio_end",
+            # TODO keep?
+            # "first_anchor",
+            # "last_anchor",
             "word",
             "sentence",
             "paragraph",
@@ -87,9 +95,11 @@ class Parser:
                 statistics_df = statistics_df.append({
                     "speaker": name,
                     "role": role,
-                    "audio_start": self.audio_start,
-                    "first_anchor": self.audio_first_anchor,
-                    "last_anchor": self.audio_last_anchor,
+                    "audio_start": self.audio_start.strftime("%Y-%m-%dT%H:%M:%S"),
+                    "audio_end": self.audio_end.strftime("%Y-%m-%dT%H:%M:%S"),
+                    # TODO keep?
+                    # "first_anchor": self.audio_first_anchor,
+                    # "last_anchor": self.audio_last_anchor,
                     "word": role_stats["word"],
                     "sentence": role_stats["sentence"],
                     "paragraph": role_stats["paragraph"],
@@ -138,7 +148,7 @@ class Parser:
         self.last_segment[seg_name]["end"] = None
         
     def parse_row(self, row):
-        self.check_audio(row["audio_id"])
+        self.check_audio(row["audio_url"])
         self.check_speaker_role(row["speaker"], row["role"])
 
         # current utterance, paragraph, sentence
@@ -170,11 +180,32 @@ class Parser:
 
         self.last = row["id"]
 
-        # for words missing audio_id, assume previous audio_id
-        if type(row["audio_id"]) != float: 
-            self.previous_audio = row["audio_id"]
-            self.audio_start = row["absolute"]
+        # for words missing audio_url, assume previous audio_url
+        if type(row["audio_url"]) != float: 
+            self.previous_audio = row["audio_url"]
+            self.audio_start_end(row["audio_url"])
             self.update_audio_anchors(start, end)
+
+    def audio_start_end(self, audio_url):
+        datetime_string = audio_url.split("/")[-1]
+
+        year = int(datetime_string[:4])
+        month = int(datetime_string[4:6])
+        day = int(datetime_string[6:8])
+
+        hour_start = int(datetime_string[8:10])
+        minute_start = int(datetime_string[10:12])
+
+        hour_end = int(datetime_string[12:14])
+        minute_end = int(datetime_string[14:16])
+
+        d = date(year, month, day)
+
+        time_start = time(hour_start, minute_start)
+        time_end = time(hour_end, minute_end)
+
+        self.audio_start = datetime.combine(d, time_start)
+        self.audio_end = datetime.combine(d, time_end)
 
     def update_audio_anchors(self, start, end):
         if self.audio_first_anchor is None: 
@@ -188,9 +219,9 @@ class Parser:
         elif start is not None:
             self.audio_last_anchor = start.strftime("%Y-%m-%dT%H:%M:%S")
 
-    def check_audio(self, audio_id):
+    def check_audio(self, audio_url):
         # different audio
-        if (self.previous_audio != audio_id) and (type(audio_id) != float):
+        if (self.previous_audio != audio_url) and (type(audio_url) != float):
             self.save_audio()
 
     def save_audio(self):
@@ -214,7 +245,7 @@ class Parser:
             )
 
             # audio already exists -> update statistics
-            path = os.path.join(self.dir_out, self.previous_audio + ".txt")
+            path = self.construct_path()
             if os.path.exists(path):
                 self.update_from_existing(path)
 
@@ -224,6 +255,30 @@ class Parser:
 
             # reset statistics
             self.statistics = dict()
+
+    def construct_path(self):
+        year = self.audio_start.strftime("%Y")
+        month = self.audio_start.strftime("%m")
+        day = self.audio_start.strftime("%d")
+
+        hour_start = self.audio_start.strftime("%H")
+        minute_start = self.audio_start.strftime("%M")
+
+        hour_end = self.audio_end.strftime("%H")
+        minute_end = self.audio_end.strftime("%M")
+
+        name_first = year + month + day
+        name_last = hour_start + minute_start + hour_end + minute_end
+
+        path_to_dir = os.path.join(
+            self.dir_out,
+            year,
+            month,
+            day
+        )
+        
+        Path(path_to_dir).mkdir(parents=True, exist_ok=True)
+        return os.path.join(path_to_dir, name_first + name_last + ".txt")
 
     def update_from_existing(self, path):
         existing_df = pd.read_csv(path)
@@ -338,8 +393,11 @@ if __name__ == "__main__":
     # directory where statistics for each audio should be stored
     args = sys.argv[1:]
     if len(args) == 2:
-        parser = Parser(args[0], args[1])
-        parser.parse()
+        # Windows-compatible pattern matching
+        filelist = glob(args[0]) 
+        for filename in filelist:
+            parser = Parser(filename, args[1])
+            parser.parse()
     else:
         print("Incorrect number of args")
 

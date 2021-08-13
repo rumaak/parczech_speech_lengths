@@ -1,0 +1,2 @@
+speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous
+JeronymTejc.1977,regular,2016-03-11T11:48:00,2016-03-11T12:02:00,484650.0,590440.0,626800.0,641220.0,641220.0

@@ -1,0 +1,4 @@
+speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous
+RadkaMaxova.1968,regular,2016-03-11T10:18:00,2016-03-11T10:32:00,441600.0,503700.0,534660.0,552480.0,552480.0
+JaroslavaPokornaJermanova.1970,chair,2016-03-11T10:18:00,2016-03-11T10:32:00,5850.0,13210.0,13220.0,13220.0,13220.0
+SimeonKaramazov.1963,regular,2016-03-11T10:18:00,2016-03-11T10:32:00,33740.0,34380.0,39420.0,39420.0,39420.0

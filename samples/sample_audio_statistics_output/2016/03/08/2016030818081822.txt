@@ -1,0 +1,2 @@
+speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous
+MarekBenda.1968,regular,2016-03-08T18:08:00,2016-03-08T18:22:00,384240.0,509430.0,540660.0,561370.0,561370.0
