@@ -3,6 +3,7 @@
 import sys
 import os
 from datetime import datetime, date, time
+from pathlib import Path
 
 import pandas as pd
 import seaborn as sns
@@ -17,6 +18,8 @@ import matplotlib.pyplot as plt
 #
 # Statistics of an audio are used only if both audio start and end belong
 # to the said interval (makes more sense as audio files overlap)
+
+# TODO ms aren't probably very good way to measure the lenghts of speeches
 
 class Aggregator:
     def __init__(self, input_dir, output_dir, start, end):
@@ -41,6 +44,10 @@ class Aggregator:
 
     def speech_length_statistics(self):
         for role in self.total_length:
+            # make sure directory exists
+            path_to_dir = os.path.join(self.output_dir, "total_length")
+            Path(path_to_dir).mkdir(parents=True, exist_ok=True)
+
             # tables
             statistics_df = pd.DataFrame()
             for speaker in self.total_length[role]["word"]:
@@ -52,8 +59,7 @@ class Aggregator:
                     "utterance": self.total_length[role]["utterance"][speaker]
                 }, ignore_index=True)
 
-            filename = "total_length-" + role + ".txt"
-            path = os.path.join(self.output_dir, filename)
+            path = os.path.join(self.output_dir, "total_length", role + ".txt")
             statistics_df.to_csv(path, index=False)
 
             # plots
@@ -66,6 +72,7 @@ class Aggregator:
                         "stat": stat,
                         "length": val
                     }, ignore_index=True)
+            plot_df = plot_df.sort_values(by=["length"], ascending=False)
 
             sns.set_theme()
             sns.set_context("paper")
@@ -78,8 +85,7 @@ class Aggregator:
             )
             sns_plot.set_xticklabels(rotation=90)
 
-            filename = "total_length-" + role + ".png"
-            path = os.path.join(self.output_dir, filename)
+            path = os.path.join(self.output_dir, "total_length", role + ".png")
             sns_plot.savefig(path)
 
     def compute_total_length(self, row):
