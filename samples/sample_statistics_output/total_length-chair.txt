@@ -1,0 +1,3 @@
+speaker,word,sentence,paragraph,utterance
+JanHamacek.1978,214030.0,234880.0,254400.0,270300.0
+VojtechFilip.1955,140780.0,167200.0,178090.0,186260.0

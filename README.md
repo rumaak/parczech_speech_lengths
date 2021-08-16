@@ -40,4 +40,18 @@ matching is implemented in the python script itself. Last, it is important
 to note that the script accumulates statistics; running it multiple times
 without deleting previously generated output thus leads to wrong results.
 
+Now we would like to compute statistics over some time interval. For that,
+we are going to use the `scripts/aggregate_statistics.py` python script.
+We need to tell the script where the audio statistics data are stored
+(`samples/sample_audio_statistics_output`), where it should output the
+computed statistics and plots (`samples/sample_statistics_output`) and
+what is the interval over which we want to compute the statistics.
+
+```
+scripts/aggregate_statistics.py samples/sample_audio_statistics_output samples/sample_statistics_output 2016-03-01T13:58:00 2016-03-01T14:32:00
+```
+
+Executing the line above leads to statistics being generated into the specified
+output directory. The statistics are computed over the interval starting at
+`2016-03-01T13:58:00` and ending at `2016-03-01T14:32:00`.
 
