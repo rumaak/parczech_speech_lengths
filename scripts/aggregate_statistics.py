@@ -29,9 +29,11 @@ class Aggregator:
         self.end = datetime.strptime(end, "%Y-%m-%dT%H:%M:%S")
 
         self.total_length = dict()
+        self.relative_diff = dict()
 
     def tables_plots(self):
         self.speech_length_statistics()
+        self.relative_diff_statistics()
 
         # TODO add plotting other statistics
 
@@ -39,8 +41,72 @@ class Aggregator:
         for audio in self.correct_audios():
             data_df = pd.read_csv(audio)
             data_df.apply(self.compute_total_length, axis=1)
+            data_df.apply(self.compute_relative_difference, axis=1)
 
             # TODO add computing other statistics
+
+    def relative_diff_statistics(self):
+        for role in self.total_length:
+            # make sure directory exists
+            path_to_dir = os.path.join(self.output_dir, "relative_diff")
+            Path(path_to_dir).mkdir(parents=True, exist_ok=True)
+
+            # tables
+            statistics_df = pd.DataFrame()
+            for speaker in self.relative_diff[role]["sentence-word"]:
+                sw = self.calculate_rel_diff(speaker, role, "sentence-word", "sentence")
+                ps = self.calculate_rel_diff(speaker, role, "paragraph-sentence", "paragraph")
+                up = self.calculate_rel_diff(speaker, role, "utterance-paragraph", "utterance")
+
+                statistics_df = statistics_df.append({
+                    "speaker": speaker,
+                    "sentence-word": sw,
+                    "paragraph-sentence": ps,
+                    "utterance-paragraph": up
+                }, ignore_index=True)
+
+            path = os.path.join(path_to_dir, role + ".txt")
+            statistics_df.to_csv(path, index=False)
+
+            # plots
+            plot_df = pd.DataFrame()
+            for stat in self.relative_diff[role]:
+                for speaker in self.relative_diff[role][stat]:
+                    val = self.calculate_rel_diff(
+                        speaker, 
+                        role, 
+                        stat, 
+                        self.decide_stat_total(stat)
+                    )
+                    plot_df = plot_df.append({
+                        "speaker": speaker,
+                        "stat": stat,
+                        "difference": val
+                    }, ignore_index=True)
+            plot_df = plot_df.sort_values(by=["difference"], ascending=False)
+
+            sns.set_theme()
+            sns.set_context("paper")
+            sns_plot = sns.catplot(
+                x="speaker",
+                y="difference",
+                hue="stat",
+                kind="bar",
+                data=plot_df
+            )
+            sns_plot.set_xticklabels(rotation=90)
+
+            path = os.path.join(path_to_dir, role + ".png")
+            sns_plot.savefig(path)
+
+    def decide_stat_total(self, stat):
+        return stat.split("-")[0]
+
+    def calculate_rel_diff(self, speaker, role, stat, stat_total):
+        total_diff = self.relative_diff[role][stat][speaker]
+        total_length = self.total_length[role][stat_total][speaker]
+        rel_diff =  total_diff / total_length
+        return rel_diff
 
     def speech_length_statistics(self):
         for role in self.total_length:
@@ -59,7 +125,7 @@ class Aggregator:
                     "utterance": self.total_length[role]["utterance"][speaker]
                 }, ignore_index=True)
 
-            path = os.path.join(self.output_dir, "total_length", role + ".txt")
+            path = os.path.join(path_to_dir, role + ".txt")
             statistics_df.to_csv(path, index=False)
 
             # plots
@@ -85,19 +151,45 @@ class Aggregator:
             )
             sns_plot.set_xticklabels(rotation=90)
 
-            path = os.path.join(self.output_dir, "total_length", role + ".png")
+            path = os.path.join(path_to_dir, role + ".png")
             sns_plot.savefig(path)
+
+    def compute_relative_difference(self, row):
+        speaker, role = row["speaker"], row["role"]
+        self.check_speaker_role_diff(speaker, role)
+
+        up = self.relative_diff[role]["utterance-paragraph"]
+        ps = self.relative_diff[role]["paragraph-sentence"]
+        sw = self.relative_diff[role]["sentence-word"]
+
+        up[speaker] += row["utterance"] - row["paragraph"]
+        ps[speaker] += row["paragraph"] - row["sentence"]
+        sw[speaker] += row["sentence"] - row["word"]
 
     def compute_total_length(self, row):
         speaker, role = row["speaker"], row["role"]
-        self.check_speaker_role(speaker, role)
+        self.check_speaker_role_length(speaker, role)
 
         self.total_length[role]["word"][speaker] += row["word"]
         self.total_length[role]["sentence"][speaker] += row["sentence"]
         self.total_length[role]["paragraph"][speaker] += row["paragraph"]
         self.total_length[role]["utterance"][speaker] += row["utterance"]
 
-    def check_speaker_role(self, speaker, role):
+    def check_speaker_role_diff(self, speaker, role):
+        if not (role in self.relative_diff):
+            self.relative_diff[role] = {
+                "utterance-paragraph": dict(),
+                "paragraph-sentence": dict(),
+                "sentence-word": dict()
+            }
+
+        # it is enough to check just one field
+        if not (speaker in self.relative_diff[role]["sentence-word"]):
+            self.relative_diff[role]["utterance-paragraph"][speaker] = 0
+            self.relative_diff[role]["paragraph-sentence"][speaker] = 0
+            self.relative_diff[role]["sentence-word"][speaker] = 0
+
+    def check_speaker_role_length(self, speaker, role):
         if not (role in self.total_length):
             self.total_length[role] = {
                 "word": dict(),
