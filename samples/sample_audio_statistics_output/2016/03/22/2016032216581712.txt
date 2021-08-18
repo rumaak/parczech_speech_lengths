@@ -1,2 +1,2 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous
-IvanaDobesova.1960,regular,2016-03-22T16:58:00,2016-03-22T17:12:00,461590.0,512870.0,572820.0,585650.0,585650.0
+speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+IvanaDobesova.1960,regular,2016-03-22T16:58:00,2016-03-22T17:12:00,461590.0,512870.0,572820.0,585650.0,585650.0,1214,67

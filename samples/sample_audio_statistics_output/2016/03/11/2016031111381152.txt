@@ -1,4 +1,4 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous
-JiriDienstbier.1969,regular,2016-03-11T11:38:00,2016-03-11T11:52:00,326830.0,381690.0,410480.0,429100.0,429100.0
-JaroslavaPokornaJermanova.1970,chair,2016-03-11T11:38:00,2016-03-11T11:52:00,6360.0,5800.0,7170.0,7170.0,7170.0
-JeronymTejc.1977,regular,2016-03-11T11:38:00,2016-03-11T11:52:00,109740.0,128690.0,137040.0,140670.0,140670.0
+speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JiriDienstbier.1969,regular,2016-03-11T11:38:00,2016-03-11T11:52:00,326830.0,381690.0,410480.0,429100.0,429100.0,745,64
+JaroslavaPokornaJermanova.1970,chair,2016-03-11T11:38:00,2016-03-11T11:52:00,6360.0,5800.0,7170.0,7170.0,7170.0,21,0
+JeronymTejc.1977,regular,2016-03-11T11:38:00,2016-03-11T11:52:00,109740.0,128690.0,137040.0,140670.0,140670.0,264,19

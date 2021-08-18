@@ -30,10 +30,12 @@ class Aggregator:
 
         self.total_length = dict()
         self.relative_diff = dict()
+        self.words = dict()
 
     def tables_plots(self):
         self.speech_length_statistics()
         self.relative_diff_statistics()
+        self.word_statistics()
 
         # TODO add plotting other statistics
 
@@ -42,8 +44,86 @@ class Aggregator:
             data_df = pd.read_csv(audio)
             data_df.apply(self.compute_total_length, axis=1)
             data_df.apply(self.compute_relative_difference, axis=1)
+            data_df.apply(self.compute_word_statistics, axis=1)
 
             # TODO add computing other statistics
+
+    def word_statistics(self):
+        for role in self.words:
+            # make sure directory exists
+            path_to_dir = os.path.join(self.output_dir, "words")
+            Path(path_to_dir).mkdir(parents=True, exist_ok=True)
+
+            # tables
+            statistics_df = pd.DataFrame()
+            for speaker in self.words[role]["word_count"]:
+                count = self.words[role]["word_count"][speaker]
+                anchor = self.words[role]["no_anchor"][speaker]
+                length = self.total_length[role]["utterance"][speaker]
+
+                statistics_df = statistics_df.append({
+                    "speaker": speaker,
+                    "unanchored": anchor / count,
+                    "words_per_minute": count / self.to_minutes(length)
+                }, ignore_index=True)
+
+            path = os.path.join(path_to_dir, role + ".txt")
+            statistics_df.to_csv(path, index=False)
+
+            # plots
+            plot1_df = pd.DataFrame()
+            plot2_df = pd.DataFrame()
+            for speaker in self.words[role]["word_count"]:
+                count = self.words[role]["word_count"][speaker]
+                anchor = self.words[role]["no_anchor"][speaker]
+                length = self.total_length[role]["utterance"][speaker]
+
+                plot1_df = plot1_df.append({
+                    "speaker": speaker,
+                    "unanchored": anchor / count
+                }, ignore_index=True)
+
+                plot2_df = plot2_df.append({
+                    "speaker": speaker,
+                    "words_per_minute": count / self.to_minutes(length)
+                }, ignore_index=True)
+
+            plot1_df = plot1_df.sort_values(by=["unanchored"], ascending=False)
+            plot2_df = plot2_df.sort_values(by=["words_per_minute"], ascending=False)
+
+            # unanchored plot
+            sns.set_theme()
+            sns.set_context("paper")
+            sns_plot = sns.catplot(
+                x="speaker",
+                y="unanchored",
+                kind="bar",
+                data=plot1_df
+            )
+            sns_plot.set_xticklabels(rotation=90)
+
+            path = os.path.join(path_to_dir, role + "-unanchored" + ".png")
+            sns_plot.savefig(path)
+            plt.clf()
+
+            # words_per_minute plot
+            sns.set_theme()
+            sns.set_context("paper")
+            sns_plot = sns.catplot(
+                x="speaker",
+                y="words_per_minute",
+                kind="bar",
+                data=plot2_df
+            )
+            sns_plot.set_xticklabels(rotation=90)
+
+            path = os.path.join(path_to_dir, role + "-wpm" + ".png")
+            sns_plot.savefig(path)
+
+    def to_minutes(self, length):
+        seconds = length / 1000
+        minutes = seconds / 60
+        return minutes
 
     def relative_diff_statistics(self):
         for role in self.total_length:
@@ -154,6 +234,13 @@ class Aggregator:
             path = os.path.join(path_to_dir, role + ".png")
             sns_plot.savefig(path)
 
+    def compute_word_statistics(self, row):
+        speaker, role = row["speaker"], row["role"]
+        self.check_speaker_role_word(speaker, role)
+        
+        self.words[role]["word_count"][speaker] += row["word_count"]
+        self.words[role]["no_anchor"][speaker] += row["no_anchor"]
+
     def compute_relative_difference(self, row):
         speaker, role = row["speaker"], row["role"]
         self.check_speaker_role_diff(speaker, role)
@@ -174,6 +261,18 @@ class Aggregator:
         self.total_length[role]["sentence"][speaker] += row["sentence"]
         self.total_length[role]["paragraph"][speaker] += row["paragraph"]
         self.total_length[role]["utterance"][speaker] += row["utterance"]
+
+    def check_speaker_role_word(self, speaker, role):
+        if not (role in self.words):
+            self.words[role] = {
+                "word_count": dict(),
+                "no_anchor": dict()
+            }
+
+        # it is enough to check just one field
+        if not (speaker in self.words[role]["word_count"]):
+            self.words[role]["word_count"][speaker] = 0
+            self.words[role]["no_anchor"][speaker] = 0
 
     def check_speaker_role_diff(self, speaker, role):
         if not (role in self.relative_diff):

@@ -1,4 +1,4 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous
-JaroslavaPokornaJermanova.1970,chair,2016-03-22T13:58:00,2016-03-22T14:12:00,263360.0,327880.0,353350.0,420640.0,420640.0
-MarekCernoch.1969,regular,2016-03-22T13:58:00,2016-03-22T14:12:00,23010.0,25450.0,26840.0,26840.0,26840.0
-TomioOkamura.1972,regular,2016-03-22T13:58:00,2016-03-22T14:12:00,62500.0,71230.0,76290.0,78400.0,78400.0
+speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JaroslavaPokornaJermanova.1970,chair,2016-03-22T13:58:00,2016-03-22T14:12:00,263360.0,327880.0,353350.0,420640.0,420640.0,636,84
+MarekCernoch.1969,regular,2016-03-22T13:58:00,2016-03-22T14:12:00,23010.0,25450.0,26840.0,26840.0,26840.0,60,4
+TomioOkamura.1972,regular,2016-03-22T13:58:00,2016-03-22T14:12:00,62500.0,71230.0,76290.0,78400.0,78400.0,187,25

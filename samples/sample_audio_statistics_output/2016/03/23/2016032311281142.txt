@@ -1,2 +1,2 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous
-PetrBendl.1966,regular,2016-03-23T11:28:00,2016-03-23T11:42:00,428660.0,560960.0,596190.0,612050.0,612050.0
+speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+PetrBendl.1966,regular,2016-03-23T11:28:00,2016-03-23T11:42:00,428660.0,560960.0,596190.0,612050.0,612050.0,1020,57

@@ -1,2 +1,2 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous
-JanZahradnik.1949,regular,2016-03-02T16:08:00,2016-03-02T16:22:00,389590.0,662070.0,708480.0,729630.0,729630.0
+speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanZahradnik.1949,regular,2016-03-02T16:08:00,2016-03-02T16:22:00,389590.0,662070.0,708480.0,729630.0,729630.0,1075,118

@@ -1,3 +1,3 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous
-JanHamacek.1978,chair,2016-03-08T13:58:00,2016-03-08T14:12:00,154460.0,198420.0,207560.0,251430.0,251430.0
-MiroslavKalousek.1960,regular,2016-03-08T13:58:00,2016-03-08T14:12:00,208490.0,239470.0,253180.0,262010.0,262010.0
+speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanHamacek.1978,chair,2016-03-08T13:58:00,2016-03-08T14:12:00,154460.0,198420.0,207560.0,251430.0,251430.0,517,92
+MiroslavKalousek.1960,regular,2016-03-08T13:58:00,2016-03-08T14:12:00,208490.0,239470.0,253180.0,262010.0,262010.0,481,21

@@ -1,2 +1,2 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous
-MartaSemelova.1960,regular,2016-03-09T11:28:00,2016-03-09T11:42:00,447380.0,624940.0,662840.0,674070.0,674070.0
+speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+MartaSemelova.1960,regular,2016-03-09T11:28:00,2016-03-09T11:42:00,447380.0,624940.0,662840.0,674070.0,674070.0,1013,52

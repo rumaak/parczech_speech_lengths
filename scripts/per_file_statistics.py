@@ -85,7 +85,9 @@ class Parser:
             "sentence",
             "paragraph",
             "utterance",
-            "continuous"
+            "continuous",
+            "word_count",
+            "no_anchor"
         ])
 
         for name in self.statistics:
@@ -104,7 +106,9 @@ class Parser:
                     "sentence": role_stats["sentence"],
                     "paragraph": role_stats["paragraph"],
                     "utterance": role_stats["utterance"],
-                    "continuous": role_stats["continuous"]
+                    "continuous": role_stats["continuous"],
+                    "word_count": role_stats["word_count"],
+                    "no_anchor": role_stats["no_anchor"]
                 }, ignore_index=True)
 
         return statistics_df
@@ -172,7 +176,13 @@ class Parser:
         start = self.to_absolute(row["start"], row["absolute"])
         end = self.to_absolute(row["end"], row["absolute"])
 
+
+        # update word statistics
         self.update_word(start, end, row["speaker"], row["role"])
+        self.update_word_count(row["speaker"], row["role"])
+        self.update_missing_anchors(start, end, row["speaker"], row["role"])
+
+        # update first and last anchors of segments
         self.update_segment(start, end, row["speaker"], row["role"], sc, sl, "sentence")
         self.update_segment(start, end, row["speaker"], row["role"], pc, pl, "paragraph")
         self.update_segment(start, end, row["speaker"], row["role"], uc, ul, "utterance")
@@ -315,7 +325,9 @@ class Parser:
                     "sentence": 0,
                     "paragraph": 0,
                     "utterance": 0,
-                    "continuous": 0
+                    "continuous": 0,
+                    "word_count": 0,
+                    "no_anchor": 0
                 }
             }
         elif not (role in self.statistics[speaker]):
@@ -324,13 +336,22 @@ class Parser:
                 "sentence": 0,
                 "paragraph": 0,
                 "utterance": 0,
-                "continuous": 0
+                "continuous": 0,
+                "word_count": 0,
+                "no_anchor": 0
             }
 
     def update_word(self, start, end, speaker, role):
         if (start is not None) and (end is not None):
             word_length = (end - start).total_seconds()*1000
             self.statistics[speaker][role]["word"] += word_length
+
+    def update_word_count(self, speaker, role):
+        self.statistics[speaker][role]["word_count"] += 1
+
+    def update_missing_anchors(self, start, end, speaker, role):
+        if (start is None) or (end is None):
+            self.statistics[speaker][role]["no_anchor"] += 1
 
     def update_segment(self, start, end, speaker, role, sc, sl, seg_name):
         speaker_l = self.last_segment[seg_name]["speaker"]

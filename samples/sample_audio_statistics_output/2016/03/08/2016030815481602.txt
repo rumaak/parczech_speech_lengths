@@ -1,4 +1,4 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous
-KarelRais.1949,regular,2016-03-08T15:48:00,2016-03-08T16:02:00,33060.0,42650.0,46870.0,47260.0,47260.0
-JaroslavaPokornaJermanova.1970,chair,2016-03-08T15:48:00,2016-03-08T16:02:00,4320.0,3510.0,9990.0,9990.0,9990.0
-JiriZlatuska.1957,regular,2016-03-08T15:48:00,2016-03-08T16:02:00,359870.0,512280.0,542210.0,555800.0,555800.0
+speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+KarelRais.1949,regular,2016-03-08T15:48:00,2016-03-08T16:02:00,33060.0,42650.0,46870.0,47260.0,47260.0,79,5
+JaroslavaPokornaJermanova.1970,chair,2016-03-08T15:48:00,2016-03-08T16:02:00,4320.0,3510.0,9990.0,9990.0,9990.0,13,1
+JiriZlatuska.1957,regular,2016-03-08T15:48:00,2016-03-08T16:02:00,359870.0,512280.0,542210.0,555800.0,555800.0,758,38
