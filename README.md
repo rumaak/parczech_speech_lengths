@@ -48,10 +48,10 @@ computed statistics and plots (`samples/sample_statistics_output`) and
 what is the interval over which we want to compute the statistics.
 
 ```
-scripts/aggregate_statistics.py samples/sample_audio_statistics_output samples/sample_statistics_output 2016-03-01T13:58:00 2016-03-01T14:32:00
+scripts/aggregate_statistics.py samples/sample_audio_statistics_output samples/sample_statistics_output 2016-03-01T13:58:00 2016-03-23T14:02:00
 ```
 
 Executing the line above leads to statistics being generated into the specified
 output directory. The statistics are computed over the interval starting at
-`2016-03-01T13:58:00` and ending at `2016-03-01T14:32:00`.
+`2016-03-01T13:58:00` and ending at `2016-03-23T14:02:00`.
 
