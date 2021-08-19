@@ -309,13 +309,17 @@ class Parser:
         paragraph = self.statistics[speaker][role]["paragraph"]
         utterance = self.statistics[speaker][role]["utterance"]
         continuous = self.statistics[speaker][role]["continuous"]
+        word_count = self.statistics[speaker][role]["word_count"]
+        no_anchor = self.statistics[speaker][role]["no_anchor"]
 
         # update with values from file
         self.statistics[speaker][role]["word"] = word + row["word"]
-        self.statistics[speaker][role]["sentence"] = word + row["sentence"]
-        self.statistics[speaker][role]["paragraph"] = word + row["paragraph"]
-        self.statistics[speaker][role]["utterance"] = word + row["utterance"]
-        self.statistics[speaker][role]["continuous"] = word + row["continuous"]
+        self.statistics[speaker][role]["sentence"] = sentence + row["sentence"]
+        self.statistics[speaker][role]["paragraph"] = paragraph + row["paragraph"]
+        self.statistics[speaker][role]["utterance"] = utterance + row["utterance"]
+        self.statistics[speaker][role]["continuous"] = continuous + row["continuous"]
+        self.statistics[speaker][role]["word_count"] = word_count + row["word_count"]
+        self.statistics[speaker][role]["no_anchor"] = no_anchor + row["no_anchor"]
 
     def check_speaker_role(self, speaker, role):
         if not (speaker in self.statistics):
