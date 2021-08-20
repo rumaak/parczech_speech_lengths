@@ -1,3 +1,3 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanKlan.1982,regular,2016-03-02T17:48:00,2016-03-02T18:02:00,440610.0,485590.0,566770.0,605320.0,605320.0,1211,85
-JanBartosek.1971,chair,2016-03-02T17:48:00,2016-03-02T18:02:00,6840.0,8280.0,11910.0,11910.0,11910.0,20,2
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanKlan.1982,regular,ps2013,440610.0,485590.0,566770.0,605320.0,605320.0,1211,85
+JanBartosek.1971,chair,ps2013,6840.0,8280.0,11910.0,11910.0,11910.0,20,2

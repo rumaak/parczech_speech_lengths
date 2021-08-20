@@ -1,2 +1,2 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-MarekBenda.1968,regular,2016-03-08T18:18:00,2016-03-08T18:32:00,403100.0,540430.0,633810.0,660910.0,660910.0,1103,65
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+MarekBenda.1968,regular,ps2013,403100.0,540430.0,633810.0,660910.0,660910.0,1103,65

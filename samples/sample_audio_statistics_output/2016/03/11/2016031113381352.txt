@@ -1,4 +1,4 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-StanislavGrospic.1964,regular,2016-03-11T13:38:00,2016-03-11T13:52:00,129030.0,150190.0,154590.0,212020.0,212020.0,305,21
-JanBartosek.1971,chair,2016-03-11T13:38:00,2016-03-11T13:52:00,4510.0,3610.0,12510.0,12510.0,12510.0,13,1
-MarekBenda.1968,regular,2016-03-11T13:38:00,2016-03-11T13:52:00,335630.0,409530.0,433140.0,444670.0,444670.0,867,49
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+StanislavGrospic.1964,regular,ps2013,129030.0,150190.0,154590.0,212020.0,212020.0,305,21
+JanBartosek.1971,chair,ps2013,4510.0,3610.0,12510.0,12510.0,12510.0,13,1
+MarekBenda.1968,regular,ps2013,335630.0,409530.0,433140.0,444670.0,444670.0,867,49

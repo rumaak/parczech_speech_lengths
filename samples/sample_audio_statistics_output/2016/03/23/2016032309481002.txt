@@ -1,4 +1,4 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-RobertPelikan.1979,regular,2016-03-23T09:48:00,2016-03-23T10:02:00,138560.0,173720.0,190250.0,197250.0,197250.0,340,17
-JanBartosek.1971,chair,2016-03-23T09:48:00,2016-03-23T10:02:00,170080.0,228830.0,296170.0,328680.0,328680.0,493,46
-MarieBenesova.1948,regular,2016-03-23T09:48:00,2016-03-23T10:02:00,90950.0,103360.0,109780.0,109780.0,109780.0,192,7
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+RobertPelikan.1979,regular,ps2013,138560.0,173720.0,190250.0,197250.0,197250.0,340,17
+JanBartosek.1971,chair,ps2013,170080.0,228830.0,296170.0,328680.0,328680.0,493,46
+MarieBenesova.1948,regular,ps2013,90950.0,103360.0,109780.0,109780.0,109780.0,192,7

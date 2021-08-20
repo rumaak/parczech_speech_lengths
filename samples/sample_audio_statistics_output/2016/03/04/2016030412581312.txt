@@ -1,5 +1,5 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanBartosek.1971,chair,2016-03-04T12:58:00,2016-03-04T13:12:00,235740.0,256670.0,336090.0,399590.0,399590.0,655,70
-LukasPleticha.1974,regular,2016-03-04T12:58:00,2016-03-04T13:12:00,108430.0,135360.0,201220.0,205370.0,205370.0,274,32
-ZdenekOndracek.1969,regular,2016-03-04T12:58:00,2016-03-04T13:12:00,6630.0,5360.0,7440.0,7440.0,7440.0,20,2
-NinaNovakova.1954,regular,2016-03-04T12:58:00,2016-03-04T13:12:00,10490.0,11670.0,13060.0,13060.0,13060.0,29,2
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanBartosek.1971,chair,ps2013,235740.0,256670.0,336090.0,399590.0,399590.0,655,70
+LukasPleticha.1974,regular,ps2013,108430.0,135360.0,201220.0,205370.0,205370.0,274,32
+ZdenekOndracek.1969,regular,ps2013,6630.0,5360.0,7440.0,7440.0,7440.0,20,2
+NinaNovakova.1954,regular,ps2013,10490.0,11670.0,13060.0,13060.0,13060.0,29,2

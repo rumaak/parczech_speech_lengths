@@ -1,4 +1,4 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VojtechFilip.1955,chair,2016-03-09T13:18:00,2016-03-09T13:32:00,128930.0,146890.0,363700.0,470590.0,470590.0,353,62
-JanaFischerova.1955,regular,2016-03-09T13:18:00,2016-03-09T13:32:00,8820.0,8540.0,11600.0,11600.0,11600.0,28,1
-VlastaBohdalova.1957,regular,2016-03-09T13:18:00,2016-03-09T13:32:00,168710.0,181130.0,205900.0,207560.0,207560.0,375,34
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechFilip.1955,chair,ps2013,128930.0,146890.0,363700.0,470590.0,470590.0,353,62
+JanaFischerova.1955,regular,ps2013,8820.0,8540.0,11600.0,11600.0,11600.0,28,1
+VlastaBohdalova.1957,regular,ps2013,168710.0,181130.0,205900.0,207560.0,207560.0,375,34

@@ -1,4 +1,4 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-IvanAdamec.1960,regular,2016-03-03T09:18:00,2016-03-03T09:32:00,128550.0,191070.0,287490.0,290210.0,290210.0,437,65
-VojtechFilip.1955,chair,2016-03-03T09:18:00,2016-03-03T09:32:00,20150.0,24820.0,44980.0,44980.0,44980.0,58,7
-DanTok.1959,regular,2016-03-03T09:18:00,2016-03-03T09:32:00,256970.0,333030.0,360390.0,366170.0,366170.0,631,38
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+IvanAdamec.1960,regular,ps2013,128550.0,191070.0,287490.0,290210.0,290210.0,437,65
+VojtechFilip.1955,chair,ps2013,20150.0,24820.0,44980.0,44980.0,44980.0,58,7
+DanTok.1959,regular,ps2013,256970.0,333030.0,360390.0,366170.0,366170.0,631,38

@@ -1,5 +1,5 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JaroslavaPokornaJermanova.1970,chair,2016-03-10T15:58:00,2016-03-10T16:12:00,22900.0,20910.0,31220.0,31220.0,31220.0,63,5
-RichardBrabec.1966,regular,2016-03-10T15:58:00,2016-03-10T16:12:00,95360.0,111020.0,126420.0,130660.0,130660.0,273,21
-JanaHnykova.1963,regular,2016-03-10T15:58:00,2016-03-10T16:12:00,118840.0,125750.0,140340.0,141710.0,141710.0,313,14
-MartinStropnicky.1956,regular,2016-03-10T15:58:00,2016-03-10T16:12:00,186400.0,233810.0,255500.0,257460.0,257460.0,478,32
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JaroslavaPokornaJermanova.1970,chair,ps2013,22900.0,20910.0,31220.0,31220.0,31220.0,63,5
+RichardBrabec.1966,regular,ps2013,95360.0,111020.0,126420.0,130660.0,130660.0,273,21
+JanaHnykova.1963,regular,ps2013,118840.0,125750.0,140340.0,141710.0,141710.0,313,14
+MartinStropnicky.1956,regular,ps2013,186400.0,233810.0,255500.0,257460.0,257460.0,478,32

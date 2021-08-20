@@ -1,5 +1,5 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-SimeonKaramazov.1963,regular,2016-03-09T11:48:00,2016-03-09T12:02:00,147340.0,156940.0,174100.0,177940.0,177940.0,380,14
-JaroslavaPokornaJermanova.1970,chair,2016-03-09T11:48:00,2016-03-09T12:02:00,10460.0,9820.0,16310.0,16310.0,16310.0,30,2
-BohuslavChalupa.1960,regular,2016-03-09T11:48:00,2016-03-09T12:02:00,56560.0,60970.0,64310.0,64310.0,64310.0,163,10
-RadkaMaxova.1968,regular,2016-03-09T11:48:00,2016-03-09T12:02:00,266810.0,298380.0,313440.0,322810.0,322810.0,687,36
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+SimeonKaramazov.1963,regular,ps2013,147340.0,156940.0,174100.0,177940.0,177940.0,380,14
+JaroslavaPokornaJermanova.1970,chair,ps2013,10460.0,9820.0,16310.0,16310.0,16310.0,30,2
+BohuslavChalupa.1960,regular,ps2013,56560.0,60970.0,64310.0,64310.0,64310.0,163,10
+RadkaMaxova.1968,regular,ps2013,266810.0,298380.0,313440.0,322810.0,322810.0,687,36

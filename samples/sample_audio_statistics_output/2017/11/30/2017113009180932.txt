@@ -1,0 +1,7 @@
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+RadekVondracek.1973,chair,ps2017,161800.0,276670.0,380660.0,428210.0,428210.0,420,33
+JanBartosek.1971,regular,ps2017,65260.0,82150.0,89070.0,90690.0,90690.0,183,13
+RadimFiala.1969,regular,ps2017,61610.0,71660.0,81570.0,81570.0,81570.0,151,8
+PetrGazdik.1974,regular,ps2017,23630.0,25530.0,27870.0,27870.0,27870.0,69,7
+FrantisekVacha.1966,regular,ps2017,25840.0,35130.0,36230.0,36230.0,36230.0,66,5
+ZbynekStanjura.1964,regular,ps2017,17020.0,16710.0,21200.0,21200.0,21200.0,48,3

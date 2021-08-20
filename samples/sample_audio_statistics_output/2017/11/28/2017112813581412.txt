@@ -1,0 +1,3 @@
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+RadekVondracek.1973,chair,ps2017,169010.0,338810.0,354860.0,392040.0,392040.0,441,67
+StanislavGrospic.1964,regular,ps2017,148690.0,176510.0,184190.0,243730.0,243730.0,380,40

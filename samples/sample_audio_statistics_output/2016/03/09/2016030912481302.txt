@@ -1,4 +1,4 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JiriMihola.1972,regular,2016-03-09T12:48:00,2016-03-09T13:02:00,56850.0,63930.0,68830.0,70320.0,70320.0,135,3
-VojtechFilip.1955,chair,2016-03-09T12:48:00,2016-03-09T13:02:00,12800.0,16280.0,21720.0,21720.0,21720.0,44,13
-KaterinaValachova.1976,regular,2016-03-09T12:48:00,2016-03-09T13:02:00,341890.0,464280.0,484080.0,498050.0,498050.0,1158,271
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JiriMihola.1972,regular,ps2013,56850.0,63930.0,68830.0,70320.0,70320.0,135,3
+VojtechFilip.1955,chair,ps2013,12800.0,16280.0,21720.0,21720.0,21720.0,44,13
+KaterinaValachova.1976,regular,ps2013,341890.0,464280.0,484080.0,498050.0,498050.0,1158,271

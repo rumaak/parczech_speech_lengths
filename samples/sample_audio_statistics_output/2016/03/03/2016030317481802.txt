@@ -1,4 +1,4 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VojtechFilip.1955,chair,2016-03-03T17:48:00,2016-03-03T18:02:00,49740.0,144650.0,150170.0,154470.0,154470.0,153,36
-MarianJurecka.1981,regular,2016-03-03T17:48:00,2016-03-03T18:02:00,68630.0,88910.0,94830.0,95030.0,95030.0,256,44
-PetrBendl.1966,regular,2016-03-03T17:48:00,2016-03-03T18:02:00,23230.0,31060.0,35770.0,35770.0,35770.0,55,2
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechFilip.1955,chair,ps2013,49740.0,144650.0,150170.0,154470.0,154470.0,153,36
+MarianJurecka.1981,regular,ps2013,68630.0,88910.0,94830.0,95030.0,95030.0,256,44
+PetrBendl.1966,regular,ps2013,23230.0,31060.0,35770.0,35770.0,35770.0,55,2

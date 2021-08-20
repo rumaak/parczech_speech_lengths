@@ -1,4 +1,4 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-MartinLank.1976,regular,2016-03-22T17:38:00,2016-03-22T17:52:00,246980.0,256130.0,294710.0,303940.0,303940.0,683,43
-VojtechFilip.1955,chair,2016-03-22T17:38:00,2016-03-22T17:52:00,19910.0,186430.0,187610.0,187610.0,187610.0,47,2
-ZdenekSoukup.1952,regular,2016-03-22T17:38:00,2016-03-22T17:52:00,188640.0,199970.0,233080.0,248420.0,248420.0,542,38
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+MartinLank.1976,regular,ps2013,246980.0,256130.0,294710.0,303940.0,303940.0,683,43
+VojtechFilip.1955,chair,ps2013,19910.0,186430.0,187610.0,187610.0,187610.0,47,2
+ZdenekSoukup.1952,regular,ps2013,188640.0,199970.0,233080.0,248420.0,248420.0,542,38

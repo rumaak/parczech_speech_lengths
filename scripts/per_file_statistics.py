@@ -60,8 +60,8 @@ class Parser:
         self.previous_audio = None
         self.audio_start = None
         self.audio_end = None
-        self.audio_first_anchor = None
-        self.audio_last_anchor = None
+
+        self.election_period = None
 
     def parse(self):
         data_df = pd.read_csv(self.file_in, sep="\t")
@@ -76,11 +76,7 @@ class Parser:
         statistics_df = pd.DataFrame(columns=[
             "speaker",
             "role",
-            "audio_start",
-            "audio_end",
-            # TODO keep?
-            # "first_anchor",
-            # "last_anchor",
+            "election_period",
             "word",
             "sentence",
             "paragraph",
@@ -97,11 +93,7 @@ class Parser:
                 statistics_df = statistics_df.append({
                     "speaker": name,
                     "role": role,
-                    "audio_start": self.audio_start.strftime("%Y-%m-%dT%H:%M:%S"),
-                    "audio_end": self.audio_end.strftime("%Y-%m-%dT%H:%M:%S"),
-                    # TODO keep?
-                    # "first_anchor": self.audio_first_anchor,
-                    # "last_anchor": self.audio_last_anchor,
+                    "election_period": self.election_period,
                     "word": role_stats["word"],
                     "sentence": role_stats["sentence"],
                     "paragraph": role_stats["paragraph"],
@@ -176,7 +168,6 @@ class Parser:
         start = self.to_absolute(row["start"], row["absolute"])
         end = self.to_absolute(row["end"], row["absolute"])
 
-
         # update word statistics
         self.update_word(start, end, row["speaker"], row["role"])
         self.update_word_count(row["speaker"], row["role"])
@@ -194,7 +185,9 @@ class Parser:
         if type(row["audio_url"]) != float: 
             self.previous_audio = row["audio_url"]
             self.audio_start_end(row["audio_url"])
-            self.update_audio_anchors(start, end)
+
+        # update election period
+        self.election_period = row["id"].split("-")[0]
 
     # TODO this time of time striping is used in both scripts, consider
     #      creating a shared helper module
@@ -218,18 +211,6 @@ class Parser:
 
         self.audio_start = datetime.combine(d, time_start)
         self.audio_end = datetime.combine(d, time_end)
-
-    def update_audio_anchors(self, start, end):
-        if self.audio_first_anchor is None: 
-            if start is not None:
-                self.audio_first_anchor = start.strftime("%Y-%m-%dT%H:%M:%S")
-            elif end is not None:
-                self.audio_first_anchor = end.strftime("%Y-%m-%dT%H:%M:%S")
-
-        if end is not None:
-            self.audio_last_anchor = end.strftime("%Y-%m-%dT%H:%M:%S")
-        elif start is not None:
-            self.audio_last_anchor = start.strftime("%Y-%m-%dT%H:%M:%S")
 
     def check_audio(self, audio_url):
         # different audio

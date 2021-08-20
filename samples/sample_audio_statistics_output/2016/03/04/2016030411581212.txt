@@ -1,2 +1,2 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanBartosek.1971,chair,2016-03-04T11:58:00,2016-03-04T12:12:00,6910.0,385730.0,385730.0,385730.0,385730.0,95,91
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanBartosek.1971,chair,ps2013,6910.0,385730.0,385730.0,385730.0,385730.0,95,91

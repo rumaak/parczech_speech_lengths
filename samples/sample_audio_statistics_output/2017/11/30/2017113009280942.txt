@@ -1,0 +1,3 @@
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+RadekVondracek.1973,chair,ps2017,212580.0,404450.0,466930.0,534690.0,534690.0,520,32
+KarelRais.1949,regular,ps2017,168040.0,199210.0,210380.0,240800.0,240800.0,404,43

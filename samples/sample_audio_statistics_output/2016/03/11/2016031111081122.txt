@@ -1,2 +1,2 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-MilosZeman.1944,guest,2016-03-11T11:08:00,2016-03-11T11:22:00,331050.0,490060.0,559580.0,590210.0,590210.0,719,68
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+MilosZeman.1944,guest,ps2013,331050.0,490060.0,559580.0,590210.0,590210.0,719,68

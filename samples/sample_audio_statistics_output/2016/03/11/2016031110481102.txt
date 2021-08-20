@@ -1,4 +1,4 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JiriMihola.1972,regular,2016-03-11T10:48:00,2016-03-11T11:02:00,104070.0,114540.0,120690.0,124950.0,124950.0,224,18
-JaroslavaPokornaJermanova.1970,chair,2016-03-11T10:48:00,2016-03-11T11:02:00,38090.0,361910.0,370050.0,370050.0,370050.0,103,20
-JiriDienstbier.1969,regular,2016-03-11T10:48:00,2016-03-11T11:02:00,157730.0,179770.0,188370.0,194530.0,194530.0,396,10
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JiriMihola.1972,regular,ps2013,104070.0,114540.0,120690.0,124950.0,124950.0,224,18
+JaroslavaPokornaJermanova.1970,chair,ps2013,38090.0,361910.0,370050.0,370050.0,370050.0,103,20
+JiriDienstbier.1969,regular,ps2013,157730.0,179770.0,188370.0,194530.0,194530.0,396,10

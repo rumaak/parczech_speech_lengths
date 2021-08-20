@@ -1,0 +1,3 @@
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechPikal.1987,chair,ps2017,107040.0,184840.0,225630.0,260920.0,260920.0,311,41
+StanislavGrospic.1964,regular,ps2017,71870.0,84210.0,88740.0,90270.0,90270.0,190,15

@@ -1,0 +1,5 @@
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechFilip.1955,chair,ps2017,235670.0,285170.0,335850.0,361760.0,361760.0,604,88
+MartinKolovratnik.1975,regular,ps2017,29820.0,30910.0,33620.0,34010.0,34010.0,78,2
+MikulasFerjencik.1987,regular,ps2017,31410.0,38510.0,44260.0,44260.0,44260.0,81,3
+RadimFiala.1969,regular,ps2017,45550.0,60730.0,62750.0,63060.0,63060.0,138,12

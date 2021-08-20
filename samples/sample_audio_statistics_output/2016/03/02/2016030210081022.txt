@@ -1,4 +1,4 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-AndrejBabis.1954,guest,2016-03-02T10:08:00,2016-03-02T10:22:00,131580.0,152450.0,194220.0,199020.0,199020.0,373,47
-VojtechFilip.1955,chair,2016-03-02T10:08:00,2016-03-02T10:22:00,92860.0,99590.0,124190.0,132720.0,132720.0,220,15
-RomanKubicek.1963,regular,2016-03-02T10:08:00,2016-03-02T10:22:00,231630.0,263850.0,282720.0,289520.0,289520.0,589,52
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+AndrejBabis.1954,guest,ps2013,131580.0,152450.0,194220.0,199020.0,199020.0,373,47
+VojtechFilip.1955,chair,ps2013,92860.0,99590.0,124190.0,132720.0,132720.0,220,15
+RomanKubicek.1963,regular,ps2013,231630.0,263850.0,282720.0,289520.0,289520.0,589,52

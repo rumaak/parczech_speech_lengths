@@ -1,4 +1,4 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanKlan.1982,regular,2016-03-08T16:28:00,2016-03-08T16:42:00,174540.0,223400.0,248690.0,252290.0,252290.0,560,33
-JaroslavaPokornaJermanova.1970,chair,2016-03-08T16:28:00,2016-03-08T16:42:00,4280.0,12530.0,13090.0,13090.0,13090.0,15,3
-JiriKoubek.1976,regular,2016-03-08T16:28:00,2016-03-08T16:42:00,245050.0,447400.0,474610.0,489070.0,489070.0,953,247
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanKlan.1982,regular,ps2013,174540.0,223400.0,248690.0,252290.0,252290.0,560,33
+JaroslavaPokornaJermanova.1970,chair,ps2013,4280.0,12530.0,13090.0,13090.0,13090.0,15,3
+JiriKoubek.1976,regular,ps2013,245050.0,447400.0,474610.0,489070.0,489070.0,953,247

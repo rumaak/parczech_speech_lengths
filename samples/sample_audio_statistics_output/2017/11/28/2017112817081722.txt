@@ -1,0 +1,4 @@
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+ZbynekStanjura.1964,regular,ps2017,70100.0,82540.0,91590.0,91590.0,91590.0,213,35
+VojtechFilip.1955,chair,ps2017,299400.0,356890.0,461370.0,486370.0,486370.0,779,65
+JaroslavFaltynek.1962,regular,ps2017,29160.0,36930.0,43720.0,43720.0,43720.0,75,3

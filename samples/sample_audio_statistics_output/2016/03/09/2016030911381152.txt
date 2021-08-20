@@ -1,4 +1,4 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-MartaSemelova.1960,regular,2016-03-09T11:38:00,2016-03-09T11:52:00,127550.0,155090.0,168080.0,173350.0,173350.0,309,17
-JaroslavaPokornaJermanova.1970,chair,2016-03-09T11:38:00,2016-03-09T11:52:00,7370.0,6030.0,14040.0,14040.0,14040.0,19,1
-SimeonKaramazov.1963,regular,2016-03-09T11:38:00,2016-03-09T11:52:00,354760.0,379240.0,414780.0,429400.0,429400.0,874,27
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+MartaSemelova.1960,regular,ps2013,127550.0,155090.0,168080.0,173350.0,173350.0,309,17
+JaroslavaPokornaJermanova.1970,chair,ps2013,7370.0,6030.0,14040.0,14040.0,14040.0,19,1
+SimeonKaramazov.1963,regular,ps2013,354760.0,379240.0,414780.0,429400.0,429400.0,874,27

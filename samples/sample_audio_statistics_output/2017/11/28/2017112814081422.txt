@@ -1,0 +1,4 @@
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+RadekVondracek.1973,chair,ps2017,146330.0,166720.0,207830.0,236420.0,236420.0,399,34
+MartinKolovratnik.1975,regular,ps2017,80210.0,94770.0,95610.0,97150.0,97150.0,209,11
+JaroslavFaltynek.1962,regular,ps2017,168000.0,235640.0,267820.0,278050.0,278050.0,459,39

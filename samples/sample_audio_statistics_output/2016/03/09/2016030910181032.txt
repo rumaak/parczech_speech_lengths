@@ -1,5 +1,5 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JaroslavaPokornaJermanova.1970,chair,2016-03-09T10:18:00,2016-03-09T10:32:00,82060.0,99160.0,106890.0,111560.0,111560.0,190,22
-FrantisekLaudat.1960,regular,2016-03-09T10:18:00,2016-03-09T10:32:00,56260.0,63510.0,70750.0,72050.0,72050.0,161,9
-JanHamacek.1978,chair,2016-03-09T10:18:00,2016-03-09T10:32:00,163120.0,172460.0,256460.0,326230.0,326230.0,459,52
-PavelAntonin.1962,regular,2016-03-09T10:18:00,2016-03-09T10:32:00,67830.0,79470.0,86450.0,87190.0,87190.0,195,20
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JaroslavaPokornaJermanova.1970,chair,ps2013,82060.0,99160.0,106890.0,111560.0,111560.0,190,22
+FrantisekLaudat.1960,regular,ps2013,56260.0,63510.0,70750.0,72050.0,72050.0,161,9
+JanHamacek.1978,chair,ps2013,163120.0,172460.0,256460.0,326230.0,326230.0,459,52
+PavelAntonin.1962,regular,ps2013,67830.0,79470.0,86450.0,87190.0,87190.0,195,20

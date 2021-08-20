@@ -1,4 +1,4 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-AnnaPutnova.1960,regular,2016-03-03T16:28:00,2016-03-03T16:42:00,178810.0,204060.0,236520.0,241080.0,241080.0,428,20
-VojtechFilip.1955,chair,2016-03-03T16:28:00,2016-03-03T16:42:00,22390.0,24230.0,162640.0,163650.0,163650.0,65,11
-PavelBelobradek.1976,guest,2016-03-03T16:28:00,2016-03-03T16:42:00,153740.0,190590.0,280890.0,291240.0,291240.0,598,190
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+AnnaPutnova.1960,regular,ps2013,178810.0,204060.0,236520.0,241080.0,241080.0,428,20
+VojtechFilip.1955,chair,ps2013,22390.0,24230.0,162640.0,163650.0,163650.0,65,11
+PavelBelobradek.1976,guest,ps2013,153740.0,190590.0,280890.0,291240.0,291240.0,598,190

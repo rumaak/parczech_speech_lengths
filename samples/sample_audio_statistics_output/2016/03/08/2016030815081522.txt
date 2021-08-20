@@ -1,2 +1,2 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-BohuslavSobotka.1971,guest,2016-03-08T15:08:00,2016-03-08T15:22:00,481620.0,512270.0,563720.0,568420.0,568420.0,1336,78
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+BohuslavSobotka.1971,guest,ps2013,481620.0,512270.0,563720.0,568420.0,568420.0,1336,78

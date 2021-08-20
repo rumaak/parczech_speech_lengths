@@ -1,0 +1,6 @@
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechPikal.1987,chair,ps2017,149410.0,212910.0,286510.0,327510.0,327510.0,380,39
+JanChvojka.1980,regular,ps2017,20820.0,140520.0,142500.0,142500.0,142500.0,97,33
+VojtechFilip.1955,chair,ps2017,74640.0,76540.0,121020.0,127850.0,127850.0,180,16
+LeoLuzar.1964,regular,ps2017,41630.0,46170.0,55750.0,55750.0,55750.0,155,21
+PavelBelobradek.1976,guest,ps2017,18800.0,21520.0,25420.0,25420.0,25420.0,68,7

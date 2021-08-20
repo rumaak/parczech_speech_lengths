@@ -1,5 +1,5 @@
-speaker,role,audio_start,audio_end,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-PetrBendl.1966,regular,2016-03-10T16:28:00,2016-03-10T16:42:00,88320.0,127350.0,136170.0,138120.0,138120.0,221,12
-JaroslavaPokornaJermanova.1970,chair,2016-03-10T16:28:00,2016-03-10T16:42:00,27860.0,30230.0,53780.0,53780.0,53780.0,83,18
-KarlaSlechtova.1977,regular,2016-03-10T16:28:00,2016-03-10T16:42:00,69380.0,77830.0,84240.0,84780.0,84780.0,194,16
-AntoninSeda.1960,regular,2016-03-10T16:28:00,2016-03-10T16:42:00,7730.0,8100.0,9560.0,9560.0,9560.0,19,2
+speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+PetrBendl.1966,regular,ps2013,88320.0,127350.0,136170.0,138120.0,138120.0,221,12
+JaroslavaPokornaJermanova.1970,chair,ps2013,27860.0,30230.0,53780.0,53780.0,53780.0,83,18
+KarlaSlechtova.1977,regular,ps2013,69380.0,77830.0,84240.0,84780.0,84780.0,194,16
+AntoninSeda.1960,regular,ps2013,7730.0,8100.0,9560.0,9560.0,9560.0,19,2
