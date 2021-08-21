@@ -50,34 +50,36 @@ matching is implemented in the python script itself. Last, it is important
 to note that the script accumulates statistics; running it multiple times
 without deleting previously generated output thus leads to wrong results.
 
-Now we would like to compute statistics over some time interval. For that,
-we are going to use the `scripts/aggregate_statistics.py` python script.
-We need to tell the script where the audio statistics data are stored
-(`samples/sample_audio_statistics_output`), where it should output the
-computed statistics and plots
-(`samples/sample_statistics_output/201603011358-201603231402`) and
-what is the interval over which we want to compute the statistics (note
-that the interval over which we compute the statistics is reflected
-in the output directory name).
-
-```
-scripts/aggregate_statistics.py samples/sample_audio_statistics_output samples/sample_statistics_output/201603011358-201603231402 2016-03-01T13:58:00 2016-03-23T14:02:00
-```
-
-Executing the line above leads to statistics being generated into the specified
-output directory. The statistics are computed over the interval starting at
-`2016-03-01T13:58:00` and ending at `2016-03-23T14:02:00`.
+TODO fix the `scripts/aggregate_statistics_interval.py` so that it computes
+statistics in similar manner to the second aggregation script (that computes
+statistics over all election periods)
 
 ### Computing offline statistics
 In the future, we might wish to present statistics computed over the dataset.
 It makes sense to precompute certain statistics, as they will be used often.
 We are thus going to precompute the statistics over election periods.
 
-TODO precomputing offline statistics over election periods
+To do that, we use the `scripts/aggregate_statistics_all.py` and
+`scripts/plot_statistics.py` scripts. The first one computes statistics over
+all the available data and saves them to the specified directory. Example
+usage:
+
+```
+scripts/aggregate_statistics_all.py samples/sample_audio_statistics_output samples/sample_statistics_output
+```
+
+Precomputed statistics can be found in the `precomputed/all.txt` file (path
+relative to the output directory). Even though the plotting will be
+probably done on the frontend of this projects website, we would like to have
+some plots to present before setting up the actual website. For that, the
+`scripts/plot_statistics.py` script is used - it allows us to create plots for
+a particular member of parliament.
+
+```
+scripts/plot_statistics.py samples/sample_statistics_output/precomputed/all.txt samples/sample_statistics_output/precomputed/plots JaroslavFaltynek.1962
+```
 
 ### Computing online statistics
-It is not feasible to compute the statistics over all the possible time
-intervals. For that purpose, we will use the `scripts/aggregate_statistics.py`
-script as shown in the Examples section whenever we are asked for statistics
-over a partilar time period (for example when requested from a web client).
+TODO refer to the `scripts/aggregate_statistics_interval.py` example (will
+be added ASAP)
 

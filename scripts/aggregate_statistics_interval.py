@@ -9,9 +9,15 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# The script expects path to the audio files, output directory and a time
-# interval, over over which the data should be aggregated (two separate
-# arguments).
+
+
+# TODO THIS SCRIPT SHOULDN'T BE USED AS OF RIGHT NOW
+
+
+
+# The script expects paths to an audio file directory, an output directory
+# and a time interval (two additional arguments, start and end). The script
+# computes the statistics over the specified interval.
 # 
 # Example of proper datetime (ISO 8601):
 # 2021-08-13T03:34:17
@@ -21,16 +27,28 @@ import matplotlib.pyplot as plt
 
 # TODO ms aren't probably very good way to measure the lenghts of speeches
 
-class Aggregator:
+class IntervalAggregator:
     def __init__(self, input_dir, output_dir, start, end):
-        self.input_dir = os.path.relpath(input_dir)
-        self.output_dir = os.path.relpath(output_dir)
         self.start = datetime.strptime(start, "%Y-%m-%dT%H:%M:%S")
         self.end = datetime.strptime(end, "%Y-%m-%dT%H:%M:%S")
+
+        self.input_dir = os.path.relpath(input_dir)
+        self.output_dir = self.resolve_output_dir(output_dir)
 
         self.total_length = dict()
         self.relative_diff = dict()
         self.words = dict()
+
+    def resolve_output_dir(self, output_dir):
+        start = self.start.strftime("%Y%m%d%H%M")
+        end = self.end.strftime("%Y%m%d%H%M")
+
+        path_to_dir = os.path.join(
+            output_dir,
+            start + "-" + end
+        )
+
+        return path_to_dir
 
     def tables_plots(self):
         self.speech_length_statistics()
@@ -397,10 +415,10 @@ class Aggregator:
 
 if __name__ == "__main__":
     args = sys.argv[1:]
+    # Compute over specified interval
     if len(args) == 4:
-        agg = Aggregator(args[0], args[1], args[2], args[3])
+        agg = IntervalAggregator(args[0], args[1], args[2], args[3])
         agg.aggregate()
         agg.tables_plots()
     else:
         print("Incorrect number of args")
-
