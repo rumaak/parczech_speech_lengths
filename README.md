@@ -90,7 +90,7 @@ are computed.
 Now we are going to plot these results. Running
 
 ```
-cripts/plot_statistics.py samples/sample_statistics_output/201603011358-201603231402/all.txt samples/sample_statistics_output/201603011358-201603231402/plots speaker JaroslavFaltynek.1962
+scripts/plot_statistics.py samples/sample_statistics_output/201603011358-201603231402/all.txt samples/sample_statistics_output/201603011358-201603231402/plots speaker JaroslavFaltynek.1962
 ```
 
 results in plots of the statistics over the given time interval for MoP with
