@@ -50,36 +50,55 @@ matching is implemented in the python script itself. Last, it is important
 to note that the script accumulates statistics; running it multiple times
 without deleting previously generated output thus leads to wrong results.
 
-TODO fix the `scripts/aggregate_statistics_interval.py` so that it computes
-statistics in similar manner to the second aggregation script (that computes
-statistics over all election periods)
-
-### Computing offline statistics
-In the future, we might wish to present statistics computed over the dataset.
-It makes sense to precompute certain statistics, as they will be used often.
-We are thus going to precompute the statistics over election periods.
-
-To do that, we use the `scripts/aggregate_statistics_all.py` and
-`scripts/plot_statistics.py` scripts. The first one computes statistics over
-all the available data and saves them to the specified directory. Example
-usage:
+Now we would like to compute some statistics from the available data. First,
+we are going to compute the statistics over all the data we have. Because
+this can be done in advance and the results will be probably reused many
+times, we will refer to this as the _precomputation_.
 
 ```
 scripts/aggregate_statistics_all.py samples/sample_audio_statistics_output samples/sample_statistics_output
 ```
 
-Precomputed statistics can be found in the `precomputed/all.txt` file (path
-relative to the output directory). Even though the plotting will be
-probably done on the frontend of this projects website, we would like to have
-some plots to present before setting up the actual website. For that, the
-`scripts/plot_statistics.py` script is used - it allows us to create plots for
-a particular member of parliament.
+Inside the `samples/sample_audio_statistics_output` a new directory
+`precomputed` was created, with a single file - `all.txt`. This file contains
+statistics for all the members of parliament. Now we would like to visualize
+the results we obtained. For that, the `scripts/plot_statistics.py` script
+is used.
 
 ```
-scripts/plot_statistics.py samples/sample_statistics_output/precomputed/all.txt samples/sample_statistics_output/precomputed/plots JaroslavFaltynek.1962
+scripts/plot_statistics.py samples/sample_statistics_output/precomputed/all.txt samples/sample_statistics_output/precomputed/plots term JaroslavFaltynek.1962
 ```
 
-### Computing online statistics
-TODO refer to the `scripts/aggregate_statistics_interval.py` example (will
-be added ASAP)
+The meaning of each argument is described in the script. The line above will
+produce plots of the precomputed statistics for MoP with id
+`JaroslavFaltynek.1962`. We can thus obtain some basic statistics about any
+MoP.
+
+Second, we would like to compute the same statistics but over a custom
+time period.
+
+```
+scripts/aggregate_statistics_interval.py samples/sample_audio_statistics_output samples/sample_statistics_output 2016-03-01T13:58:00 2016-03-23T14:02:00
+```
+
+Executing the line above leads to statistics being computed in the same
+manner as before, with the only difference that only the audio files from
+the specified time interval are included. The results are saved into a
+directory whose name reflects the time period over which the statistics
+are computed.
+
+Now we are going to plot these results. Running
+
+```
+cripts/plot_statistics.py samples/sample_statistics_output/201603011358-201603231402/all.txt samples/sample_statistics_output/201603011358-201603231402/plots speaker JaroslavFaltynek.1962
+```
+
+results in plots of the statistics over the given time interval for MoP with
+id `JaroslavFaltynek.1962`. Moreover, we can specify multiple MoPs:
+
+```
+scripts/plot_statistics.py samples/sample_statistics_output/201603011358-201603231402/all.txt samples/sample_statistics_output/201603011358-201603231402/plots speaker JaroslavFaltynek.1962 JiriStetina.1941
+```
+
+This enables us to compare the statistics between multiple MoPs.
 

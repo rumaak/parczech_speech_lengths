@@ -4,16 +4,11 @@ import sys
 import os
 from datetime import datetime, date, time
 from pathlib import Path
+from copy import deepcopy
 
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-
-
-
-# TODO THIS SCRIPT SHOULDN'T BE USED AS OF RIGHT NOW
-
-
 
 # The script expects paths to an audio file directory, an output directory
 # and a time interval (two additional arguments, start and end). The script
@@ -33,294 +28,147 @@ class IntervalAggregator:
         self.end = datetime.strptime(end, "%Y-%m-%dT%H:%M:%S")
 
         self.input_dir = os.path.relpath(input_dir)
-        self.output_dir = self.resolve_output_dir(output_dir)
+        self.output_dir = os.path.relpath(output_dir)
 
         self.total_length = dict()
         self.relative_diff = dict()
         self.words = dict()
 
-    def resolve_output_dir(self, output_dir):
-        start = self.start.strftime("%Y%m%d%H%M")
-        end = self.end.strftime("%Y%m%d%H%M")
-
-        path_to_dir = os.path.join(
-            output_dir,
-            start + "-" + end
-        )
-
-        return path_to_dir
-
-    def tables_plots(self):
-        self.speech_length_statistics()
-        self.relative_diff_statistics()
-        self.word_statistics()
-
-        # TODO add plotting other statistics
-
     def aggregate(self):
+        # accumulate the data from audio files
         for audio in self.correct_audios():
             data_df = pd.read_csv(audio)
             data_df.apply(self.compute_total_length, axis=1)
             data_df.apply(self.compute_relative_difference, axis=1)
             data_df.apply(self.compute_word_statistics, axis=1)
 
-            # TODO add computing other statistics
+        # create a file with accumulated values
+        statistics_df = pd.DataFrame()
+        for period in self.total_length:
+            length_period = self.total_length[period]
+            for speaker in length_period:
+                length_speaker = length_period[speaker]
+                for role in length_speaker:
+                    length = length_speaker[role]
+                    diff = self.relative_diff[period][speaker][role]
+                    words = self.words[period][speaker][role]
 
-    def word_statistics(self):
-        for role in self.words:
-            # make sure directory exists
-            path_to_dir = os.path.join(self.output_dir, "words")
-            Path(path_to_dir).mkdir(parents=True, exist_ok=True)
+                    up = diff["utterance-paragraph"] / length["utterance"]
+                    ps = diff["paragraph-sentence"] / length["paragraph"]
+                    sw = diff["sentence-word"] / length["sentence"]
 
-            # tables
-            statistics_df = pd.DataFrame()
-            for speaker in self.words[role]["word_count"]:
-                count = self.words[role]["word_count"][speaker]
-                anchor = self.words[role]["no_anchor"][speaker]
-                length = self.total_length[role]["utterance"][speaker]
+                    count = words["word_count"]
+                    anchor = words["no_anchor"]
+                    minutes = self.to_minutes(length["utterance"])
 
-                statistics_df = statistics_df.append({
-                    "speaker": speaker,
-                    "unanchored": anchor / count,
-                    "words_per_minute": count / self.to_minutes(length)
-                }, ignore_index=True)
+                    statistics_df = statistics_df.append({
+                        "election_period": period,
+                        "speaker": speaker,
+                        "role": role,
+                        "length_word": length["word"],
+                        "length_sentence": length["sentence"],
+                        "length_paragraph": length["paragraph"],
+                        "length_utterance": length["utterance"],
+                        "utterance-paragraph": up,
+                        "paragraph-sentence": ps,
+                        "sentence-word": sw,
+                        "unanchored": anchor / count,
+                        "words_per_minute": count / minutes
+                    }, ignore_index=True)
 
-            path = os.path.join(path_to_dir, role + ".txt")
-            statistics_df.to_csv(path, index=False)
+        # make sure the directory exists
+        path_to_dir = self.resolve_output_dir()
+        Path(path_to_dir).mkdir(parents=True, exist_ok=True)
 
-            # plots
-            plot1_df = pd.DataFrame()
-            plot2_df = pd.DataFrame()
-            for speaker in self.words[role]["word_count"]:
-                count = self.words[role]["word_count"][speaker]
-                anchor = self.words[role]["no_anchor"][speaker]
-                length = self.total_length[role]["utterance"][speaker]
-
-                plot1_df = plot1_df.append({
-                    "speaker": speaker,
-                    "unanchored": anchor / count
-                }, ignore_index=True)
-
-                plot2_df = plot2_df.append({
-                    "speaker": speaker,
-                    "words_per_minute": count / self.to_minutes(length)
-                }, ignore_index=True)
-
-            plot1_df = plot1_df.sort_values(by=["unanchored"], ascending=False)
-            plot2_df = plot2_df.sort_values(by=["words_per_minute"], ascending=False)
-
-            # unanchored plot
-            sns.set_theme()
-            sns.set_context("paper")
-            sns_plot = sns.catplot(
-                x="speaker",
-                y="unanchored",
-                kind="bar",
-                data=plot1_df
-            )
-            sns_plot.set_xticklabels(rotation=90)
-
-            path = os.path.join(path_to_dir, role + "-unanchored" + ".png")
-            sns_plot.savefig(path)
-            plt.clf()
-
-            # words_per_minute plot
-            sns.set_theme()
-            sns.set_context("paper")
-            sns_plot = sns.catplot(
-                x="speaker",
-                y="words_per_minute",
-                kind="bar",
-                data=plot2_df
-            )
-            sns_plot.set_xticklabels(rotation=90)
-
-            path = os.path.join(path_to_dir, role + "-wpm" + ".png")
-            sns_plot.savefig(path)
+        path = os.path.join(path_to_dir, "all.txt")
+        statistics_df.to_csv(path, index=False)
 
     def to_minutes(self, length):
         seconds = length / 1000
         minutes = seconds / 60
         return minutes
 
-    def relative_diff_statistics(self):
-        for role in self.total_length:
-            # make sure directory exists
-            path_to_dir = os.path.join(self.output_dir, "relative_diff")
-            Path(path_to_dir).mkdir(parents=True, exist_ok=True)
-
-            # tables
-            statistics_df = pd.DataFrame()
-            for speaker in self.relative_diff[role]["sentence-word"]:
-                sw = self.calculate_rel_diff(speaker, role, "sentence-word", "sentence")
-                ps = self.calculate_rel_diff(speaker, role, "paragraph-sentence", "paragraph")
-                up = self.calculate_rel_diff(speaker, role, "utterance-paragraph", "utterance")
-
-                statistics_df = statistics_df.append({
-                    "speaker": speaker,
-                    "sentence-word": sw,
-                    "paragraph-sentence": ps,
-                    "utterance-paragraph": up
-                }, ignore_index=True)
-
-            path = os.path.join(path_to_dir, role + ".txt")
-            statistics_df.to_csv(path, index=False)
-
-            # plots
-            plot_df = pd.DataFrame()
-            for stat in self.relative_diff[role]:
-                for speaker in self.relative_diff[role][stat]:
-                    val = self.calculate_rel_diff(
-                        speaker, 
-                        role, 
-                        stat, 
-                        self.decide_stat_total(stat)
-                    )
-                    plot_df = plot_df.append({
-                        "speaker": speaker,
-                        "stat": stat,
-                        "difference": val
-                    }, ignore_index=True)
-            plot_df = plot_df.sort_values(by=["difference"], ascending=False)
-
-            sns.set_theme()
-            sns.set_context("paper")
-            sns_plot = sns.catplot(
-                x="speaker",
-                y="difference",
-                hue="stat",
-                kind="bar",
-                data=plot_df
-            )
-            sns_plot.set_xticklabels(rotation=90)
-
-            path = os.path.join(path_to_dir, role + ".png")
-            sns_plot.savefig(path)
-
-    def decide_stat_total(self, stat):
-        return stat.split("-")[0]
-
-    def calculate_rel_diff(self, speaker, role, stat, stat_total):
-        total_diff = self.relative_diff[role][stat][speaker]
-        total_length = self.total_length[role][stat_total][speaker]
-        rel_diff =  total_diff / total_length
-        return rel_diff
-
-    def speech_length_statistics(self):
-        for role in self.total_length:
-            # make sure directory exists
-            path_to_dir = os.path.join(self.output_dir, "total_length")
-            Path(path_to_dir).mkdir(parents=True, exist_ok=True)
-
-            # tables
-            statistics_df = pd.DataFrame()
-            for speaker in self.total_length[role]["word"]:
-                statistics_df = statistics_df.append({
-                    "speaker": speaker,
-                    "word": self.total_length[role]["word"][speaker],
-                    "sentence": self.total_length[role]["sentence"][speaker],
-                    "paragraph": self.total_length[role]["paragraph"][speaker],
-                    "utterance": self.total_length[role]["utterance"][speaker]
-                }, ignore_index=True)
-
-            path = os.path.join(path_to_dir, role + ".txt")
-            statistics_df.to_csv(path, index=False)
-
-            # plots
-            plot_df = pd.DataFrame()
-            for stat in self.total_length[role]:
-                for speaker in self.total_length[role][stat]:
-                    val = self.total_length[role][stat][speaker]
-                    plot_df = plot_df.append({
-                        "speaker": speaker,
-                        "stat": stat,
-                        "length": val
-                    }, ignore_index=True)
-            plot_df = plot_df.sort_values(by=["length"], ascending=False)
-
-            sns.set_theme()
-            sns.set_context("paper")
-            sns_plot = sns.catplot(
-                x="speaker",
-                y="length",
-                hue="stat",
-                kind="bar",
-                data=plot_df
-            )
-            sns_plot.set_xticklabels(rotation=90)
-
-            path = os.path.join(path_to_dir, role + ".png")
-            sns_plot.savefig(path)
-
     def compute_word_statistics(self, row):
         speaker, role = row["speaker"], row["role"]
-        self.check_speaker_role_word(speaker, role)
+        period = row["election_period"]
+
+        default_values = {
+            "word_count": 0,
+            "no_anchor": 0
+        }
+        self.check_field_exists(
+            self.words,
+            default_values,
+            speaker,
+            role,
+            period
+        )
+
+        words = self.words[period][speaker][role]
         
-        self.words[role]["word_count"][speaker] += row["word_count"]
-        self.words[role]["no_anchor"][speaker] += row["no_anchor"]
+        words["word_count"] += row["word_count"]
+        words["no_anchor"] += row["no_anchor"]
 
     def compute_relative_difference(self, row):
         speaker, role = row["speaker"], row["role"]
-        self.check_speaker_role_diff(speaker, role)
+        period = row["election_period"]
 
-        up = self.relative_diff[role]["utterance-paragraph"]
-        ps = self.relative_diff[role]["paragraph-sentence"]
-        sw = self.relative_diff[role]["sentence-word"]
+        default_values = {
+            "utterance-paragraph": 0,
+            "paragraph-sentence": 0,
+            "sentence-word": 0
+        }
+        self.check_field_exists(
+            self.relative_diff,
+            default_values,
+            speaker,
+            role,
+            period
+        )
 
-        up[speaker] += row["utterance"] - row["paragraph"]
-        ps[speaker] += row["paragraph"] - row["sentence"]
-        sw[speaker] += row["sentence"] - row["word"]
+        relative_diff = self.relative_diff[period][speaker][role]
+
+        relative_diff["utterance-paragraph"] += row["utterance"] - row["paragraph"]
+        relative_diff["paragraph-sentence"] += row["paragraph"] - row["sentence"]
+        relative_diff["sentence-word"] += row["sentence"] - row["word"]
 
     def compute_total_length(self, row):
-        speaker, role = row["speaker"], row["role"]
-        self.check_speaker_role_length(speaker, role)
+        speaker, role = row["speaker"], row["role"] 
+        period = row["election_period"]
 
-        self.total_length[role]["word"][speaker] += row["word"]
-        self.total_length[role]["sentence"][speaker] += row["sentence"]
-        self.total_length[role]["paragraph"][speaker] += row["paragraph"]
-        self.total_length[role]["utterance"][speaker] += row["utterance"]
+        default_values = {
+            "word": 0,
+            "sentence": 0,
+            "paragraph": 0,
+            "utterance": 0
+        }
+        self.check_field_exists(
+            self.total_length,
+            default_values,
+            speaker,
+            role,
+            period
+        )
 
-    def check_speaker_role_word(self, speaker, role):
-        if not (role in self.words):
-            self.words[role] = {
-                "word_count": dict(),
-                "no_anchor": dict()
-            }
+        length = self.total_length[period][speaker][role]
 
-        # it is enough to check just one field
-        if not (speaker in self.words[role]["word_count"]):
-            self.words[role]["word_count"][speaker] = 0
-            self.words[role]["no_anchor"][speaker] = 0
+        length["word"] += row["word"]
+        length["sentence"] += row["sentence"]
+        length["paragraph"] += row["paragraph"]
+        length["utterance"] += row["utterance"]
 
-    def check_speaker_role_diff(self, speaker, role):
-        if not (role in self.relative_diff):
-            self.relative_diff[role] = {
-                "utterance-paragraph": dict(),
-                "paragraph-sentence": dict(),
-                "sentence-word": dict()
-            }
+    def check_field_exists(self, field, values, speaker, role, period):
+        """Ensure there is a field in the field dict corresponding to this speaker, role and period."""
+        if not (period in field):
+            field[period] = dict()
+        field_period = field[period]
 
-        # it is enough to check just one field
-        if not (speaker in self.relative_diff[role]["sentence-word"]):
-            self.relative_diff[role]["utterance-paragraph"][speaker] = 0
-            self.relative_diff[role]["paragraph-sentence"][speaker] = 0
-            self.relative_diff[role]["sentence-word"][speaker] = 0
+        if not (speaker in field_period):
+            field_period[speaker] = dict()
+        field_speaker = field_period[speaker]
 
-    def check_speaker_role_length(self, speaker, role):
-        if not (role in self.total_length):
-            self.total_length[role] = {
-                "word": dict(),
-                "sentence": dict(),
-                "paragraph": dict(),
-                "utterance": dict()
-            }
-
-        # it is enough to check just one field
-        if not (speaker in self.total_length[role]["word"]):
-            self.total_length[role]["word"][speaker] = 0
-            self.total_length[role]["sentence"][speaker] = 0
-            self.total_length[role]["paragraph"][speaker] = 0
-            self.total_length[role]["utterance"][speaker] = 0
+        if not (role in field_speaker):
+            field_speaker[role] = values.copy()
 
     # TODO this looks bad, don't know how to make prettier yet simple
     def correct_audios(self):
@@ -413,12 +261,21 @@ class IntervalAggregator:
         before_end = int(year) <= self.end.year
         return after_start and before_end
 
+    def resolve_output_dir(self):
+        start = self.start.strftime("%Y%m%d%H%M")
+        end = self.end.strftime("%Y%m%d%H%M")
+
+        path_to_dir = os.path.join(
+            self.output_dir,
+            start + "-" + end
+        )
+
+        return path_to_dir
+
 if __name__ == "__main__":
     args = sys.argv[1:]
-    # Compute over specified interval
     if len(args) == 4:
         agg = IntervalAggregator(args[0], args[1], args[2], args[3])
         agg.aggregate()
-        agg.tables_plots()
     else:
         print("Incorrect number of args")

@@ -9,18 +9,36 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # The script expects paths to a file with precomputed values, an output
-# directory and an id of an MoP. It generates plots for this particular
-# MoP.
+# directory, a string indicating whether we want to compare between MoPs
+# or election periods, and ids of one or more MoPs. It generates plots for
+# these particular MoPs.
+#
+# The indication string can have one of two values:
+# speaker
+# term
 
 class Plotter:
-    def __init__(self, file_in, output_dir, mop):
+    def __init__(self, file_in, output_dir, compare_by, mops):
+        assert compare_by in ["speaker", "term"]
+
         self.file_in = file_in
         self.output_dir = output_dir
-        self.mop = mop
+        self.mops = mops
+
+        if compare_by == "speaker":
+            self.x = "speaker"
+        else:
+            self.x = "election_period"
+
+        if len(mops) == 1:
+            self.dir_name = mops[0]
+        else:
+            self.dir_name = "multiple"
+
 
     def plot(self):
         data_df = pd.read_csv(self.file_in)
-        speaker_df = data_df.loc[data_df["speaker"] == self.mop]
+        speaker_df = data_df.loc[data_df["speaker"].isin(self.mops)]
 
         # Plots are in general divided by role
         roles = speaker_df.role.unique()
@@ -28,7 +46,7 @@ class Plotter:
             role_df = speaker_df.loc[speaker_df["role"] == role]
 
             # make sure directory exists
-            path_to_dir = os.path.join(self.output_dir, self.mop, role)
+            path_to_dir = os.path.join(self.output_dir, self.dir_name, role)
             Path(path_to_dir).mkdir(parents=True, exist_ok=True)
 
             # plots
@@ -51,11 +69,11 @@ class Plotter:
             stat_df["statistic"] = stat
             stat_df.rename(columns={stat: "length"}, inplace=True)
             plot_df = pd.concat([plot_df, stat_df])
-        plot_df = plot_df.sort_values(by=["election_period"], ascending=True)
+        plot_df = plot_df.sort_values(by=[self.x], ascending=True)
 
         sns.set_theme()
         sns_plot = sns.catplot(
-            x="election_period",
+            x=self.x,
             y="length",
             hue="statistic",
             kind="bar",
@@ -78,11 +96,11 @@ class Plotter:
             stat_df["statistic"] = stat
             stat_df.rename(columns={stat: "difference"}, inplace=True)
             plot_df = pd.concat([plot_df, stat_df])
-        plot_df = plot_df.sort_values(by=["election_period"], ascending=True)
+        plot_df = plot_df.sort_values(by=[self.x], ascending=True)
 
         sns.set_theme()
         sns_plot = sns.catplot(
-            x="election_period",
+            x=self.x,
             y="difference",
             hue="statistic",
             kind="bar",
@@ -93,11 +111,11 @@ class Plotter:
         sns_plot.savefig(path)
 
     def plot_unanchored(self, role_df, path_to_dir):
-        plot_df = role_df.sort_values(by=["election_period"], ascending=True)
+        plot_df = role_df.sort_values(by=[self.x], ascending=True)
 
         sns.set_theme()
         sns_plot = sns.catplot(
-            x="election_period",
+            x=self.x,
             y="unanchored",
             kind="bar",
             data=plot_df
@@ -107,11 +125,11 @@ class Plotter:
         sns_plot.savefig(path)
 
     def plot_wpm(self, role_df, path_to_dir):
-        plot_df = role_df.sort_values(by=["election_period"], ascending=True)
+        plot_df = role_df.sort_values(by=[self.x], ascending=True)
 
         sns.set_theme()
         sns_plot = sns.catplot(
-            x="election_period",
+            x=self.x,
             y="words_per_minute",
             kind="bar",
             data=plot_df
@@ -122,8 +140,8 @@ class Plotter:
 
 if __name__ == "__main__":
     args = sys.argv[1:]
-    if len(args) == 3:
-        plotter = Plotter(args[0], args[1], args[2])
+    if len(args) >= 4:
+        plotter = Plotter(args[0], args[1], args[2], args[3:])
         plotter.plot()
     else:
         print("Incorrect number of args")
