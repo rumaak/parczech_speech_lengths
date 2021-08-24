@@ -13,8 +13,9 @@ import matplotlib.pyplot as plt
 # The script expects paths to an audio file directory and an output directory.
 # The script precomputes the statistics over election periods and saves
 # them to the output directory.
-
-# TODO ms aren't probably very good way to measure the lenghts of speeches
+#
+# Note that as opposed to the audio files, the total speaking times (per word,
+# sentence, paragraph, utterance) are measured in hours, not milliseconds.
 
 class TermAggregator:
     def __init__(self, input_dir, output_dir):
@@ -56,10 +57,10 @@ class TermAggregator:
                         "election_period": period,
                         "speaker": speaker,
                         "role": role,
-                        "length_word": length["word"],
-                        "length_sentence": length["sentence"],
-                        "length_paragraph": length["paragraph"],
-                        "length_utterance": length["utterance"],
+                        "length_word": self.to_hours(length["word"]),
+                        "length_sentence": self.to_hours(length["sentence"]),
+                        "length_paragraph": self.to_hours(length["paragraph"]),
+                        "length_utterance": self.to_hours(length["utterance"]),
                         "utterance-paragraph": up,
                         "paragraph-sentence": ps,
                         "sentence-word": sw,
@@ -78,6 +79,12 @@ class TermAggregator:
         seconds = length / 1000
         minutes = seconds / 60
         return minutes
+
+    def to_hours(self, length):
+        seconds = length / 1000
+        minutes = seconds / 60
+        hours = minutes / 60
+        return hours
 
     def compute_word_statistics(self, row):
         speaker, role = row["speaker"], row["role"]

@@ -19,8 +19,9 @@ import matplotlib.pyplot as plt
 #
 # Statistics of an audio are used only if both audio start and end belong
 # to the said interval (makes more sense as audio files overlap)
-
-# TODO ms aren't probably very good way to measure the lenghts of speeches
+#
+# Note that as opposed to the audio files, the total speaking times (per word,
+# sentence, paragraph, utterance) are measured in hours, not milliseconds.
 
 class IntervalAggregator:
     def __init__(self, input_dir, output_dir, start, end):
@@ -65,10 +66,10 @@ class IntervalAggregator:
                         "election_period": period,
                         "speaker": speaker,
                         "role": role,
-                        "length_word": length["word"],
-                        "length_sentence": length["sentence"],
-                        "length_paragraph": length["paragraph"],
-                        "length_utterance": length["utterance"],
+                        "length_word": self.to_hours(length["word"]),
+                        "length_sentence": self.to_hours(length["sentence"]),
+                        "length_paragraph": self.to_hours(length["paragraph"]),
+                        "length_utterance": self.to_hours(length["utterance"]),
                         "utterance-paragraph": up,
                         "paragraph-sentence": ps,
                         "sentence-word": sw,
@@ -87,6 +88,12 @@ class IntervalAggregator:
         seconds = length / 1000
         minutes = seconds / 60
         return minutes
+
+    def to_hours(self, length):
+        seconds = length / 1000
+        minutes = seconds / 60
+        hours = minutes / 60
+        return hours
 
     def compute_word_statistics(self, row):
         speaker, role = row["speaker"], row["role"]
