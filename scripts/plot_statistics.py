@@ -27,8 +27,10 @@ class Plotter:
 
         if compare_by == "speaker":
             self.x = "speaker"
+            self.x_label = "Speaker"
         else:
             self.x = "election_period"
+            self.x_label = "Election period"
 
         if len(mops) == 1:
             self.dir_name = mops[0]
@@ -60,8 +62,15 @@ class Plotter:
             "length_word",
             "length_sentence",
             "length_paragraph",
-            "length_utterance",
+            "length_utterance"
         ]
+
+        stats_labels = {
+            "length_word": "Word",
+            "length_sentence": "Sentence",
+            "length_paragraph": "Paragraph",
+            "length_utterance": "Utterance"
+        }
 
         plot_df = pd.DataFrame()
         for stat in length_stats:
@@ -79,6 +88,7 @@ class Plotter:
             kind="bar",
             data=plot_df
         )
+        sns_plot.set_axis_labels(x_var=self.x_label, y_var="Speaking time [h]")
 
         path = os.path.join(path_to_dir, "total_length.png")
         sns_plot.savefig(path)
@@ -106,6 +116,7 @@ class Plotter:
             kind="bar",
             data=plot_df
         )
+        sns_plot.set_axis_labels(x_var=self.x_label, y_var="Relative difference")
 
         path = os.path.join(path_to_dir, "relative_diff.png")
         sns_plot.savefig(path)
@@ -120,6 +131,7 @@ class Plotter:
             kind="bar",
             data=plot_df
         )
+        sns_plot.set_axis_labels(x_var=self.x_label, y_var="Percentage of unanchored words")
 
         path = os.path.join(path_to_dir, "unanchored.png")
         sns_plot.savefig(path)
@@ -134,6 +146,7 @@ class Plotter:
             kind="bar",
             data=plot_df
         )
+        sns_plot.set_axis_labels(x_var=self.x_label, y_var="Words per minute")
 
         path = os.path.join(path_to_dir, "wpm.png")
         sns_plot.savefig(path)
