@@ -1,6 +1,15 @@
 # ParCzech speech lengths
 Compute speech lengths of members of parliament.
 
+### Installation
+Clone this repository, install dependencies in `requirements.txt`.
+
+Install this package:
+
+```
+pip install -e .
+```
+
 ### Examples
 An example of corpus data is available in the `samples/sample_input`
 directory. To apply XSLT transformation extracting time-related data
