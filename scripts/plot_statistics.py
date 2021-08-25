@@ -66,25 +66,26 @@ class Plotter:
         ]
 
         stats_labels = {
-            "length_word": "Word",
-            "length_sentence": "Sentence",
-            "length_paragraph": "Paragraph",
-            "length_utterance": "Utterance"
+            "length_word": "Words",
+            "length_sentence": "Sentences",
+            "length_paragraph": "Paragraphs",
+            "length_utterance": "Utterances"
         }
 
         plot_df = pd.DataFrame()
         for stat in length_stats:
             stat_df = role_df.loc[:,["speaker","election_period",stat]]
-            stat_df["statistic"] = stat
+            stat_df["statistic"] = stats_labels[stat]
             stat_df.rename(columns={stat: "length"}, inplace=True)
             plot_df = pd.concat([plot_df, stat_df])
         plot_df = plot_df.sort_values(by=[self.x], ascending=True)
+        plot_df.rename(columns={"statistic": "Measured across"}, inplace=True)
 
         sns.set_theme()
         sns_plot = sns.catplot(
             x=self.x,
             y="length",
-            hue="statistic",
+            hue="Measured across",
             kind="bar",
             data=plot_df
         )
@@ -100,19 +101,26 @@ class Plotter:
             "sentence-word"
         ]
 
+        stats_labels = {
+            "utterance-paragraph": "Utterance vs paragraph",
+            "paragraph-sentence": "Paragraph vs sentence",
+            "sentence-word": "Sentence vs word"
+        }
+
         plot_df = pd.DataFrame()
         for stat in diff_stats:
             stat_df = role_df.loc[:,["speaker","election_period",stat]]
-            stat_df["statistic"] = stat
+            stat_df["statistic"] = stats_labels[stat]
             stat_df.rename(columns={stat: "difference"}, inplace=True)
             plot_df = pd.concat([plot_df, stat_df])
         plot_df = plot_df.sort_values(by=[self.x], ascending=True)
+        plot_df.rename(columns={"statistic": "Comparing"}, inplace=True)
 
         sns.set_theme()
         sns_plot = sns.catplot(
             x=self.x,
             y="difference",
-            hue="statistic",
+            hue="Comparing",
             kind="bar",
             data=plot_df
         )

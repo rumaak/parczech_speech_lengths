@@ -20,7 +20,6 @@ What is missing in the examples, what will be added, in general important things
 
 - the way the data is displayed on a website will probably differ from the way they are displayed here, especially the design might change significantly; however, it is desirable the examples here contain roughly the same data as the website will contain (that is what is plotted, etc.)
 - the examples are missing a header with info about the speaker; will be added
-- the plots are very rough (legends,...); will make more user-friendly
 - there are very little statistics right now; will add more, for example:
   - difference between the speed of speaking throughout the day (not trivial; needs to account for different speakers etc.)
   - compare the statistics between different genders, age groups, parties,...
