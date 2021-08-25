@@ -75,7 +75,7 @@ the results we obtained. For that, the `scripts/plot_statistics.py` script
 is used.
 
 ```
-scripts/plot_statistics.py samples/sample_statistics_output/precomputed/all.txt samples/sample_statistics_output/precomputed/plots term JaroslavFaltynek.1962
+scripts/plot_statistics.py samples/sample_statistics_output/precomputed/all.txt samples/sample_statistics_output/precomputed/plots/JaroslavFaltynek.1962 term JaroslavFaltynek.1962
 ```
 
 The meaning of each argument is described in the script. The line above will
@@ -99,14 +99,14 @@ are computed.
 Now we are going to plot these results. Running
 
 ```
-scripts/plot_statistics.py samples/sample_statistics_output/201603011358-201603231402/all.txt samples/sample_statistics_output/201603011358-201603231402/plots speaker JaroslavFaltynek.1962
+scripts/plot_statistics.py samples/sample_statistics_output/201603011358-201603231402/all.txt samples/sample_statistics_output/201603011358-201603231402/plots/JaroslavFaltynek.1962 speaker JaroslavFaltynek.1962
 ```
 
 results in plots of the statistics over the given time interval for MoP with
 id `JaroslavFaltynek.1962`. Moreover, we can specify multiple MoPs:
 
 ```
-scripts/plot_statistics.py samples/sample_statistics_output/201603011358-201603231402/all.txt samples/sample_statistics_output/201603011358-201603231402/plots speaker JaroslavFaltynek.1962 JiriStetina.1941
+scripts/plot_statistics.py samples/sample_statistics_output/201603011358-201603231402/all.txt samples/sample_statistics_output/201603011358-201603231402/plots/multiple speaker JaroslavFaltynek.1962 JiriStetina.1941
 ```
 
 This enables us to compare the statistics between multiple MoPs.
