@@ -12,6 +12,8 @@ __JaroslavFaltynek.1962_interval__: Statistics for a single member of parliament
 
 __multiple_interval__: Statistics for multiple members of parliament computed over a custom time interval.
 
+__top_interval__: Members are selected for each metric independently based on the values of that statistic for these members; top scoring members are selected.
+
 We expect there will be a one page with statistics for every member of parliament and one page for comparing multiple members of parliament. It should be clear which example above belongs to which category.
 
 ### Notes
@@ -25,5 +27,6 @@ What is missing in the examples, what will be added, in general important things
   - compare the statistics between different genders, age groups, parties,...
   - ...
 - currently, the statistics for multiple people are visualized only over a particular interval, as opposed to statistics for single person, which have an all-time variant
-- we would like to have an example where members of parliament with most extreme values of individual metrics are shown (e.g. five fastest speakers)
+- as of now, in the `top_interval.md` example we sort only by `Sentence vs word`; it wouldn't be a problem to add sorting by the other two statistics too, but it would lead to many plots
+- another issue of `top_interval.md` (at the time of writing also mentioned in a Github issue) is wpm statistics being broken because of one of the MoPs short speech with many unanchored words
 

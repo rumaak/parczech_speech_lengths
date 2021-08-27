@@ -111,3 +111,12 @@ scripts/plot_statistics.py samples/sample_statistics_output/201603011358-2016032
 
 This enables us to compare the statistics between multiple MoPs.
 
+Comparing between multiple selected MoPs is nice, but we would like to have
+some default interesting selection of MoPs to plot the data for. Top
+performers in terms of individual metrics would seem like a good start. We
+are thus going to plot those:
+
+```
+scripts/plot_top.py samples/sample_statistics_output/201603011358-201603231402/all.txt samples/sample_statistics_output/201603011358-201603231402/plots/top
+```
+
