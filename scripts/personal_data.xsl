@@ -17,8 +17,6 @@
 
     <!-- Header row -->
     <xsl:template match="/">
-        <!-- TODO affliations -->
-
         <xsl:text>id&#x9;</xsl:text>
         <xsl:text>surname&#x9;</xsl:text>
         <xsl:text>forename&#x9;</xsl:text>
