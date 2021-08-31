@@ -19,8 +19,8 @@
         <xsl:text>name_cs&#x9;</xsl:text>
         <xsl:text>name_en&#x9;</xsl:text>
         <xsl:text>name_short&#x9;</xsl:text>
-        <xsl:text>to&#x9;</xsl:text>
         <xsl:text>from&#x9;</xsl:text>
+        <xsl:text>to&#x9;</xsl:text>
         <xsl:text>&#xA;</xsl:text>
 
         <xsl:apply-templates/>
