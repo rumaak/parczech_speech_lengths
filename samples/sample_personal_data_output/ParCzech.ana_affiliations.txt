@@ -1,4 +1,4 @@
-id	type	name_cs	name_en	name_short	to	from	
+id	type	name_cs	name_en	name_short	from	to	
 AdamKalous.1979	politicalGroup	Poslanecký klub ANO 2011	Political group ANO 2011	ANO	2017-10-24T00:00:00	
 AdamKalous.1979	politicalParty	ANO2011	ANO2011	ANO2011	2017-10-21	
 AdamRykala.1986	politicalGroup	Poslanecký klub České strany sociálně demokratické	Political group Czech Social Democratic Party	ČSSD	2013-10-29T00:00:00	2017-10-26T23:00:00

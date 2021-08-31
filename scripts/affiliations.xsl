@@ -1,7 +1,12 @@
 <?xml version="1.0"?>
 
 <!--
-    TODO description
+    This script extracts affiliation-related data about all people specified
+    in the input XML file.
+
+    The resulting file consists of header row followed by a single row
+    for each affiliation (this means there might be several lines for single
+    person). Columns are tab-separated.
 -->
 
 

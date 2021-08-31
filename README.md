@@ -120,3 +120,25 @@ are thus going to plot those:
 scripts/plot_top.py samples/sample_statistics_output/201603011358-201603231402/all.txt samples/sample_statistics_output/201603011358-201603231402/plots/top
 ```
 
+It would be useful to have more information about members of parliament aside
+from their ids. Two XSLT scripts and a single python script are used to
+extract this type of information - `personal_data.xsl`, `affiliations.xsl`,
+and `personal_data.py`.
+
+```
+xsltproc scripts/personal_data.xsl samples/sample_input/ParCzech.ana.xml >samples/sample_personal_data_output/ParCzech.ana.txt
+xsltproc scripts/affiliations.xsl samples/sample_input/ParCzech.ana.xml >samples/sample_personal_data_output/ParCzech.ana_affiliations.txt
+scripts/personal_data.py samples/sample_personal_data_output/ParCzech.ana.txt samples/sample_personal_data_output/ParCzech.ana_affiliations.txt samples/sample_personal_data_output/
+```
+
+The result of applying these scripts is the `ParCzech.ana.json` file in the
+`samples/sample_personal_data_output/` directory. This file aggregates
+personal data of all speakers.
+
+
+
+
+
+
+
+
