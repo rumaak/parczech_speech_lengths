@@ -66,6 +66,8 @@ class Aggregator:
         path = os.path.join(path_to_dir, "all.txt")
         statistics_df.to_csv(path, index=False)
 
+        return statistics_df
+
     def to_minutes(self, length):
         seconds = length / 1000
         minutes = seconds / 60
