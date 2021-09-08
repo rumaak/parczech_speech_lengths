@@ -1,10 +1,26 @@
-def update_response(response, row):
+import pandas as pd
+from typing import Optional, List, Dict
+from pydantic import BaseModel
+
+Series = pd.core.series.Series
+
+class Request(BaseModel):
+    MoP: str
+
+class Response(BaseModel):
+    speaking_time: Dict[str, List[List]]
+    relative_diff: Dict[str, List[List]]
+    unanchored: Dict[str, List[List]]
+    wpm: Dict[str, List[List]]
+
+
+def update_response(response: Response, row: Series) -> None:
     update_speaking_time(response, row)
     update_relative_diff(response, row)
     update_unanchored(response, row)
     update_wpm(response, row)
 
-def update_speaking_time(response, row):
+def update_speaking_time(response: Response, row: Series) -> None:
     role = row["role"]
     if role not in response["speaking_time"]:
         response["speaking_time"][role] = [[
@@ -23,7 +39,7 @@ def update_speaking_time(response, row):
         row["length_utterance"]
     ])
 
-def update_relative_diff(response, row):
+def update_relative_diff(response: Response, row: Series) -> None:
     role = row["role"]
     if role not in response["relative_diff"]:
         response["relative_diff"][role] = [[
@@ -40,7 +56,7 @@ def update_relative_diff(response, row):
         row["sentence-word"]
     ])
 
-def update_unanchored(response, row):
+def update_unanchored(response: Response, row: Series) -> None:
     role = row["role"]
     if role not in response["unanchored"]:
         response["unanchored"][role] = [["Election period", "Unanchored"]]
@@ -50,7 +66,7 @@ def update_unanchored(response, row):
         row["unanchored"]
     ])
 
-def update_wpm(response, row):
+def update_wpm(response: Response, row: Series) -> None:
     role = row["role"]
     if role not in response["wpm"]:
         response["wpm"][role] = [["Election period", "Words per mminute"]]
