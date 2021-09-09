@@ -1,4 +1,5 @@
 from datetime import datetime
+from enum import Enum
 
 import pandas as pd
 from typing import Optional, List, Dict
@@ -6,11 +7,59 @@ from pydantic import BaseModel
 
 Series = pd.core.series.Series
 
-class Request(BaseModel):
-    MoP: str
+# TODO
+#   - find all possible roles
+#   - make a globally available list of possible roles
+
+# Request related models
+class Birth(BaseModel):
     start: datetime
     end: datetime
 
+class Sex(str, Enum):
+    M = "M"
+    F = "F"
+
+class Role(str, Enum):
+    regular = "regular"
+    chair = "chair"
+    guest = "guest"
+
+class Static(BaseModel):
+    MoPs: Optional[List[str]]
+    birth: Optional[Birth]
+    sex: Optional[Sex]
+    role: Optional[Role]
+
+class Age(BaseModel):
+    start: int
+    end: int
+
+class Dynamic(BaseModel):
+    age: Optional[Age]
+    group: Optional[str]
+    party: Optional[str]
+
+class Speakers(BaseModel):
+    static: Optional[Static]
+    dynamic: Optional[Dynamic]
+
+class Interval(BaseModel):
+    start: datetime
+    end: datetime
+
+class Data(BaseModel):
+    interval: Optional[Interval]
+    term: Optional[str]
+    meeting: Optional[int]
+    sitting: Optional[int]
+    agenda: Optional[int]
+
+class Request(BaseModel):
+    speakers: Optional[Speakers]
+    data: Data
+
+# Response related models
 class Response(BaseModel):
     speaking_time: Dict[str, List[List]]
     relative_diff: Dict[str, List[List]]

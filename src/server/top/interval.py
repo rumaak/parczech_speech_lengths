@@ -1,13 +1,14 @@
 from datetime import datetime
+from enum import Enum
 
 import pandas as pd
 from typing import Optional, List, Dict
 from pydantic import BaseModel
 
 Series = pd.core.series.Series
+DataFrame = pd.core.frame.DataFrame
 
 class Request(BaseModel):
-    MoP: str
     start: datetime
     end: datetime
 
@@ -18,11 +19,34 @@ class Response(BaseModel):
     wpm: Dict[str, List[List]]
 
 
-def update_response(response: Response, row: Series) -> None:
-    update_speaking_time(response, row)
-    update_relative_diff(response, row)
-    update_unanchored(response, row)
-    update_wpm(response, row)
+def update_response(data_df: DataFrame, response: Response) -> None:
+    roles = data_df.role.unique()
+    for role in roles:
+        role_df = data_df.loc[data_df["role"] == role]
+
+        # top speaking time
+        speaker_df = role_df.sort_values("length_utterance", ascending=False)
+        n_select = min(5, len(speaker_df))
+        top_df = speaker_df.iloc[:n_select, :]
+        top_df.apply(lambda row: update_speaking_time(response, row) , axis=1)
+
+        # top relative difference
+        speaker_df = role_df.sort_values("sentence-word", ascending=False)
+        n_select = min(5, len(speaker_df))
+        top_df = speaker_df.iloc[:n_select, :]
+        top_df.apply(lambda row: update_relative_diff(response, row) , axis=1)
+
+        # top unanchored
+        speaker_df = role_df.sort_values("unanchored", ascending=False)
+        n_select = min(5, len(speaker_df))
+        top_df = speaker_df.iloc[:n_select, :]
+        top_df.apply(lambda row: update_unanchored(response, row) , axis=1)
+
+        # top wpm
+        speaker_df = role_df.sort_values("words_per_minute", ascending=False)
+        n_select = min(5, len(speaker_df))
+        top_df = speaker_df.iloc[:n_select, :]
+        top_df.apply(lambda row: update_wpm(response, row) , axis=1)
 
 def update_speaking_time(response: Response, row: Series) -> None:
     role = row["role"]
