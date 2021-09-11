@@ -17,9 +17,6 @@ import pandas as pd
 # - difference between first and last anchor of an utterance
 # - difference between first and last anchor of an uninterrupted speech
 
-# TODO should we also include audio start / audio end if it can be inferred
-#      from the name of the file?
-
 class Parser:
     def __init__(self, file_in, dir_out):
         self.file_in = file_in
@@ -28,32 +25,27 @@ class Parser:
         self.statistics = dict()
 
         self.last_continuous = {
-            "speaker": None,
-            "role": None,
             "beg": None,
             "end": None
         }
 
         self.last_segment = {
             "sentence": {
-                "speaker": None,
-                "role": None,
                 "beg": None,
                 "end": None
             },
             "paragraph": {
-                "speaker": None,
-                "role": None,
                 "beg": None,
                 "end": None
             },
             "utterance": {
-                "speaker": None,
-                "role": None,
                 "beg": None,
                 "end": None
             }
         }
+
+        self.last_speaker = None
+        self.last_role = None
 
         self.last = None
 
@@ -105,41 +97,37 @@ class Parser:
 
         return statistics_df
 
-    def finish(self, speaker, role):
-        self.finish_continuous(speaker, role)
-        self.finish_segment("sentence", speaker, role)
-        self.finish_segment("paragraph", speaker, role)
-        self.finish_segment("utterance", speaker, role)
+    def finish(self):
+        self.finish_continuous()
+        self.finish_segment("sentence")
+        self.finish_segment("paragraph")
+        self.finish_segment("utterance")
 
-    def finish_continuous(self, speaker, role):
-        speaker_l = self.last_continuous["speaker"]
-        role_l = self.last_continuous["role"]
-        beg_l = self.last_continuous["beg"]
-        end_l = self.last_continuous["end"]
+    def finish_continuous(self):
+        speaker = self.last_speaker
+        role = self.last_role
+        beg = self.last_continuous["beg"]
+        end = self.last_continuous["end"]
 
-        if speaker_l is not None:
-            if beg_l is not None:
-                length = (end_l - beg_l).total_seconds()*1000
-                self.statistics[speaker_l][role_l]["continuous"] += length
+        if speaker is not None:
+            if beg is not None:
+                length = (end - beg).total_seconds()*1000
+                self.statistics[speaker][role]["continuous"] += length
 
-        self.last_continuous["speaker"] = speaker
-        self.last_continuous["role"] = role
         self.last_continuous["beg"] = None
         self.last_continuous["end"] = None
 
-    def finish_segment(self, seg_name, speaker, role):
-        speaker_l = self.last_segment[seg_name]["speaker"]
-        role_l = self.last_segment[seg_name]["role"]
-        beg_l = self.last_segment[seg_name]["beg"]
-        end_l = self.last_segment[seg_name]["end"]
+    def finish_segment(self, seg_name):
+        speaker = self.last_speaker
+        role = self.last_role
+        beg = self.last_segment[seg_name]["beg"]
+        end = self.last_segment[seg_name]["end"]
 
-        if speaker_l is not None:
-            if beg_l is not None:
-                length = (end_l - beg_l).total_seconds()*1000
-                self.statistics[speaker_l][role_l][seg_name] += length
+        if speaker is not None:
+            if beg is not None:
+                length = (end - beg).total_seconds()*1000
+                self.statistics[speaker][role][seg_name] += length
 
-        self.last_segment[seg_name]["speaker"] = speaker
-        self.last_segment[seg_name]["role"] = role
         self.last_segment[seg_name]["beg"] = None
         self.last_segment[seg_name]["end"] = None
         
@@ -189,6 +177,10 @@ class Parser:
         # update election period
         self.election_period = row["id"].split("-")[0]
 
+        # remember last speaker, role
+        self.last_speaker = row["speaker"]
+        self.last_role = row["role"]
+
     # TODO this time of time striping is used in both scripts, consider
     #      creating a shared helper module
     def audio_start_end(self, audio_url):
@@ -220,22 +212,10 @@ class Parser:
     def save_audio(self):
         if self.previous_audio is not None:
             # finish counting
-            self.finish_continuous(
-                self.last_continuous["speaker"],
-                self.last_continuous["role"]
-            )
-            self.finish_segment("sentence",
-                self.last_segment["sentence"]["speaker"],
-                self.last_segment["sentence"]["role"]
-            )
-            self.finish_segment("paragraph",
-                self.last_segment["paragraph"]["speaker"],
-                self.last_segment["paragraph"]["role"]
-            )
-            self.finish_segment("utterance",
-                self.last_segment["utterance"]["speaker"],
-                self.last_segment["utterance"]["role"]
-            )
+            self.finish_continuous()
+            self.finish_segment("sentence")
+            self.finish_segment("paragraph")
+            self.finish_segment("utterance")
 
             # audio already exists -> update statistics
             path = self.construct_path()
@@ -339,8 +319,6 @@ class Parser:
             self.statistics[speaker][role]["no_anchor"] += 1
 
     def update_segment(self, start, end, speaker, role, sc, sl, seg_name):
-        speaker_l = self.last_segment[seg_name]["speaker"]
-        role_l = self.last_segment[seg_name]["role"]
         beg_l = self.last_segment[seg_name]["beg"]
         end_l = self.last_segment[seg_name]["end"]
 
@@ -361,11 +339,11 @@ class Parser:
 
         # different segment - finish last one, initialize values for new one
         else:
-            self.finish_segment(seg_name, speaker, role)
+            self.finish_segment(seg_name)
 
     def update_continuous(self, start, end, speaker, role):
-        speaker_l = self.last_continuous["speaker"]
-        role_l = self.last_continuous["role"]
+        speaker_l = self.last_speaker
+        role_l = self.last_role
         beg_l = self.last_continuous["beg"]
         end_l = self.last_continuous["end"]
 
@@ -386,7 +364,7 @@ class Parser:
 
         # different speaker - finish last one, initialize values for new one
         else:
-            self.finish_continuous(speaker, role)
+            self.finish_continuous()
 
     def to_absolute(self, interval, absolute):
         # check if either value is not nan
