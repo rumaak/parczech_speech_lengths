@@ -11,14 +11,4 @@ pip install -e .
 ```
 
 ### Usage
-To see how this project is meant to be used, see the
-[Usage](https://github.com/rumaak/parczech_speech_lengths/wiki/Usage)
-wiki page.
-
-
-
-
-
-
-
-
+Info about usage and other details can be found on the [wiki](https://github.com/rumaak/parczech_speech_lengths/wiki).
