@@ -1,4 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-ZbynekStanjura.1964,regular,ps2017,70100.0,82540.0,91590.0,91590.0,91590.0,213,35
-VojtechFilip.1955,chair,ps2017,299400.0,356890.0,461370.0,486370.0,486370.0,779,65
-JaroslavFaltynek.1962,regular,ps2017,29160.0,36930.0,43720.0,43720.0,43720.0,75,3
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+ZbynekStanjura.1964,regular,ps2017,002,01,004,43100.0,52390.0,58200.0,58200.0,58200.0,138,25
+VojtechFilip.1955,chair,ps2017,002,01,004,188490.0,227230.0,311720.0,328250.0,328250.0,502,46
+VojtechFilip.1955,chair,ps2017,2,1,5,110910.0,129660.0,149650.0,158120.0,158120.0,277,19
+JaroslavFaltynek.1962,regular,ps2017,2,1,5,29160.0,36930.0,43720.0,43720.0,43720.0,75,3
+ZbynekStanjura.1964,regular,ps2017,2,1,5,27000.0,30150.0,33390.0,33390.0,33390.0,75,10

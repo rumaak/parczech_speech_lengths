@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanaLorencova.1940,regular,ps2013,16980.0,22470.0,26860.0,26970.0,26970.0,53,10
-JanHamacek.1978,chair,ps2013,32380.0,33730.0,44440.0,44440.0,44440.0,88,3
-MartinNovotny.1972,regular,ps2013,40260.0,46250.0,48830.0,48830.0,48830.0,111,6
-FrantisekLaudat.1960,regular,ps2013,346490.0,420360.0,454090.0,466930.0,466930.0,951,75
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanaLorencova.1940,regular,ps2013,042,02,031,16980.0,22470.0,26860.0,26970.0,26970.0,53,10
+JanHamacek.1978,chair,ps2013,042,02,031,32380.0,33730.0,44440.0,44440.0,44440.0,88,3
+MartinNovotny.1972,regular,ps2013,042,02,031,40260.0,46250.0,48830.0,48830.0,48830.0,111,6
+FrantisekLaudat.1960,regular,ps2013,042,02,031,346490.0,420360.0,454090.0,466930.0,466930.0,951,75

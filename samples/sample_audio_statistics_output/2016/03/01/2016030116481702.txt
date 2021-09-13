@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanBartosek.1971,chair,ps2013,22510.0,24130.0,35660.0,35660.0,35660.0,61,3
-JosefKott.1970,regular,ps2013,201910.0,249530.0,271220.0,276230.0,276230.0,463,19
-JiriSkalicky.1954,regular,ps2013,215010.0,251220.0,276870.0,286560.0,286560.0,461,28
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanBartosek.1971,chair,ps2013,042,01,007,22510.0,24130.0,35660.0,35660.0,35660.0,61,3
+JosefKott.1970,regular,ps2013,042,01,007,201910.0,249530.0,271220.0,276230.0,276230.0,463,19
+JiriSkalicky.1954,regular,ps2013,042,01,007,215010.0,251220.0,276870.0,286560.0,286560.0,461,28

@@ -1,8 +1,8 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JaroslavaPokornaJermanova.1970,chair,ps2013,66970.0,64840.0,95490.0,98640.0,98640.0,176,10
-VojtechFilip.1955,chair,ps2013,50740.0,57040.0,60310.0,60310.0,60310.0,126,9
-JaroslavFaltynek.1962,regular,ps2013,88790.0,113590.0,142310.0,145320.0,145320.0,260,24
-KarelSchwarzenberg.1937,regular,ps2013,13880.0,15720.0,17240.0,17240.0,17240.0,25,0
-ZbynekStanjura.1964,regular,ps2013,39090.0,63950.0,65910.0,73850.0,73850.0,173,66
-TomioOkamura.1972,regular,ps2013,67820.0,82420.0,91940.0,92370.0,92370.0,248,36
-MarekCernoch.1969,regular,ps2013,47750.0,51700.0,54840.0,56040.0,56040.0,124,2
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,09,221,66970.0,64840.0,95490.0,98640.0,98640.0,176,10
+VojtechFilip.1955,chair,ps2013,042,09,221,50740.0,57040.0,60310.0,60310.0,60310.0,126,9
+JaroslavFaltynek.1962,regular,ps2013,042,09,221,88790.0,113590.0,142310.0,145320.0,145320.0,260,24
+KarelSchwarzenberg.1937,regular,ps2013,042,09,221,13880.0,15720.0,17240.0,17240.0,17240.0,25,0
+ZbynekStanjura.1964,regular,ps2013,042,09,221,39090.0,63950.0,65910.0,73850.0,73850.0,173,66
+TomioOkamura.1972,regular,ps2013,042,09,221,67820.0,82420.0,91940.0,92370.0,92370.0,248,36
+MarekCernoch.1969,regular,ps2013,042,09,221,47750.0,51700.0,54840.0,56040.0,56040.0,124,2

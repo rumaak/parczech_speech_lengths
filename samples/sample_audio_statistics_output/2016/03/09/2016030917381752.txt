@@ -1,5 +1,8 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-PetrGazdik.1974,chair,ps2013,202250.0,199580.0,257730.0,336740.0,336740.0,558,44
-AndrejBabis.1954,guest,ps2013,145940.0,160110.0,175140.0,180710.0,180710.0,375,34
-JosefNovotny.1952,regular,ps2013,35390.0,41140.0,44550.0,45870.0,45870.0,79,2
-JanVolny.1959,regular,ps2013,7700.0,8080.0,8700.0,8700.0,8700.0,22,3
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+PetrGazdik.1974,chair,ps2013,042,06,040,12510.0,12360.0,13060.0,15570.0,15570.0,39,6
+AndrejBabis.1954,guest,ps2013,042,06,040,44070.0,48510.0,52190.0,52910.0,52910.0,112,14
+PetrGazdik.1974,chair,ps2013,42,6,39,149680.0,146400.0,196870.0,259590.0,259590.0,407,26
+AndrejBabis.1954,guest,ps2013,42,6,39,101870.0,111600.0,122950.0,127800.0,127800.0,263,20
+JosefNovotny.1952,regular,ps2013,42,6,39,35390.0,41140.0,44550.0,45870.0,45870.0,79,2
+JanVolny.1959,regular,ps2013,42,6,39,7700.0,8080.0,8700.0,8700.0,8700.0,22,3
+PetrGazdik.1974,chair,ps2013,42,6,38,40060.0,40820.0,47800.0,61580.0,61580.0,112,12

@@ -1,4 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VojtechFilip.1955,chair,ps2013,181380.0,217720.0,275620.0,296450.0,296790.0,480,61
-MarekCernoch.1969,regular,ps2013,24850.0,34040.0,35540.0,35540.0,35540.0,65,3
-LubomirZaoralek.1956,regular,ps2013,180860.0,215630.0,248070.0,250480.0,250480.0,558,48
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechFilip.1955,chair,ps2013,042,03,223,135430.0,166280.0,220610.0,239950.0,240290.0,365,53
+MarekCernoch.1969,regular,ps2013,042,03,223,24850.0,34040.0,35540.0,35540.0,35540.0,65,3
+VojtechFilip.1955,chair,ps2013,42,3,140,45950.0,51440.0,55010.0,56500.0,56500.0,115,8
+LubomirZaoralek.1956,regular,ps2013,42,3,140,180860.0,215630.0,248070.0,250480.0,250480.0,558,48

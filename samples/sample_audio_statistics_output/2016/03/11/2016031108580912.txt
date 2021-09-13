@@ -1,3 +1,3 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanHamacek.1978,chair,ps2013,252350.0,355570.0,442930.0,532430.0,532430.0,735,54
-JaroslavFaltynek.1962,regular,ps2013,69480.0,85000.0,91160.0,92950.0,92950.0,179,20
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanHamacek.1978,chair,ps2013,042,08,000,252350.0,355570.0,442930.0,532430.0,532430.0,735,54
+JaroslavFaltynek.1962,regular,ps2013,042,08,000,69480.0,85000.0,91160.0,92950.0,92950.0,179,20

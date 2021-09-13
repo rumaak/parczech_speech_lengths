@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-LukasPleticha.1974,regular,ps2013,144060.0,193520.0,247230.0,250150.0,250150.0,370,33
-JanBartosek.1971,chair,ps2013,143980.0,163190.0,249780.0,312820.0,312820.0,419,42
-MiroslavKalousek.1960,regular,ps2013,14640.0,15270.0,16680.0,16680.0,16680.0,33,1
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+LukasPleticha.1974,regular,ps2013,042,04,163,144060.0,193520.0,247230.0,250150.0,250150.0,370,33
+JanBartosek.1971,chair,ps2013,042,04,163,143980.0,163190.0,249780.0,312820.0,312820.0,419,42
+MiroslavKalousek.1960,regular,ps2013,042,04,163,14640.0,15270.0,16680.0,16680.0,16680.0,33,1

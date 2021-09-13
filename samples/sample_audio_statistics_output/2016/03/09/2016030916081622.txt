@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VladislavVilimec.1963,regular,ps2013,45250.0,62560.0,65770.0,66300.0,66300.0,127,14
-JanBartosek.1971,chair,ps2013,10330.0,9670.0,17100.0,17100.0,17100.0,30,2
-JitkaChalankova.1957,regular,ps2013,183670.0,193650.0,216590.0,222370.0,222370.0,436,15
-MiroslavOpalka.1952,regular,ps2013,224310.0,253500.0,290630.0,302500.0,302500.0,476,26
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VladislavVilimec.1963,regular,ps2013,042,06,051,45250.0,62560.0,65770.0,66300.0,66300.0,127,14
+JanBartosek.1971,chair,ps2013,042,06,051,10330.0,9670.0,17100.0,17100.0,17100.0,30,2
+JitkaChalankova.1957,regular,ps2013,042,06,051,183670.0,193650.0,216590.0,222370.0,222370.0,436,15
+MiroslavOpalka.1952,regular,ps2013,042,06,051,224310.0,253500.0,290630.0,302500.0,302500.0,476,26

@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-RadkaMaxova.1968,regular,ps2013,215700.0,254220.0,268900.0,301680.0,301680.0,570,36
-VojtechFilip.1955,chair,ps2013,27540.0,38340.0,45910.0,45910.0,45910.0,88,16
-MartinStropnicky.1956,regular,ps2013,45360.0,56660.0,60620.0,60620.0,60620.0,144,14
-GabrielaHubackova.1975,regular,ps2013,135840.0,164120.0,171960.0,193810.0,193810.0,331,19
-KaterinaValachova.1976,regular,ps2013,26710.0,82860.0,83670.0,83670.0,83670.0,65,3
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+RadkaMaxova.1968,regular,ps2013,042,06,160,215700.0,254220.0,268900.0,301680.0,301680.0,570,36
+VojtechFilip.1955,chair,ps2013,042,06,160,27540.0,38340.0,45910.0,45910.0,45910.0,88,16
+MartinStropnicky.1956,regular,ps2013,042,06,160,45360.0,56660.0,60620.0,60620.0,60620.0,144,14
+GabrielaHubackova.1975,regular,ps2013,042,06,160,135840.0,164120.0,171960.0,193810.0,193810.0,331,19
+KaterinaValachova.1976,regular,ps2013,042,06,160,26710.0,82860.0,83670.0,83670.0,83670.0,65,3

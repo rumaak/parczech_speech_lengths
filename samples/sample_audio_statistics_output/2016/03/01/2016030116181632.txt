@@ -1,5 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanBartosek.1971,chair,ps2013,50660.0,52220.0,70460.0,71350.0,71350.0,137,13
-MarianJurecka.1981,regular,ps2013,194150.0,227120.0,239110.0,244280.0,244280.0,519,61
-PetrKudela.1969,regular,ps2013,71770.0,79960.0,87500.0,91630.0,91630.0,161,11
-JosefSenfeld.1961,regular,ps2013,166850.0,194160.0,203870.0,207880.0,207880.0,372,33
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanBartosek.1971,chair,ps2013,042,01,006,47950.0,49980.0,68220.0,68580.0,68580.0,129,12
+MarianJurecka.1981,regular,ps2013,042,01,006,194150.0,227120.0,239110.0,244280.0,244280.0,519,61
+PetrKudela.1969,regular,ps2013,042,01,006,71770.0,79960.0,87500.0,91630.0,91630.0,161,11
+JosefSenfeld.1961,regular,ps2013,042,01,006,166850.0,194160.0,203870.0,207880.0,207880.0,372,33
+JanBartosek.1971,chair,ps2013,42,1,5,2710.0,2240.0,2240.0,2770.0,2770.0,8,1

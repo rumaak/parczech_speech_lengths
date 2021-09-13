@@ -1,4 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-PetrGazdik.1974,chair,ps2013,198260.0,207950.0,262700.0,333290.0,343450.0,580,66
-PavelKovacik.1955,regular,ps2013,129170.0,152390.0,161290.0,161850.0,161850.0,340,44
-DanTok.1959,regular,ps2013,68690.0,74290.0,80510.0,83250.0,83250.0,157,9
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+PetrGazdik.1974,chair,ps2013,042,10,173,167580.0,173490.0,223550.0,294110.0,304270.0,493,60
+PavelKovacik.1955,regular,ps2013,042,10,173,129170.0,152390.0,161290.0,161850.0,161850.0,340,44
+PetrGazdik.1974,chair,ps2013,42,10,52,30680.0,34460.0,39150.0,39180.0,39180.0,87,6
+DanTok.1959,regular,ps2013,42,10,52,68690.0,74290.0,80510.0,83250.0,83250.0,157,9

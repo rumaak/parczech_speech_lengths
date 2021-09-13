@@ -1,6 +1,9 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JaroslavaPokornaJermanova.1970,chair,ps2013,167700.0,175050.0,224430.0,257660.0,257660.0,413,33
-MilanChovanec.1970,regular,ps2013,88650.0,92760.0,102750.0,105020.0,105020.0,228,16
-PavelHolik.1957,regular,ps2013,71280.0,79530.0,84310.0,85600.0,85600.0,184,26
-RomanSklenak.1970,regular,ps2013,8350.0,9110.0,9120.0,9120.0,9120.0,26,1
-AndrejBabis.1954,guest,ps2013,101360.0,115610.0,125710.0,128160.0,128160.0,281,30
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,07,145,2130.0,1770.0,1770.0,2160.0,2160.0,5,1
+JaroslavaPokornaJermanova.1970,chair,ps2013,42,7,147,119890.0,121980.0,151100.0,183120.0,183120.0,286,22
+MilanChovanec.1970,regular,ps2013,42,7,147,88650.0,92760.0,102750.0,105020.0,105020.0,228,16
+PavelHolik.1957,regular,ps2013,42,7,147,25780.0,27220.0,30010.0,30010.0,30010.0,63,7
+RomanSklenak.1970,regular,ps2013,42,7,147,8350.0,9110.0,9120.0,9120.0,9120.0,26,1
+JaroslavaPokornaJermanova.1970,chair,ps2013,42,7,132,45680.0,51300.0,71560.0,72380.0,72380.0,122,10
+AndrejBabis.1954,guest,ps2013,42,7,132,101360.0,115610.0,125710.0,128160.0,128160.0,281,30
+PavelHolik.1957,regular,ps2013,42,7,132,45500.0,52310.0,54300.0,55590.0,55590.0,121,19

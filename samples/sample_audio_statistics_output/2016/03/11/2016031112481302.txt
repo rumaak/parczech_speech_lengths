@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JiriDienstbier.1969,regular,ps2013,29490.0,37280.0,41040.0,126780.0,126780.0,90,2
-JanBartosek.1971,chair,ps2013,17080.0,15630.0,30740.0,30740.0,30740.0,51,5
-MiroslavKalousek.1960,regular,ps2013,75930.0,86170.0,97580.0,99120.0,99120.0,197,14
-TomioOkamura.1972,regular,ps2013,272110.0,347090.0,506190.0,513580.00000000006,513580.00000000006,998,328
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JiriDienstbier.1969,regular,ps2013,042,08,067,29490.0,37280.0,41040.0,126780.0,126780.0,90,2
+JanBartosek.1971,chair,ps2013,042,08,067,17080.0,15630.0,30740.0,30740.0,30740.0,51,5
+MiroslavKalousek.1960,regular,ps2013,042,08,067,75930.0,86170.0,97580.0,99120.0,99120.0,197,14
+TomioOkamura.1972,regular,ps2013,042,08,067,272110.0,347090.0,506190.0,513580.00000000006,513580.00000000006,998,328

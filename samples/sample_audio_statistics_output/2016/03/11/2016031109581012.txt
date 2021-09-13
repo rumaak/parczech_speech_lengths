@@ -1,7 +1,7 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanaCernochova.1973,regular,ps2013,32330.0,35970.0,39540.0,39540.0,39540.0,80,2
-JaroslavaPokornaJermanova.1970,chair,ps2013,63550.0,73800.0,100630.0,126300.0,126300.0,159,15
-JiriDienstbier.1969,regular,ps2013,59840.0,67020.0,71860.0,71930.0,71930.0,163,9
-ZdenekSoukup.1952,regular,ps2013,124010.0,139620.0,154730.0,162910.0,162910.0,346,25
-LukasPleticha.1974,regular,ps2013,34030.0,41610.0,45180.0,45880.0,45880.0,95,7
-MarketaPekarovaAdamova.1984,regular,ps2013,79640.0,85300.0,91040.0,92810.0,92810.0,194,12
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanaCernochova.1973,regular,ps2013,042,08,018,32330.0,35970.0,39540.0,39540.0,39540.0,80,2
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,08,018,63550.0,73800.0,100630.0,126300.0,126300.0,159,15
+JiriDienstbier.1969,regular,ps2013,042,08,018,59840.0,67020.0,71860.0,71930.0,71930.0,163,9
+ZdenekSoukup.1952,regular,ps2013,042,08,018,124010.0,139620.0,154730.0,162910.0,162910.0,346,25
+LukasPleticha.1974,regular,ps2013,042,08,018,34030.0,41610.0,45180.0,45880.0,45880.0,95,7
+MarketaPekarovaAdamova.1984,regular,ps2013,042,08,018,79640.0,85300.0,91040.0,92810.0,92810.0,194,12

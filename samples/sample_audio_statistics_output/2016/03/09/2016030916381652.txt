@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanaHnykova.1963,regular,ps2013,177970.0,189130.0,208460.0,213800.0,213800.0,401,21
-VojtechFilip.1955,chair,ps2013,28680.0,32920.0,35120.0,35410.0,35410.0,82,12
-VitKankovsky.1970,regular,ps2013,273940.0,300990.0,321750.0,328480.0,328480.0,679,50
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanaHnykova.1963,regular,ps2013,042,06,014,177970.0,189130.0,208460.0,213800.0,213800.0,401,21
+VojtechFilip.1955,chair,ps2013,042,06,014,28680.0,32920.0,35120.0,35410.0,35410.0,82,12
+VitKankovsky.1970,regular,ps2013,042,06,014,273940.0,300990.0,321750.0,328480.0,328480.0,679,50

@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-RadekVondracek.1973,chair,ps2017,206420.0,240410.0,274900.0,279040.0,279040.0,690,90
-VojtechFilip.1955,chair,ps2017,26410.0,28450.0,33800.0,33800.0,33800.0,70,5
-RobertPelikan.1979,regular,ps2017,51630.0,114340.0,194840.0,194840.0,194840.0,172,17
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+RadekVondracek.1973,chair,ps2017,002,01,001,206420.0,240410.0,274900.0,279040.0,279040.0,690,90
+VojtechFilip.1955,chair,ps2017,002,01,001,26410.0,28450.0,33800.0,33800.0,33800.0,70,5
+RobertPelikan.1979,regular,ps2017,002,01,001,51630.0,114340.0,194840.0,194840.0,194840.0,172,17

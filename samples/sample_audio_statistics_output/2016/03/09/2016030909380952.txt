@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-LeosHeger.1948,regular,ps2013,344230.0,407100.0,433640.0,446730.0,446730.0,690,37
-JanHamacek.1978,chair,ps2013,1930.0,990.0,1270.0,1270.0,1270.0,5,0
-LudvikHovorka.1963,regular,ps2013,121230.0,141630.0,151470.0,156540.0,156540.0,292,15
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+LeosHeger.1948,regular,ps2013,042,06,158,344230.0,407100.0,433640.0,446730.0,446730.0,690,37
+JanHamacek.1978,chair,ps2013,042,06,158,1930.0,990.0,1270.0,1270.0,1270.0,5,0
+LudvikHovorka.1963,regular,ps2013,042,06,158,121230.0,141630.0,151470.0,156540.0,156540.0,292,15

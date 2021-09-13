@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-DanielKorte.1953,regular,ps2013,106680.0,121220.0,136660.0,146530.0,146530.0,285,27
-JaroslavaPokornaJermanova.1970,chair,ps2013,12690.0,11480.0,29240.0,29240.0,29240.0,30,1
-PetrBendl.1966,regular,ps2013,102140.0,136160.0,144820.0,144820.0,144820.0,274,24
-RichardBrabec.1966,regular,ps2013,216480.0,276780.0,294600.0,300240.0,300240.0,563,41
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+DanielKorte.1953,regular,ps2013,042,07,224,106680.0,121220.0,136660.0,146530.0,146530.0,285,27
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,07,224,12690.0,11480.0,29240.0,29240.0,29240.0,30,1
+PetrBendl.1966,regular,ps2013,042,07,224,102140.0,136160.0,144820.0,144820.0,144820.0,274,24
+RichardBrabec.1966,regular,ps2013,042,07,224,216480.0,276780.0,294600.0,300240.0,300240.0,563,41

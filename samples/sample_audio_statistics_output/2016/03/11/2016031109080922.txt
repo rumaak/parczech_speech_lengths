@@ -1,4 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanHamacek.1978,chair,ps2013,188200.0,281070.0,470440.0,525000.0,530540.0,543,58
-JanMladek.1960,regular,ps2013,128540.0,157990.0,171050.0,175220.0,175220.0,316,15
-MichalKucera.1968,regular,ps2013,54090.0,71680.0,77610.0,80690.0,80690.0,132,10
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanHamacek.1978,chair,ps2013,042,08,000,80420.0,153100.0,191640.0,221160.0,221160.0,215,21
+JanHamacek.1978,chair,ps2013,42,8,152,107780.0,127970.0,278800.0,303840.0,309380.0,328,37
+JanMladek.1960,regular,ps2013,42,8,152,128540.0,157990.0,171050.0,175220.0,175220.0,316,15
+MichalKucera.1968,regular,ps2013,42,8,152,54090.0,71680.0,77610.0,80690.0,80690.0,132,10

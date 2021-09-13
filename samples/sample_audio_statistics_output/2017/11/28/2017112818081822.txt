@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanBartosek.1971,regular,ps2017,24370.0,33050.0,39390.0,39630.0,39630.0,58,3
-VojtechFilip.1955,chair,ps2017,25490.0,26440.0,48670.0,48670.0,48670.0,74,4
-PavelBelobradek.1976,guest,ps2017,298740.0,372630.0,408170.0,412550.0,412550.0,874,76
-RadimFiala.1969,regular,ps2017,24330.0,29940.0,33560.0,34620.0,34620.0,65,5
-LeoLuzar.1964,regular,ps2017,48240.0,57120.0,60580.0,60580.0,60580.0,144,16
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanBartosek.1971,regular,ps2017,002,01,008,24370.0,33050.0,39390.0,39630.0,39630.0,58,3
+VojtechFilip.1955,chair,ps2017,002,01,008,25490.0,26440.0,48670.0,48670.0,48670.0,74,4
+PavelBelobradek.1976,guest,ps2017,002,01,008,298740.0,372630.0,408170.0,412550.0,412550.0,874,76
+RadimFiala.1969,regular,ps2017,002,01,008,24330.0,29940.0,33560.0,34620.0,34620.0,65,5
+LeoLuzar.1964,regular,ps2017,002,01,008,48240.0,57120.0,60580.0,60580.0,60580.0,144,16

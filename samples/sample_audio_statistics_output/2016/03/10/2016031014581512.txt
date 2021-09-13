@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanHamacek.1978,chair,ps2013,23450.0,22710.0,25270.0,26090.0,26090.0,65,2
-LudvikHovorka.1963,regular,ps2013,120550.0,136370.0,148410.0,150470.0,150470.0,292,25
-RadimHolecek.1976,regular,ps2013,23460.0,23010.0,28140.0,28140.0,28140.0,77,5
-AntoninSeda.1960,regular,ps2013,100550.0,111590.0,127150.0,127150.0,127150.0,269,18
-MartinStropnicky.1956,regular,ps2013,167530.0,197420.0,212200.0,215970.0,215970.0,414,24
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanHamacek.1978,chair,ps2013,042,07,224,23450.0,22710.0,25270.0,26090.0,26090.0,65,2
+LudvikHovorka.1963,regular,ps2013,042,07,224,120550.0,136370.0,148410.0,150470.0,150470.0,292,25
+RadimHolecek.1976,regular,ps2013,042,07,224,23460.0,23010.0,28140.0,28140.0,28140.0,77,5
+AntoninSeda.1960,regular,ps2013,042,07,224,100550.0,111590.0,127150.0,127150.0,127150.0,269,18
+MartinStropnicky.1956,regular,ps2013,042,07,224,167530.0,197420.0,212200.0,215970.0,215970.0,414,24

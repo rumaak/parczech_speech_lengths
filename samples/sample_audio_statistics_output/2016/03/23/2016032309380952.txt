@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-LudvikHovorka.1963,regular,ps2013,22620.0,25530.0,27890.0,28240.0,28240.0,54,2
-JanBartosek.1971,chair,ps2013,28010.0,26500.0,42720.0,42720.0,42720.0,85,5
-VojtechFilip.1955,chair,ps2013,104070.0,123130.0,131320.0,134220.0,134220.0,260,15
-MarekBenda.1968,regular,ps2013,165660.0,193320.0,213640.0,218130.0,218130.0,434,29
-HelenaValkova.1951,regular,ps2013,107710.0,139130.0,144300.0,145120.0,145120.0,278,22
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+LudvikHovorka.1963,regular,ps2013,042,10,153,22620.0,25530.0,27890.0,28240.0,28240.0,54,2
+JanBartosek.1971,chair,ps2013,042,10,153,28010.0,26500.0,42720.0,42720.0,42720.0,85,5
+VojtechFilip.1955,chair,ps2013,042,10,153,104070.0,123130.0,131320.0,134220.0,134220.0,260,15
+MarekBenda.1968,regular,ps2013,042,10,153,165660.0,193320.0,213640.0,218130.0,218130.0,434,29
+HelenaValkova.1951,regular,ps2013,042,10,153,107710.0,139130.0,144300.0,145120.0,145120.0,278,22

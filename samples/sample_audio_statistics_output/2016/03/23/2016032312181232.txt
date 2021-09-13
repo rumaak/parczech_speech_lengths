@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JiriStetina.1941,regular,ps2013,267350.0,334560.0,367180.0,378640.0,378640.0,690,55
-JanBartosek.1971,chair,ps2013,14030.0,10730.0,23250.0,23250.0,23250.0,40,4
-MargitaBalastikova.1967,regular,ps2013,48920.0,54560.0,57870.0,58560.0,58560.0,126,15
-PavelKovacik.1955,regular,ps2013,36860.0,43290.0,47960.0,47960.0,47960.0,92,4
-BohuslavSvoboda.1944,regular,ps2013,63620.0,78090.0,85410.0,85990.0,85990.0,186,20
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JiriStetina.1941,regular,ps2013,042,10,173,267350.0,334560.0,367180.0,378640.0,378640.0,690,55
+JanBartosek.1971,chair,ps2013,042,10,173,14030.0,10730.0,23250.0,23250.0,23250.0,40,4
+MargitaBalastikova.1967,regular,ps2013,042,10,173,48920.0,54560.0,57870.0,58560.0,58560.0,126,15
+PavelKovacik.1955,regular,ps2013,042,10,173,36860.0,43290.0,47960.0,47960.0,47960.0,92,4
+BohuslavSvoboda.1944,regular,ps2013,042,10,173,63620.0,78090.0,85410.0,85990.0,85990.0,186,20

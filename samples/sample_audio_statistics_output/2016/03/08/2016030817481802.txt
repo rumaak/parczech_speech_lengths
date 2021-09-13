@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VitKankovsky.1970,regular,ps2013,215770.0,252720.0,267960.0,279220.0,279220.0,527,27
-PetrGazdik.1974,chair,ps2013,69730.0,71140.0,81960.0,92000.0,92000.0,184,13
-MilanBrazdil.1962,regular,ps2013,41140.0,49180.0,56880.0,56880.0,56880.0,118,6
-LukasPleticha.1974,regular,ps2013,91490.0,119360.0,125330.0,129330.00000000001,129330.00000000001,237,12
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VitKankovsky.1970,regular,ps2013,042,05,015,215770.0,252720.0,267960.0,279220.0,279220.0,527,27
+PetrGazdik.1974,chair,ps2013,042,05,015,69730.0,71140.0,81960.0,92000.0,92000.0,184,13
+MilanBrazdil.1962,regular,ps2013,042,05,015,41140.0,49180.0,56880.0,56880.0,56880.0,118,6
+LukasPleticha.1974,regular,ps2013,042,05,015,91490.0,119360.0,125330.0,129330.00000000001,129330.00000000001,237,12

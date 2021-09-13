@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-PavelKovacik.1955,regular,ps2013,120720.0,136010.0,144410.0,149000.0,149000.0,338,19
-VojtechFilip.1955,chair,ps2013,34120.0,37870.0,48510.0,48750.0,48750.0,85,8
-MarekCernoch.1969,regular,ps2013,16900.0,19750.0,20700.0,20700.0,20700.0,47,1
-MiroslavaNemcova.1952,regular,ps2013,292630.0,327710.0,342850.0,346870.0,346870.0,780,45
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+PavelKovacik.1955,regular,ps2013,042,09,202,120720.0,136010.0,144410.0,149000.0,149000.0,338,19
+VojtechFilip.1955,chair,ps2013,042,09,202,34120.0,37870.0,48510.0,48750.0,48750.0,85,8
+MarekCernoch.1969,regular,ps2013,042,09,202,16900.0,19750.0,20700.0,20700.0,20700.0,47,1
+MiroslavaNemcova.1952,regular,ps2013,042,09,202,292630.0,327710.0,342850.0,346870.0,346870.0,780,45

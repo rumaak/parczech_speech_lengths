@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-PetrKudela.1969,regular,ps2013,182170.0,206790.0,238770.0,245200.0,245200.0,438,29
-PetrGazdik.1974,chair,ps2013,14330.0,13090.0,17600.0,17600.0,17600.0,44,2
-JiriStetina.1941,regular,ps2013,215610.0,270050.0,300330.0,313740.0,313740.0,582,36
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+PetrKudela.1969,regular,ps2013,042,01,007,182170.0,206790.0,238770.0,245200.0,245200.0,438,29
+PetrGazdik.1974,chair,ps2013,042,01,007,14330.0,13090.0,17600.0,17600.0,17600.0,44,2
+JiriStetina.1941,regular,ps2013,042,01,007,215610.0,270050.0,300330.0,313740.0,313740.0,582,36

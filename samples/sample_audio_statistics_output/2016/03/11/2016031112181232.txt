@@ -1,2 +1,2 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-ZbynekStanjura.1964,regular,ps2013,429740.0,578720.0,630710.0,647870.0,647870.0,1317,158
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+ZbynekStanjura.1964,regular,ps2013,042,08,067,429740.0,578720.0,630710.0,647870.0,647870.0,1317,158

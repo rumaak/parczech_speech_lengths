@@ -1,7 +1,7 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanBartosek.1971,chair,ps2013,59760.0,74440.0,93070.0,94920.0,94920.0,155,11
-AugustinKarelAndrleSylor.1946,regular,ps2013,60680.0,94520.0,97020.0,99270.0,99270.0,149,14
-FrantisekVacha.1966,regular,ps2013,74680.0,99170.0,108320.0,118520.0,118520.0,141,11
-PetrBendl.1966,regular,ps2013,44910.0,65420.0,70040.0,72910.0,72910.0,134,19
-MartinNovotny.1972,regular,ps2013,83800.0,99920.0,105010.0,105010.0,105010.0,215,20
-NinaNovakova.1954,regular,ps2013,57940.0,75100.0,80820.0,81970.0,81970.0,160,15
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanBartosek.1971,chair,ps2013,042,02,165,59760.0,74440.0,93070.0,94920.0,94920.0,155,11
+AugustinKarelAndrleSylor.1946,regular,ps2013,042,02,165,60680.0,94520.0,97020.0,99270.0,99270.0,149,14
+FrantisekVacha.1966,regular,ps2013,042,02,165,74680.0,99170.0,108320.0,118520.0,118520.0,141,11
+PetrBendl.1966,regular,ps2013,042,02,165,44910.0,65420.0,70040.0,72910.0,72910.0,134,19
+MartinNovotny.1972,regular,ps2013,042,02,165,83800.0,99920.0,105010.0,105010.0,105010.0,215,20
+NinaNovakova.1954,regular,ps2013,042,02,165,57940.0,75100.0,80820.0,81970.0,81970.0,160,15

@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-RadkaMaxova.1968,regular,ps2013,441600.0,503700.0,534660.0,552480.0,552480.0,986,64
-JaroslavaPokornaJermanova.1970,chair,ps2013,5850.0,13210.0,13220.0,13220.0,13220.0,19,3
-SimeonKaramazov.1963,regular,ps2013,33740.0,34380.0,39420.0,39420.0,39420.0,89,4
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+RadkaMaxova.1968,regular,ps2013,042,08,018,441600.0,503700.0,534660.0,552480.0,552480.0,986,64
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,08,018,5850.0,13210.0,13220.0,13220.0,13220.0,19,3
+SimeonKaramazov.1963,regular,ps2013,042,08,018,33740.0,34380.0,39420.0,39420.0,39420.0,89,4

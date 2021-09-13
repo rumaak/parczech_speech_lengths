@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JiriMihola.1972,regular,ps2013,84420.0,112190.0,119800.0,192750.0,192750.0,225,18
-JanBartosek.1971,chair,ps2013,74240.0,82020.0,96720.0,98790.0,98790.0,189,15
-TomioOkamura.1972,regular,ps2013,74530.0,115880.0,119540.0,120110.0,120110.0,275,80
-VojtechFilip.1955,chair,ps2013,161590.0,190680.0,212080.0,220770.0,220770.0,403,29
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JiriMihola.1972,regular,ps2013,042,09,202,84420.0,112190.0,119800.0,192750.0,192750.0,225,18
+JanBartosek.1971,chair,ps2013,042,09,202,74240.0,82020.0,96720.0,98790.0,98790.0,189,15
+TomioOkamura.1972,regular,ps2013,042,09,202,74530.0,115880.0,119540.0,120110.0,120110.0,275,80
+VojtechFilip.1955,chair,ps2013,042,09,202,161590.0,190680.0,212080.0,220770.0,220770.0,403,29

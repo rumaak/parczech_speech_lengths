@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JiriMihola.1972,regular,ps2013,79300.0,94160.0,94160.0,94160.0,94160.0,176,14
-PetrGazdik.1974,chair,ps2013,124050.0,127140.0,160980.0,210690.0,210690.0,323,45
-MarekCernoch.1969,regular,ps2013,24940.0,29780.0,34390.0,34390.0,34390.0,75,8
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JiriMihola.1972,regular,ps2013,042,09,202,79300.0,94160.0,94160.0,94160.0,94160.0,176,14
+PetrGazdik.1974,chair,ps2013,042,09,202,124050.0,127140.0,160980.0,210690.0,210690.0,323,45
+MarekCernoch.1969,regular,ps2013,042,09,202,24940.0,29780.0,34390.0,34390.0,34390.0,75,8

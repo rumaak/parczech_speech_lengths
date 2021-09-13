@@ -1,4 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VojtechPikal.1987,chair,ps2017,201610.0,242570.0,275760.0,318870.0,319090.0,565,64
-ZbynekStanjura.1964,regular,ps2017,28020.0,32570.0,103980.0,103980.0,103980.0,104,17
-MartinKolovratnik.1975,regular,ps2017,76210.0,83020.0,86750.0,88080.0,88080.0,242,9
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechPikal.1987,chair,ps2017,002,01,016,170170.0,211930.0,213660.0,249320.0,249320.0,468,47
+ZbynekStanjura.1964,regular,ps2017,002,01,016,28020.0,32570.0,103980.0,103980.0,103980.0,104,17
+VojtechPikal.1987,chair,ps2017,2,1,15,31440.0,30640.0,62100.0,69550.0,69770.0,97,17
+MartinKolovratnik.1975,regular,ps2017,2,1,15,76210.0,83020.0,86750.0,88080.0,88080.0,242,9

@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-MilanChovanec.1970,regular,ps2013,158810.0,177460.0,192710.0,198780.0,198780.0,482,46
-VojtechFilip.1955,chair,ps2013,126920.0,150680.0,198560.0,208360.0,208360.0,320,40
-IvanAdamec.1960,regular,ps2013,138170.0,338850.0,352350.0,355480.0,355480.0,475,103
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+MilanChovanec.1970,regular,ps2013,042,03,223,158810.0,177460.0,192710.0,198780.0,198780.0,482,46
+VojtechFilip.1955,chair,ps2013,042,03,223,126920.0,150680.0,198560.0,208360.0,208360.0,320,40
+IvanAdamec.1960,regular,ps2013,042,03,223,138170.0,338850.0,352350.0,355480.0,355480.0,475,103

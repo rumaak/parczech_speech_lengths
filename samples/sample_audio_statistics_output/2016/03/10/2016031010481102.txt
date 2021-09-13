@@ -1,5 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanBartosek.1971,chair,ps2013,98170.0,101320.0,125460.0,145550.0,145550.0,265,27
-AndrejBabis.1954,guest,ps2013,176740.0,204650.0,222630.0,232000.0,232000.0,525,72
-VaclavVotava.1956,regular,ps2013,41920.0,48070.0,50000.0,51520.0,51520.0,102,7
-VladimirKonicek.1964,regular,ps2013,23940.0,25180.0,25180.0,25180.0,25180.0,55,2
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanBartosek.1971,chair,ps2013,042,07,206,28930.0,29110.0,37800.0,52040.0,52040.0,59,7
+JanBartosek.1971,chair,ps2013,42,7,208,69240.0,72210.0,87660.0,93510.0,93510.0,206,20
+AndrejBabis.1954,guest,ps2013,42,7,208,176740.0,204650.0,222630.0,232000.0,232000.0,525,72
+VaclavVotava.1956,regular,ps2013,42,7,208,41920.0,48070.0,50000.0,51520.0,51520.0,102,7
+VladimirKonicek.1964,regular,ps2013,42,7,208,23940.0,25180.0,25180.0,25180.0,25180.0,55,2

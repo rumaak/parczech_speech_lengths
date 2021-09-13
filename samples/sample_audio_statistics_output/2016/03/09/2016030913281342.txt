@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VlastaBohdalova.1957,regular,ps2013,188570.0,250860.0,275960.0,275960.0,275960.0,403,35
-VojtechFilip.1955,chair,ps2013,130340.0,253370.0,408400.0,450180.0,450180.0,382,63
-RomanSklenak.1970,regular,ps2013,8920.0,10860.0,11400.0,11400.0,11400.0,25,1
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VlastaBohdalova.1957,regular,ps2013,042,06,160,188570.0,250860.0,275960.0,275960.0,275960.0,403,35
+VojtechFilip.1955,chair,ps2013,042,06,160,130340.0,253370.0,408400.0,450180.0,450180.0,382,63
+RomanSklenak.1970,regular,ps2013,042,06,160,8920.0,10860.0,11400.0,11400.0,11400.0,25,1

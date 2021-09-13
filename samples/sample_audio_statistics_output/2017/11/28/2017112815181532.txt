@@ -1,3 +1,3 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-MartinKolovratnik.1975,regular,ps2017,161640.0,229110.0,237190.0,237190.0,237190.0,488,98
-RadekVondracek.1973,chair,ps2017,199430.0,242990.0,346930.0,426280.0,426280.0,509,48
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+MartinKolovratnik.1975,regular,ps2017,002,01,002,161640.0,229110.0,237190.0,237190.0,237190.0,488,98
+RadekVondracek.1973,chair,ps2017,002,01,002,199430.0,242990.0,346930.0,426280.0,426280.0,509,48

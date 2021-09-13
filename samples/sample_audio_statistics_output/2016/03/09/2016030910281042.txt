@@ -1,5 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JaroslavaPokornaJermanova.1970,chair,ps2013,231880.0,251360.0,330590.0,432400.0,432400.0,584,48
-RadekVondracek.1973,regular,ps2013,42480.0,43400.0,45860.0,49550.0,49550.0,119,12
-MartinPlisek.1974,regular,ps2013,61140.0,73800.0,76050.0,76050.0,76050.0,138,6
-RobertPelikan.1979,regular,ps2013,53920.0,69220.0,77290.0,79560.0,79560.0,126,8
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,06,155,131440.0,141360.0,203640.0,303250.0,303250.0,331,33
+RadekVondracek.1973,regular,ps2013,042,06,155,42480.0,43400.0,45860.0,49550.0,49550.0,119,12
+JaroslavaPokornaJermanova.1970,chair,ps2013,42,6,156,100440.0,110000.0,126950.0,129150.0,129150.0,253,15
+MartinPlisek.1974,regular,ps2013,42,6,156,61140.0,73800.0,76050.0,76050.0,76050.0,138,6
+RobertPelikan.1979,regular,ps2013,42,6,156,53920.0,69220.0,77290.0,79560.0,79560.0,126,8

@@ -1,3 +1,3 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VlastaBohdalova.1957,regular,ps2013,237610.0,263750.0,292700.0,293930.0,293930.0,502,41
-VojtechFilip.1955,chair,ps2013,116660.0,118650.0,261930.0,291650.0,291650.0,332,51
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VlastaBohdalova.1957,regular,ps2013,042,06,160,237610.0,263750.0,292700.0,293930.0,293930.0,502,41
+VojtechFilip.1955,chair,ps2013,042,06,160,116660.0,118650.0,261930.0,291650.0,291650.0,332,51

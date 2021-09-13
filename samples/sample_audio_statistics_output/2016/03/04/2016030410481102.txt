@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-KarlaSlechtova.1977,regular,ps2013,166870.0,181200.0,195050.0,197000.0,197000.0,466,31
-JanBartosek.1971,chair,ps2013,9420.0,9390.0,21140.0,21140.0,21140.0,34,5
-MartinPlisek.1974,regular,ps2013,33000.0,36790.0,39360.0,39360.0,39360.0,105,11
-ZbynekStanjura.1964,regular,ps2013,242110.0,279450.0,305280.0,312010.0,312010.0,789,111
-PetrGazdik.1974,chair,ps2013,6040.0,5880.0,6140.0,6140.0,6140.0,18,2
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+KarlaSlechtova.1977,regular,ps2013,042,04,163,166870.0,181200.0,195050.0,197000.0,197000.0,466,31
+JanBartosek.1971,chair,ps2013,042,04,163,9420.0,9390.0,21140.0,21140.0,21140.0,34,5
+MartinPlisek.1974,regular,ps2013,042,04,163,33000.0,36790.0,39360.0,39360.0,39360.0,105,11
+ZbynekStanjura.1964,regular,ps2013,042,04,163,242110.0,279450.0,305280.0,312010.0,312010.0,789,111
+PetrGazdik.1974,chair,ps2013,042,04,163,6040.0,5880.0,6140.0,6140.0,6140.0,18,2

@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-KaterinaValachova.1976,regular,ps2013,32280.0,37520.0,39090.0,40360.0,40360.0,106,7
-VojtechFilip.1955,chair,ps2013,32340.0,35120.0,38240.0,38240.0,38240.0,87,10
-VlastaBohdalova.1957,regular,ps2013,415780.0,454470.0,484260.0,524880.0,524880.0,909,70
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+KaterinaValachova.1976,regular,ps2013,042,06,160,32280.0,37520.0,39090.0,40360.0,40360.0,106,7
+VojtechFilip.1955,chair,ps2013,042,06,160,32340.0,35120.0,38240.0,38240.0,38240.0,87,10
+VlastaBohdalova.1957,regular,ps2013,042,06,160,415780.0,454470.0,484260.0,524880.0,524880.0,909,70

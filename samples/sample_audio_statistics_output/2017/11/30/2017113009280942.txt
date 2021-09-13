@@ -1,3 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-RadekVondracek.1973,chair,ps2017,212580.0,404450.0,466930.0,534690.0,534690.0,520,32
-KarelRais.1949,regular,ps2017,168040.0,199210.0,210380.0,240800.0,240800.0,404,43
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+RadekVondracek.1973,chair,ps2017,002,02,018,98870.0,139920.0,176960.0,225620.0,225620.0,235,6
+RadekVondracek.1973,chair,ps2017,2,2,31,20070.0,161720.0,166750.0,167870.0,167870.0,51,7
+RadekVondracek.1973,chair,ps2017,2,2,30,93640.0,102810.0,123220.0,141200.0,141200.0,234,19
+KarelRais.1949,regular,ps2017,2,2,30,168040.0,199210.0,210380.0,240800.0,240800.0,404,43

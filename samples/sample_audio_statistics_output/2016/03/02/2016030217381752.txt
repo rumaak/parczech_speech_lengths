@@ -1,5 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanBartosek.1971,chair,ps2013,98770.0,103450.0,123250.0,135040.0,135040.0,263,22
-MarianJurecka.1981,regular,ps2013,259140.0,301990.0,320620.0,328940.0,328940.0,745,76
-JanChvojka.1980,regular,ps2013,54440.0,64930.0,69730.0,71260.0,71260.0,169,14
-JanKlan.1982,regular,ps2013,64550.0,177840.0,185460.0,187110.0,187110.0,186,14
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanBartosek.1971,chair,ps2013,042,02,062,2690.0,2260.0,2260.0,2780.0,2780.0,8,1
+JanBartosek.1971,chair,ps2013,42,2,124,96080.0,101190.0,120990.0,132260.0,132260.0,255,21
+MarianJurecka.1981,regular,ps2013,42,2,124,259140.0,301990.0,320620.0,328940.0,328940.0,745,76
+JanChvojka.1980,regular,ps2013,42,2,124,54440.0,64930.0,69730.0,71260.0,71260.0,169,14
+JanKlan.1982,regular,ps2013,42,2,124,64550.0,177840.0,185460.0,187110.0,187110.0,186,14

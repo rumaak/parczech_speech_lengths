@@ -1,5 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-MichalKucera.1968,regular,ps2013,93300.0,109280.0,112610.0,117390.0,117390.0,244,16
-JanHamacek.1978,chair,ps2013,121420.0,139850.0,191930.0,222740.0,222740.0,343,29
-VeraKovarova.1964,regular,ps2013,113160.0,138100.0,146790.0,151510.0,151510.0,256,16
-JosefKott.1970,regular,ps2013,63780.0,79170.0,82450.0,83960.0,83960.0,163,7
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+MichalKucera.1968,regular,ps2013,042,08,152,93300.0,109280.0,112610.0,117390.0,117390.0,244,16
+JanHamacek.1978,chair,ps2013,042,08,152,77840.0,90080.0,133160.0,161580.0,161580.0,218,16
+JanHamacek.1978,chair,ps2013,42,8,166,43580.0,49770.0,58770.0,61160.0,61160.0,125,13
+VeraKovarova.1964,regular,ps2013,42,8,166,113160.0,138100.0,146790.0,151510.0,151510.0,256,16
+JosefKott.1970,regular,ps2013,42,8,166,63780.0,79170.0,82450.0,83960.0,83960.0,163,7

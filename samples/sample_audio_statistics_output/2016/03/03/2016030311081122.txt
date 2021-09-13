@@ -1,5 +1,7 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VojtechFilip.1955,chair,ps2013,145120.0,160090.0,212080.0,218580.0,218580.0,400,58
-LubomirZaoralek.1956,regular,ps2013,191790.0,307800.0,325700.0,399910.0,399910.0,627,101
-VaclavZemek.1974,regular,ps2013,43510.0,48170.0,52770.0,56510.0,56510.0,137,12
-PavelHolik.1957,regular,ps2013,22990.0,22980.0,25610.0,25610.0,25610.0,59,3
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechFilip.1955,chair,ps2013,042,03,141,84260.0,93210.0,120810.0,123690.0,123690.0,235,39
+LubomirZaoralek.1956,regular,ps2013,042,03,141,66890.0,99010.0,108930.0,111000.0,111000.0,255,68
+VaclavZemek.1974,regular,ps2013,042,03,141,43510.0,48170.0,52770.0,56510.0,56510.0,137,12
+LubomirZaoralek.1956,regular,ps2013,42,3,140,124900.0,208790.0,216770.0,288910.0,288910.0,372,33
+VojtechFilip.1955,chair,ps2013,42,3,140,60860.0,66880.0,91270.0,94890.0,94890.0,165,19
+PavelHolik.1957,regular,ps2013,42,3,140,22990.0,22980.0,25610.0,25610.0,25610.0,59,3

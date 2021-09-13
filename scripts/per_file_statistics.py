@@ -53,7 +53,10 @@ class Parser:
         self.audio_start = None
         self.audio_end = None
 
-        self.election_period = None
+        self.last_term = None
+        self.last_meeting = None
+        self.last_sitting = None
+        self.last_agenda = None
 
     def parse(self):
         data_df = pd.read_csv(self.file_in, sep="\t")
@@ -69,6 +72,9 @@ class Parser:
             "speaker",
             "role",
             "election_period",
+            "meeting",
+            "sitting",
+            "agenda",
             "word",
             "sentence",
             "paragraph",
@@ -78,22 +84,24 @@ class Parser:
             "no_anchor"
         ])
 
-        for name in self.statistics:
-            person_stats = self.statistics[name]
-            for role in person_stats:
-                role_stats = person_stats[role]
-                statistics_df = statistics_df.append({
-                    "speaker": name,
-                    "role": role,
-                    "election_period": self.election_period,
-                    "word": role_stats["word"],
-                    "sentence": role_stats["sentence"],
-                    "paragraph": role_stats["paragraph"],
-                    "utterance": role_stats["utterance"],
-                    "continuous": role_stats["continuous"],
-                    "word_count": role_stats["word_count"],
-                    "no_anchor": role_stats["no_anchor"]
-                }, ignore_index=True)
+        for key in self.statistics:
+            speaker, role, election_period, meeting, sitting, agenda = key
+            stats = self.statistics[key]
+            statistics_df = statistics_df.append({
+                "speaker": speaker,
+                "role": role,
+                "election_period": election_period,
+                "meeting": meeting,
+                "sitting": sitting,
+                "agenda": agenda,
+                "word": stats["word"],
+                "sentence": stats["sentence"],
+                "paragraph": stats["paragraph"],
+                "utterance": stats["utterance"],
+                "continuous": stats["continuous"],
+                "word_count": stats["word_count"],
+                "no_anchor": stats["no_anchor"]
+            }, ignore_index=True)
 
         return statistics_df
 
@@ -104,36 +112,35 @@ class Parser:
         self.finish_segment("utterance")
 
     def finish_continuous(self):
-        speaker = self.last_speaker
-        role = self.last_role
+        key = self.key_last()
         beg = self.last_continuous["beg"]
         end = self.last_continuous["end"]
 
-        if speaker is not None:
+        if not (None in key):
             if beg is not None:
                 length = (end - beg).total_seconds()*1000
-                self.statistics[speaker][role]["continuous"] += length
+                self.statistics[key]["continuous"] += length
 
         self.last_continuous["beg"] = None
         self.last_continuous["end"] = None
 
     def finish_segment(self, seg_name):
-        speaker = self.last_speaker
-        role = self.last_role
+        key = self.key_last()
         beg = self.last_segment[seg_name]["beg"]
         end = self.last_segment[seg_name]["end"]
 
-        if speaker is not None:
+        if not (None in key):
             if beg is not None:
                 length = (end - beg).total_seconds()*1000
-                self.statistics[speaker][role][seg_name] += length
+                self.statistics[key][seg_name] += length
 
         self.last_segment[seg_name]["beg"] = None
         self.last_segment[seg_name]["end"] = None
         
     def parse_row(self, row):
+        key = self.key_from_row(row)
         self.check_audio(row["audio_url"])
-        self.check_speaker_role(row["speaker"], row["role"])
+        self.check_statistics(key)
 
         # current utterance, paragraph, sentence
         id_parts = row["id"].split(".")
@@ -157,14 +164,14 @@ class Parser:
         end = self.to_absolute(row["end"], row["absolute"])
 
         # update word statistics
-        self.update_word(start, end, row["speaker"], row["role"])
-        self.update_word_count(row["speaker"], row["role"])
-        self.update_missing_anchors(start, end, row["speaker"], row["role"])
+        self.update_word(start, end, key)
+        self.update_word_count(key)
+        self.update_missing_anchors(start, end, key)
 
         # update first and last anchors of segments
-        self.update_segment(start, end, row["speaker"], row["role"], sc, sl, "sentence")
-        self.update_segment(start, end, row["speaker"], row["role"], pc, pl, "paragraph")
-        self.update_segment(start, end, row["speaker"], row["role"], uc, ul, "utterance")
+        self.update_segment(start, end, sc, sl, "sentence")
+        self.update_segment(start, end, pc, pl, "paragraph")
+        self.update_segment(start, end, uc, ul, "utterance")
         self.update_continuous(start, end, row["speaker"], row["role"])
 
         self.last = row["id"]
@@ -174,12 +181,15 @@ class Parser:
             self.previous_audio = row["audio_url"]
             self.audio_start_end(row["audio_url"])
 
-        # update election period
-        self.election_period = row["id"].split("-")[0]
+        # remember election period, meeting, sitting, and agenda
+        self.last_term = key[2]
+        self.last_meeting = key[3]
+        self.last_sitting = key[4]
+        self.last_agenda = key[5]
 
         # remember last speaker, role
-        self.last_speaker = row["speaker"]
-        self.last_role = row["role"]
+        self.last_speaker = key[0]
+        self.last_role = key[1]
 
     # TODO this time of time striping is used in both scripts, consider
     #      creating a shared helper module
@@ -258,45 +268,38 @@ class Parser:
         existing_df.apply(self.update_from_row, axis=1)
 
     def update_from_row(self, row):
-        speaker = row["speaker"]
-        role = row["role"]
-
-        # ensure given speaker + role exist
-        self.check_speaker_role(speaker, role)
+        # ensure key exists in the statistics object
+        key = (
+            row["speaker"],
+            row["role"],
+            row["election_period"],
+            row["meeting"],
+            row["sitting"],
+            row["agenda"]
+        )
+        self.check_statistics(key)
 
         # get current values
-        word = self.statistics[speaker][role]["word"]
-        sentence = self.statistics[speaker][role]["sentence"]
-        paragraph = self.statistics[speaker][role]["paragraph"]
-        utterance = self.statistics[speaker][role]["utterance"]
-        continuous = self.statistics[speaker][role]["continuous"]
-        word_count = self.statistics[speaker][role]["word_count"]
-        no_anchor = self.statistics[speaker][role]["no_anchor"]
+        fields = {
+            "word": None,
+            "sentence": None,
+            "paragraph": None,
+            "utterance": None,
+            "continuous": None,
+            "word_count": None,
+            "no_anchor": None
+        }
+        for f in fields:
+            fields[f] = self.statistics[key][f]
 
         # update with values from file
-        self.statistics[speaker][role]["word"] = word + row["word"]
-        self.statistics[speaker][role]["sentence"] = sentence + row["sentence"]
-        self.statistics[speaker][role]["paragraph"] = paragraph + row["paragraph"]
-        self.statistics[speaker][role]["utterance"] = utterance + row["utterance"]
-        self.statistics[speaker][role]["continuous"] = continuous + row["continuous"]
-        self.statistics[speaker][role]["word_count"] = word_count + row["word_count"]
-        self.statistics[speaker][role]["no_anchor"] = no_anchor + row["no_anchor"]
+        for f in fields:
+            self.statistics[key][f] = fields[f] + row[f]
 
-    def check_speaker_role(self, speaker, role):
-        if not (speaker in self.statistics):
-            self.statistics[speaker] = {
-                role: {
-                    "word": 0,
-                    "sentence": 0,
-                    "paragraph": 0,
-                    "utterance": 0,
-                    "continuous": 0,
-                    "word_count": 0,
-                    "no_anchor": 0
-                }
-            }
-        elif not (role in self.statistics[speaker]):
-            self.statistics[speaker][role] = {
+    def check_statistics(self, key):
+        """Make sure statistics contain key corresponding to current situation"""
+        if not (key in self.statistics):
+            self.statistics[key] = {
                 "word": 0,
                 "sentence": 0,
                 "paragraph": 0,
@@ -306,19 +309,19 @@ class Parser:
                 "no_anchor": 0
             }
 
-    def update_word(self, start, end, speaker, role):
+    def update_word(self, start, end, key):
         if (start is not None) and (end is not None):
             word_length = (end - start).total_seconds()*1000
-            self.statistics[speaker][role]["word"] += word_length
+            self.statistics[key]["word"] += word_length
 
-    def update_word_count(self, speaker, role):
-        self.statistics[speaker][role]["word_count"] += 1
+    def update_word_count(self, key):
+        self.statistics[key]["word_count"] += 1
 
-    def update_missing_anchors(self, start, end, speaker, role):
+    def update_missing_anchors(self, start, end, key):
         if (start is None) or (end is None):
-            self.statistics[speaker][role]["no_anchor"] += 1
+            self.statistics[key]["no_anchor"] += 1
 
-    def update_segment(self, start, end, speaker, role, sc, sl, seg_name):
+    def update_segment(self, start, end, sc, sl, seg_name):
         beg_l = self.last_segment[seg_name]["beg"]
         end_l = self.last_segment[seg_name]["end"]
 
@@ -373,6 +376,34 @@ class Parser:
             return dt + timedelta(milliseconds=interval)
         else:
             return None
+
+    def key_from_row(self, row):
+        """Key to index into the statistics object created from row data"""
+        # extract time-related data from row id
+        parts = row["id"].split("-")
+        election_period = parts[0]
+        meeting = parts[1]
+        sitting = parts[2]
+        agenda = parts[4].split(".")[0]
+
+        # extract speaker data
+        speaker = row["speaker"]
+        role = row["role"]
+
+        key = (speaker, role, election_period, meeting, sitting, agenda)
+        return key
+
+    def key_last(self):
+        """Key to index into the statistics object created from previous row data"""
+        speaker = self.last_speaker
+        role = self.last_role
+        election_period = self.last_term
+        meeting = self.last_meeting
+        sitting = self.last_sitting
+        agenda = self.last_agenda
+
+        key = (speaker, role, election_period, meeting, sitting, agenda)
+        return key
 
 if __name__ == "__main__":
     # The script expects path to the input file as well as a path to a

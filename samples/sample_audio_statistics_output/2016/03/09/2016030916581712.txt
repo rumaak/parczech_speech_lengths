@@ -1,5 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VojtechFilip.1955,chair,ps2013,89170.0,101320.0,126960.0,132810.0,132810.0,248,38
-JanMladek.1960,regular,ps2013,249320.0,292520.0,312350.0,323850.0,323850.0,635,56
-VlastimilVozka.1954,regular,ps2013,55030.0,74320.0,79100.0,79100.0,79100.0,114,7
-MilanUrban.1958,regular,ps2013,5710.0,10300.0,10560.0,10560.0,10560.0,18,2
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechFilip.1955,chair,ps2013,042,06,036,26530.0,32990.0,34100.0,34560.0,34560.0,79,19
+JanMladek.1960,regular,ps2013,042,06,036,249320.0,292520.0,312350.0,323850.0,323850.0,635,56
+VojtechFilip.1955,chair,ps2013,42,6,10,62640.0,68330.0,92860.0,98250.0,98250.0,169,19
+VlastimilVozka.1954,regular,ps2013,42,6,10,55030.0,74320.0,79100.0,79100.0,79100.0,114,7
+MilanUrban.1958,regular,ps2013,42,6,10,5710.0,10300.0,10560.0,10560.0,10560.0,18,2

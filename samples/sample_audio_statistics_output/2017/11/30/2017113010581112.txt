@@ -1,2 +1,2 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanHamacek.1978,chair,ps2017,39180.0,52390.0,67010.0,68810.0,68810.0,130,45
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanHamacek.1978,chair,ps2017,002,02,033,39180.0,52390.0,67010.0,68810.0,68810.0,130,45

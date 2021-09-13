@@ -1,2 +1,2 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-BohuslavSobotka.1971,guest,ps2013,481620.0,512270.0,563720.0,568420.0,568420.0,1336,78
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+BohuslavSobotka.1971,guest,ps2013,042,05,000,481620.0,512270.0,563720.0,568420.0,568420.0,1336,78

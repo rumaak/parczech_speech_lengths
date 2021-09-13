@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-TomioOkamura.1972,regular,ps2013,435580.0,471300.0,506800.0,623450.0,623450.0,1274,99
-PetrGazdik.1974,chair,ps2013,21620.0,22680.0,36530.0,36760.0,36760.0,62,3
-MiroslavKalousek.1960,regular,ps2013,26040.0,27720.0,30840.0,30840.0,30840.0,65,6
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+TomioOkamura.1972,regular,ps2013,042,09,202,435580.0,471300.0,506800.0,623450.0,623450.0,1274,99
+PetrGazdik.1974,chair,ps2013,042,09,202,21620.0,22680.0,36530.0,36760.0,36760.0,62,3
+MiroslavKalousek.1960,regular,ps2013,042,09,202,26040.0,27720.0,30840.0,30840.0,30840.0,65,6

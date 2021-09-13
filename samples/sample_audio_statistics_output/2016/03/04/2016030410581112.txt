@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-ZbynekStanjura.1964,regular,ps2013,121740.0,141790.0,160300.0,162010.0,162010.0,369,34
-PetrGazdik.1974,chair,ps2013,22320.0,21770.0,26210.0,26210.0,26210.0,70,2
-KarelFiedler.1961,regular,ps2013,67200.0,70890.0,79920.0,79920.0,79920.0,187,12
-LudvikHovorka.1963,regular,ps2013,182490.0,243670.0,253210.0,258190.0,258190.0,504,48
-LukasPleticha.1974,regular,ps2013,64340.0,86100.0,89420.0,96990.0,96990.0,165,15
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+ZbynekStanjura.1964,regular,ps2013,042,04,163,121740.0,141790.0,160300.0,162010.0,162010.0,369,34
+PetrGazdik.1974,chair,ps2013,042,04,163,22320.0,21770.0,26210.0,26210.0,26210.0,70,2
+KarelFiedler.1961,regular,ps2013,042,04,163,67200.0,70890.0,79920.0,79920.0,79920.0,187,12
+LudvikHovorka.1963,regular,ps2013,042,04,163,182490.0,243670.0,253210.0,258190.0,258190.0,504,48
+LukasPleticha.1974,regular,ps2013,042,04,163,64340.0,86100.0,89420.0,96990.0,96990.0,165,15

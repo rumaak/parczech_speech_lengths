@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VaclavVotava.1956,regular,ps2013,69060.0,90510.0,99450.0,100010.0,100010.0,196,16
-PetrGazdik.1974,chair,ps2013,38280.0,36180.0,47610.0,47610.0,47610.0,114,9
-MiroslavKalousek.1960,regular,ps2013,105690.0,127010.0,136950.0,136950.0,136950.0,296,28
-ZbynekStanjura.1964,regular,ps2013,71790.0,81800.0,95740.0,96130.0,96130.0,233,24
-AndrejBabis.1954,guest,ps2013,119360.0,174650.0,192280.0,195510.0,195510.0,407,64
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VaclavVotava.1956,regular,ps2013,042,02,151,69060.0,90510.0,99450.0,100010.0,100010.0,196,16
+PetrGazdik.1974,chair,ps2013,042,02,151,38280.0,36180.0,47610.0,47610.0,47610.0,114,9
+MiroslavKalousek.1960,regular,ps2013,042,02,151,105690.0,127010.0,136950.0,136950.0,136950.0,296,28
+ZbynekStanjura.1964,regular,ps2013,042,02,151,71790.0,81800.0,95740.0,96130.0,96130.0,233,24
+AndrejBabis.1954,guest,ps2013,042,02,151,119360.0,174650.0,192280.0,195510.0,195510.0,407,64

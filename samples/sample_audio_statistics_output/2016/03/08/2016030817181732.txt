@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-BohuslavSvoboda.1944,regular,ps2013,41190.0,47390.0,49360.0,52010.0,52010.0,104,8
-PetrGazdik.1974,chair,ps2013,11270.0,10700.0,13190.0,13190.0,13190.0,36,2
-MarekBenda.1968,regular,ps2013,298020.0,388740.0,405470.0,414230.0,414230.0,894,52
-StepanStupcuk.1976,regular,ps2013,94560.0,138170.0,149190.0,152690.0,152690.0,224,12
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+BohuslavSvoboda.1944,regular,ps2013,042,05,015,41190.0,47390.0,49360.0,52010.0,52010.0,104,8
+PetrGazdik.1974,chair,ps2013,042,05,015,11270.0,10700.0,13190.0,13190.0,13190.0,36,2
+MarekBenda.1968,regular,ps2013,042,05,015,298020.0,388740.0,405470.0,414230.0,414230.0,894,52
+StepanStupcuk.1976,regular,ps2013,042,05,015,94560.0,138170.0,149190.0,152690.0,152690.0,224,12

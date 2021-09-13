@@ -1,2 +1,2 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-PetrBendl.1966,regular,ps2013,428660.0,560960.0,596190.0,612050.0,612050.0,1020,57
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+PetrBendl.1966,regular,ps2013,042,10,172,428660.0,560960.0,596190.0,612050.0,612050.0,1020,57

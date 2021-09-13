@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-TomioOkamura.1972,regular,ps2013,301670.0,339580.0,354290.0,362080.0,362080.0,822,50
-JanBartosek.1971,chair,ps2013,11500.0,12480.0,22790.0,22790.0,22790.0,37,4
-LeosHeger.1948,regular,ps2013,93230.0,116650.0,120510.0,122150.0,122150.0,207,12
-MartinPlisek.1974,regular,ps2013,45310.0,145080.0,148050.0,149110.0,149110.0,104,5
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+TomioOkamura.1972,regular,ps2013,042,08,067,301670.0,339580.0,354290.0,362080.0,362080.0,822,50
+JanBartosek.1971,chair,ps2013,042,08,067,11500.0,12480.0,22790.0,22790.0,22790.0,37,4
+LeosHeger.1948,regular,ps2013,042,08,067,93230.0,116650.0,120510.0,122150.0,122150.0,207,12
+MartinPlisek.1974,regular,ps2013,042,08,067,45310.0,145080.0,148050.0,149110.0,149110.0,104,5

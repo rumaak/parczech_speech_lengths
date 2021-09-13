@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JiriMihola.1972,regular,ps2013,104070.0,114540.0,120690.0,124950.0,124950.0,224,18
-JaroslavaPokornaJermanova.1970,chair,ps2013,38090.0,361910.0,370050.0,370050.0,370050.0,103,20
-JiriDienstbier.1969,regular,ps2013,157730.0,179770.0,188370.0,194530.0,194530.0,396,10
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JiriMihola.1972,regular,ps2013,042,08,018,104070.0,114540.0,120690.0,124950.0,124950.0,224,18
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,08,018,38090.0,361910.0,370050.0,370050.0,370050.0,103,20
+JiriDienstbier.1969,regular,ps2013,042,08,018,157730.0,179770.0,188370.0,194530.0,194530.0,396,10

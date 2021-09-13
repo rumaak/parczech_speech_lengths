@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JeronymTejc.1977,regular,ps2013,93700.0,112680.0,123240.0,123920.0,123920.0,260,12
-JanBartosek.1971,chair,ps2013,7770.0,6320.0,11720.0,11720.0,11720.0,21,0
-TomioOkamura.1972,regular,ps2013,94180.0,110570.0,119750.0,120500.0,120500.0,280,15
-OlgaHavlova.1953,regular,ps2013,230320.0,248310.0,296650.0,305140.0,305140.0,534,24
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JeronymTejc.1977,regular,ps2013,042,08,067,93700.0,112680.0,123240.0,123920.0,123920.0,260,12
+JanBartosek.1971,chair,ps2013,042,08,067,7770.0,6320.0,11720.0,11720.0,11720.0,21,0
+TomioOkamura.1972,regular,ps2013,042,08,067,94180.0,110570.0,119750.0,120500.0,120500.0,280,15
+OlgaHavlova.1953,regular,ps2013,042,08,067,230320.0,248310.0,296650.0,305140.0,305140.0,534,24

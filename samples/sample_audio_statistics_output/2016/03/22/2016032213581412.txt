@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JaroslavaPokornaJermanova.1970,chair,ps2013,263360.0,327880.0,353350.0,420640.0,420640.0,636,84
-MarekCernoch.1969,regular,ps2013,23010.0,25450.0,26840.0,26840.0,26840.0,60,4
-TomioOkamura.1972,regular,ps2013,62500.0,71230.0,76290.0,78400.0,78400.0,187,25
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,09,000,263360.0,327880.0,353350.0,420640.0,420640.0,636,84
+MarekCernoch.1969,regular,ps2013,042,09,000,23010.0,25450.0,26840.0,26840.0,26840.0,60,4
+TomioOkamura.1972,regular,ps2013,042,09,000,62500.0,71230.0,76290.0,78400.0,78400.0,187,25

@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JeronymTejc.1977,regular,ps2013,177790.0,217220.0,237550.0,243410.0,243410.0,471,24
-JanBartosek.1971,chair,ps2013,14420.0,12250.0,16000.0,16000.0,16000.0,43,4
-MarekCernoch.1969,regular,ps2013,212540.0,226350.0,258340.0,266440.0,266440.0,516,33
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JeronymTejc.1977,regular,ps2013,042,08,067,177790.0,217220.0,237550.0,243410.0,243410.0,471,24
+JanBartosek.1971,chair,ps2013,042,08,067,14420.0,12250.0,16000.0,16000.0,16000.0,43,4
+MarekCernoch.1969,regular,ps2013,042,08,067,212540.0,226350.0,258340.0,266440.0,266440.0,516,33

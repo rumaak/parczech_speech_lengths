@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-BohuslavSobotka.1971,guest,ps2013,322740.0,364230.0,383340.0,390460.0,390460.0,795,35
-JanHamacek.1978,chair,ps2013,12220.0,13440.0,15610.0,15610.0,15610.0,38,1
-ZdenekSyblik.1956,regular,ps2013,33950.0,45970.0,48920.0,48920.0,48920.0,93,4
-PetrBendl.1966,regular,ps2013,75540.0,94360.0,103280.0,105460.0,105460.0,191,7
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+BohuslavSobotka.1971,guest,ps2013,042,03,224,322740.0,364230.0,383340.0,390460.0,390460.0,795,35
+JanHamacek.1978,chair,ps2013,042,03,224,12220.0,13440.0,15610.0,15610.0,15610.0,38,1
+ZdenekSyblik.1956,regular,ps2013,042,03,224,33950.0,45970.0,48920.0,48920.0,48920.0,93,4
+PetrBendl.1966,regular,ps2013,042,03,224,75540.0,94360.0,103280.0,105460.0,105460.0,191,7

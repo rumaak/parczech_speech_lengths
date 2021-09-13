@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JaroslavZavadil.1944,regular,ps2013,72290.0,101400.0,112990.0,114940.0,114940.0,264,58
-JanHamacek.1978,chair,ps2013,35710.0,42730.0,47730.0,48570.0,48570.0,101,3
-RomanKubicek.1963,regular,ps2013,56650.0,66420.0,70760.0,74790.0,74790.0,161,13
-SimeonKaramazov.1963,regular,ps2013,208580.0,217270.0,243790.0,251240.0,251240.0,577,23
-PetrBendl.1966,regular,ps2013,88310.0,228120.0,236760.0,239220.0,239220.0,264,20
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JaroslavZavadil.1944,regular,ps2013,042,02,031,72290.0,101400.0,112990.0,114940.0,114940.0,264,58
+JanHamacek.1978,chair,ps2013,042,02,031,35710.0,42730.0,47730.0,48570.0,48570.0,101,3
+RomanKubicek.1963,regular,ps2013,042,02,031,56650.0,66420.0,70760.0,74790.0,74790.0,161,13
+SimeonKaramazov.1963,regular,ps2013,042,02,031,208580.0,217270.0,243790.0,251240.0,251240.0,577,23
+PetrBendl.1966,regular,ps2013,042,02,031,88310.0,228120.0,236760.0,239220.0,239220.0,264,20

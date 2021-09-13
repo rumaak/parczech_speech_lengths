@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-BohuslavSobotka.1971,guest,ps2013,65880.0,72270.0,77990.0,79720.0,79720.0,158,14
-VojtechFilip.1955,chair,ps2013,75430.0,98130.0,114550.0,117420.0,117420.0,198,28
-AugustinKarelAndrleSylor.1946,regular,ps2013,90510.0,103870.0,110360.0,111410.0,111410.0,191,18
-JiriValenta.1965,regular,ps2013,71220.0,74570.0,82400.0,84730.0,84730.0,194,10
-DanTok.1959,regular,ps2013,151630.0,181860.0,191710.0,194220.0,194220.0,333,26
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+BohuslavSobotka.1971,guest,ps2013,042,03,224,65880.0,72270.0,77990.0,79720.0,79720.0,158,14
+VojtechFilip.1955,chair,ps2013,042,03,224,75430.0,98130.0,114550.0,117420.0,117420.0,198,28
+AugustinKarelAndrleSylor.1946,regular,ps2013,042,03,224,90510.0,103870.0,110360.0,111410.0,111410.0,191,18
+JiriValenta.1965,regular,ps2013,042,03,224,71220.0,74570.0,82400.0,84730.0,84730.0,194,10
+DanTok.1959,regular,ps2013,042,03,224,151630.0,181860.0,191710.0,194220.0,194220.0,333,26

@@ -1,4 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanHamacek.1978,chair,ps2013,184910.0,226170.0,320920.0,367940.0,367940.0,539,61
-AndrejBabis.1954,guest,ps2013,144100.0,169190.0,177870.0,183120.0,183120.0,410,56
-JanVolny.1959,regular,ps2013,40650.0,57430.0,60110.0,60110.0,60110.0,92,7
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanHamacek.1978,chair,ps2013,042,01,001,32940.0,37530.0,64680.0,65540.0,65540.0,103,11
+AndrejBabis.1954,guest,ps2013,042,01,001,144100.0,169190.0,177870.0,183120.0,183120.0,410,56
+JanVolny.1959,regular,ps2013,042,01,001,40650.0,57430.0,60110.0,60110.0,60110.0,92,7
+JanHamacek.1978,chair,ps2013,42,1,0,151970.0,188640.0,256240.0,302400.0,302400.0,436,50

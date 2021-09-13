@@ -1,2 +1,2 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-RichardBrabec.1966,regular,ps2013,436150.0,559980.0,582860.0,594940.0,594940.0,1188,78
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+RichardBrabec.1966,regular,ps2013,042,02,061,436150.0,559980.0,582860.0,594940.0,594940.0,1188,78

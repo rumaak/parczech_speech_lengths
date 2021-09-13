@@ -1,2 +1,2 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-IvanaDobesova.1960,regular,ps2013,461590.0,512870.0,572820.0,585650.0,585650.0,1214,67
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+IvanaDobesova.1960,regular,ps2013,042,09,202,461590.0,512870.0,572820.0,585650.0,585650.0,1214,67

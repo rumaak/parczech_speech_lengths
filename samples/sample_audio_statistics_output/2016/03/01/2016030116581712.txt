@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanBartosek.1971,chair,ps2013,6550.0,6110.0,6920.0,6920.0,6920.0,15,0
-VitKankovsky.1970,regular,ps2013,256150.0,281280.0,304370.0,313360.0,313360.0,650,37
-PetrGazdik.1974,chair,ps2013,9570.0,9390.0,11190.0,11190.0,11190.0,23,0
-MargitaBalastikova.1967,regular,ps2013,212380.0,326480.0,344150.0,349880.0,349880.0,559,35
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanBartosek.1971,chair,ps2013,042,01,007,6550.0,6110.0,6920.0,6920.0,6920.0,15,0
+VitKankovsky.1970,regular,ps2013,042,01,007,256150.0,281280.0,304370.0,313360.0,313360.0,650,37
+PetrGazdik.1974,chair,ps2013,042,01,007,9570.0,9390.0,11190.0,11190.0,11190.0,23,0
+MargitaBalastikova.1967,regular,ps2013,042,01,007,212380.0,326480.0,344150.0,349880.0,349880.0,559,35

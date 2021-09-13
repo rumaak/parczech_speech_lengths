@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-ZbynekStanjura.1964,regular,ps2013,173640.0,219820.0,239590.0,248250.0,248250.0,513,36
-JanHamacek.1978,chair,ps2013,17080.0,18500.0,20950.0,20950.0,20950.0,48,2
-MiroslavKalousek.1960,regular,ps2013,232240.0,274360.0,301620.0,303940.0,303940.0,539,36
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+ZbynekStanjura.1964,regular,ps2013,042,06,163,173640.0,219820.0,239590.0,248250.0,248250.0,513,36
+JanHamacek.1978,chair,ps2013,042,06,163,17080.0,18500.0,20950.0,20950.0,20950.0,48,2
+MiroslavKalousek.1960,regular,ps2013,042,06,163,232240.0,274360.0,301620.0,303940.0,303940.0,539,36

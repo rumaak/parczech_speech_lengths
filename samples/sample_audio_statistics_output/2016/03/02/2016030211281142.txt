@@ -1,5 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-PetrGazdik.1974,chair,ps2013,217540.0,236950.0,272470.0,372160.0,372160.0,613,59
-KarelRais.1949,regular,ps2013,30300.0,39030.0,43310.0,43310.0,43310.0,101,20
-KaterinaValachova.1976,regular,ps2013,88110.0,95640.0,98470.0,101440.0,101440.0,238,20
-FrantisekVacha.1966,regular,ps2013,43010.0,52310.0,54590.0,55730.0,55730.0,95,6
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+PetrGazdik.1974,chair,ps2013,042,02,151,160650.0,171290.0,201500.0,299610.0,299610.0,461,46
+KarelRais.1949,regular,ps2013,042,02,151,30300.0,39030.0,43310.0,43310.0,43310.0,101,20
+PetrGazdik.1974,chair,ps2013,42,2,159,56890.0,65660.0,70970.0,72550.0,72550.0,152,13
+KaterinaValachova.1976,regular,ps2013,42,2,159,88110.0,95640.0,98470.0,101440.0,101440.0,238,20
+FrantisekVacha.1966,regular,ps2013,42,2,159,43010.0,52310.0,54590.0,55730.0,55730.0,95,6

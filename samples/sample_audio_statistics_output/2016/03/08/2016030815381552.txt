@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JaroslavKlaska.1962,regular,ps2013,54700.0,57520.0,57520.0,64860.0,64860.0,124,6
-JaroslavaPokornaJermanova.1970,chair,ps2013,28220.0,23510.0,46590.0,47000.0,47000.0,77,3
-IvanPilny.1944,regular,ps2013,331140.0,396220.0,418540.0,437070.0,437070.0,986,73
-KarelRais.1949,regular,ps2013,50390.0,63470.0,67020.0,70230.0,70230.0,140,11
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JaroslavKlaska.1962,regular,ps2013,042,05,009,54700.0,57520.0,57520.0,64860.0,64860.0,124,6
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,05,009,28220.0,23510.0,46590.0,47000.0,47000.0,77,3
+IvanPilny.1944,regular,ps2013,042,05,009,331140.0,396220.0,418540.0,437070.0,437070.0,986,73
+KarelRais.1949,regular,ps2013,042,05,009,50390.0,63470.0,67020.0,70230.0,70230.0,140,11

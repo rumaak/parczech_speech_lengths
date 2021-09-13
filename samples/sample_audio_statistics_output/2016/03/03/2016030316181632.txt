@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-MarianJurecka.1981,regular,ps2013,65780.0,81960.0,86750.0,86750.0,86750.0,202,32
-VojtechFilip.1955,chair,ps2013,39890.0,47060.0,96360.0,97610.0,97610.0,112,17
-ZdenekOndracek.1969,regular,ps2013,114550.0,149360.0,162860.0,164480.0,164480.0,319,35
-LubomirZaoralek.1956,regular,ps2013,243680.0,263760.0,293430.0,299600.0,299600.0,690,42
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+MarianJurecka.1981,regular,ps2013,042,03,224,65780.0,81960.0,86750.0,86750.0,86750.0,202,32
+VojtechFilip.1955,chair,ps2013,042,03,224,39890.0,47060.0,96360.0,97610.0,97610.0,112,17
+ZdenekOndracek.1969,regular,ps2013,042,03,224,114550.0,149360.0,162860.0,164480.0,164480.0,319,35
+LubomirZaoralek.1956,regular,ps2013,042,03,224,243680.0,263760.0,293430.0,299600.0,299600.0,690,42

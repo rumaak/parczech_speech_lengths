@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-LudvikHovorka.1963,regular,ps2013,232720.0,293480.0,313820.0,321030.0,321030.0,585,39
-PetrGazdik.1974,chair,ps2013,17610.0,16130.0,20230.0,20770.0,20770.0,47,1
-KarelSchwarzenberg.1937,regular,ps2013,12610.0,15370.0,16590.0,16590.0,16590.0,31,4
-BohuslavSvoboda.1944,regular,ps2013,165470.0,310330.0,326900.0,329170.0,329170.0,380,23
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+LudvikHovorka.1963,regular,ps2013,042,05,015,232720.0,293480.0,313820.0,321030.0,321030.0,585,39
+PetrGazdik.1974,chair,ps2013,042,05,015,17610.0,16130.0,20230.0,20770.0,20770.0,47,1
+KarelSchwarzenberg.1937,regular,ps2013,042,05,015,12610.0,15370.0,16590.0,16590.0,16590.0,31,4
+BohuslavSvoboda.1944,regular,ps2013,042,05,015,165470.0,310330.0,326900.0,329170.0,329170.0,380,23

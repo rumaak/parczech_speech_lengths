@@ -1,7 +1,7 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-PetrBendl.1966,regular,ps2013,199100.0,276810.0,286480.0,294250.0,294250.0,503,37
-JanBartosek.1971,chair,ps2013,98820.0,113730.0,149340.0,192390.0,192390.0,285,30
-JiriMihola.1972,regular,ps2013,9320.0,8650.0,15530.0,15530.0,15530.0,25,2
-PavelBlazek.1969,regular,ps2013,10290.0,11600.0,11790.0,11790.0,11790.0,37,6
-ZbynekStanjura.1964,regular,ps2013,4930.0,4620.0,4620.0,4620.0,4620.0,14,0
-DanielHerman.1963,regular,ps2013,33570.0,36050.0,39180.0,39680.0,39680.0,84,7
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+PetrBendl.1966,regular,ps2013,042,07,212,199100.0,276810.0,286480.0,294250.0,294250.0,503,37
+JanBartosek.1971,chair,ps2013,042,07,212,98820.0,113730.0,149340.0,192390.0,192390.0,285,30
+JiriMihola.1972,regular,ps2013,042,07,212,9320.0,8650.0,15530.0,15530.0,15530.0,25,2
+PavelBlazek.1969,regular,ps2013,042,07,212,10290.0,11600.0,11790.0,11790.0,11790.0,37,6
+ZbynekStanjura.1964,regular,ps2013,042,07,212,4930.0,4620.0,4620.0,4620.0,4620.0,14,0
+DanielHerman.1963,regular,ps2013,042,07,212,33570.0,36050.0,39180.0,39680.0,39680.0,84,7

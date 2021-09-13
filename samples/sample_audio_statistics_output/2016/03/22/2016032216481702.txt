@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-PetrFiala.1964,regular,ps2013,418240.0,467620.0,493010.0,501370.0,501370.0,1054,70
-JanBartosek.1971,chair,ps2013,6280.0,5500.0,8340.0,8340.0,8340.0,22,4
-IvanaDobesova.1960,regular,ps2013,86720.0,182340.0,194440.0,195940.0,195940.0,214,8
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+PetrFiala.1964,regular,ps2013,042,09,202,418240.0,467620.0,493010.0,501370.0,501370.0,1054,70
+JanBartosek.1971,chair,ps2013,042,09,202,6280.0,5500.0,8340.0,8340.0,8340.0,22,4
+IvanaDobesova.1960,regular,ps2013,042,09,202,86720.0,182340.0,194440.0,195940.0,195940.0,214,8

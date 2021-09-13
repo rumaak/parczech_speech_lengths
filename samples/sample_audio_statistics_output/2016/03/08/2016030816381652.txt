@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JiriKoubek.1976,regular,ps2013,90370.0,266420.0,284620.0,286640.0,286640.0,352,100
-JaroslavaPokornaJermanova.1970,chair,ps2013,11420.0,10610.0,15690.0,16340.0,16340.0,28,1
-PetrBendl.1966,regular,ps2013,203070.0,501340.0,524130.0,533630.0,533630.0,784,242
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JiriKoubek.1976,regular,ps2013,042,05,015,90370.0,266420.0,284620.0,286640.0,286640.0,352,100
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,05,015,11420.0,10610.0,15690.0,16340.0,16340.0,28,1
+PetrBendl.1966,regular,ps2013,042,05,015,203070.0,501340.0,524130.0,533630.0,533630.0,784,242

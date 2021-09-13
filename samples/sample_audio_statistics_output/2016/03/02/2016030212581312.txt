@@ -1,3 +1,3 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanBartosek.1971,chair,ps2013,196440.0,248550.0,319930.0,369380.0,369380.0,526,49
-MartinKolovratnik.1975,regular,ps2013,101180.0,100580.0,111440.0,112130.0,112130.0,268,16
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanBartosek.1971,chair,ps2013,042,02,157,196440.0,248550.0,319930.0,369380.0,369380.0,526,49
+MartinKolovratnik.1975,regular,ps2013,042,02,157,101180.0,100580.0,111440.0,112130.0,112130.0,268,16

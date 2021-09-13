@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanBartosek.1971,chair,ps2013,12650.0,25920.0,27440.0,27440.0,27440.0,41,12
-JaroslavZavadil.1944,regular,ps2013,8750.0,159670.0,161380.0,161380.0,161380.0,130,106
-FrantisekLaudat.1960,regular,ps2013,8540.0,8910.0,9160.0,9160.0,9160.0,25,1
-ZbynekStanjura.1964,regular,ps2013,296470.0,428900.0,613620.0,623620.0,623620.0,1195,359
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanBartosek.1971,chair,ps2013,042,06,051,12650.0,25920.0,27440.0,27440.0,27440.0,41,12
+JaroslavZavadil.1944,regular,ps2013,042,06,051,8750.0,159670.0,161380.0,161380.0,161380.0,130,106
+FrantisekLaudat.1960,regular,ps2013,042,06,051,8540.0,8910.0,9160.0,9160.0,9160.0,25,1
+ZbynekStanjura.1964,regular,ps2013,042,06,051,296470.0,428900.0,613620.0,623620.0,623620.0,1195,359

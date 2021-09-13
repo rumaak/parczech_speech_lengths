@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-AndrejBabis.1954,guest,ps2013,89020.0,111480.0,128260.0,131900.0,131900.0,272,32
-PetrGazdik.1974,chair,ps2013,168810.0,176030.0,231250.0,282150.0,282150.0,463,49
-ZbynekStanjura.1964,regular,ps2013,118560.0,136220.0,151500.0,154120.0,154120.0,438,70
-IvanGabal.1951,regular,ps2013,9270.0,8060.0,9550.0,9550.0,9550.0,27,1
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+AndrejBabis.1954,guest,ps2013,042,06,041,89020.0,111480.0,128260.0,131900.0,131900.0,272,32
+PetrGazdik.1974,chair,ps2013,042,06,041,168810.0,176030.0,231250.0,282150.0,282150.0,463,49
+ZbynekStanjura.1964,regular,ps2013,042,06,041,118560.0,136220.0,151500.0,154120.0,154120.0,438,70
+IvanGabal.1951,regular,ps2013,042,06,041,9270.0,8060.0,9550.0,9550.0,9550.0,27,1

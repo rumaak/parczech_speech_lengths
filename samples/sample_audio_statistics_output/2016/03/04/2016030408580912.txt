@@ -1,3 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanHamacek.1978,chair,ps2013,147680.0,188100.0,201310.0,208490.0,208490.0,439,24
-KarlaSlechtova.1977,regular,ps2013,275640.0,288290.0,309400.0,318060.0,318060.0,684,29
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanHamacek.1978,chair,ps2013,042,04,163,36000.0,43960.0,51440.0,54080.0,54080.0,113,8
+KarlaSlechtova.1977,regular,ps2013,042,04,163,275640.0,288290.0,309400.0,318060.0,318060.0,684,29
+JanHamacek.1978,chair,ps2013,42,4,0,111680.0,144140.0,149870.0,154410.0,154410.0,326,16

@@ -1,6 +1,7 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JaroslavaPokornaJermanova.1970,chair,ps2013,113930.0,119120.0,129270.0,130860.0,130860.0,288,20
-FrantisekVacha.1966,regular,ps2013,90300.0,118700.0,133550.0,134860.0,134860.0,210,13
-PavelBelobradek.1976,guest,ps2013,201870.0,215600.0,226850.0,232940.0,232940.0,567,52
-JaroslavKlaska.1962,regular,ps2013,23640.0,27760.0,28120.0,28120.0,28120.0,62,7
-RomanSklenak.1970,regular,ps2013,38610.0,45760.0,54630.0,54630.0,54630.0,110,9
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,05,009,98300.0,104120.0,110800.0,112390.0,112390.0,245,18
+FrantisekVacha.1966,regular,ps2013,042,05,009,90300.0,118700.0,133550.0,134860.0,134860.0,210,13
+PavelBelobradek.1976,guest,ps2013,042,05,009,201870.0,215600.0,226850.0,232940.0,232940.0,567,52
+JaroslavKlaska.1962,regular,ps2013,042,05,009,23640.0,27760.0,28120.0,28120.0,28120.0,62,7
+JaroslavaPokornaJermanova.1970,chair,ps2013,42,5,0,15630.0,15000.0,18470.0,18470.0,18470.0,43,2
+RomanSklenak.1970,regular,ps2013,42,5,0,38610.0,45760.0,54630.0,54630.0,54630.0,110,9

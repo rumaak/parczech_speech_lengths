@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-RadekVondracek.1973,chair,ps2017,232740.0,311380.0,437490.0,591250.0,591250.0,614,53
-PetrPavek.1963,regular,ps2017,4280.0,3690.0,4990.0,4990.0,4990.0,13,0
-RadimFiala.1969,regular,ps2017,16300.0,20200.0,22990.0,22990.0,22990.0,55,6
-JanHamacek.1978,chair,ps2017,32560.0,37290.0,39790.0,39890.0,39890.0,100,9
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+RadekVondracek.1973,chair,ps2017,002,02,018,232740.0,311380.0,437490.0,591250.0,591250.0,614,53
+PetrPavek.1963,regular,ps2017,002,02,018,4280.0,3690.0,4990.0,4990.0,4990.0,13,0
+RadimFiala.1969,regular,ps2017,002,02,018,16300.0,20200.0,22990.0,22990.0,22990.0,55,6
+JanHamacek.1978,chair,ps2017,002,02,018,32560.0,37290.0,39790.0,39890.0,39890.0,100,9

@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VojtechFilip.1955,chair,ps2013,130100.0,137470.0,240160.0,257230.0,257230.0,350,49
-MarianJurecka.1981,regular,ps2013,125520.0,152550.0,163300.0,167180.0,167180.0,390,55
-PetrKudela.1969,regular,ps2013,103170.0,142700.0,201560.0,201560.0,201560.0,263,32
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechFilip.1955,chair,ps2013,042,10,172,130100.0,137470.0,240160.0,257230.0,257230.0,350,49
+MarianJurecka.1981,regular,ps2013,042,10,172,125520.0,152550.0,163300.0,167180.0,167180.0,390,55
+PetrKudela.1969,regular,ps2013,042,10,172,103170.0,142700.0,201560.0,201560.0,201560.0,263,32

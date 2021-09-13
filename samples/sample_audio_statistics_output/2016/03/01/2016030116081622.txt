@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VeraKovarova.1964,regular,ps2013,52120.0,59690.0,68160.0,69420.0,69420.0,126,14
-JanBartosek.1971,chair,ps2013,65000.0,61670.0,98680.0,98680.0,98680.0,190,11
-JanKlan.1982,regular,ps2013,68450.0,80530.0,87740.0,91610.0,91610.0,223,18
-LudvikHovorka.1963,regular,ps2013,164960.0,187480.0,200360.0,205220.0,205220.0,395,26
-MilanChovanec.1970,regular,ps2013,74590.0,87740.0,91920.0,93060.0,93060.0,213,18
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VeraKovarova.1964,regular,ps2013,042,01,005,52120.0,59690.0,68160.0,69420.0,69420.0,126,14
+JanBartosek.1971,chair,ps2013,042,01,005,65000.0,61670.0,98680.0,98680.0,98680.0,190,11
+JanKlan.1982,regular,ps2013,042,01,005,68450.0,80530.0,87740.0,91610.0,91610.0,223,18
+LudvikHovorka.1963,regular,ps2013,042,01,005,164960.0,187480.0,200360.0,205220.0,205220.0,395,26
+MilanChovanec.1970,regular,ps2013,042,01,005,74590.0,87740.0,91920.0,93060.0,93060.0,213,18

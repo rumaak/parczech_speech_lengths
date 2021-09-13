@@ -1,5 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-RadekVondracek.1973,chair,ps2017,41520.0,46070.0,55800.0,58500.0,58500.0,120,11
-MartinKolovratnik.1975,regular,ps2017,208600.0,234990.0,244590.0,252080.0,252080.0,633,49
-IvanBartos.1980,regular,ps2017,83110.0,98380.0,101290.0,103370.0,103370.0,236,24
-ZbynekStanjura.1964,regular,ps2017,129870.0,142640.0,158030.0,161250.0,161250.0,460,64
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+RadekVondracek.1973,chair,ps2017,002,01,002,27010.0,28980.0,33890.0,35560.0,35560.0,69,4
+MartinKolovratnik.1975,regular,ps2017,002,01,002,208600.0,234990.0,244590.0,252080.0,252080.0,633,49
+RadekVondracek.1973,chair,ps2017,2,1,1,14510.0,17090.0,21910.0,22940.0,22940.0,51,7
+IvanBartos.1980,regular,ps2017,2,1,1,83110.0,98380.0,101290.0,103370.0,103370.0,236,24
+ZbynekStanjura.1964,regular,ps2017,2,1,1,129870.0,142640.0,158030.0,161250.0,161250.0,460,64

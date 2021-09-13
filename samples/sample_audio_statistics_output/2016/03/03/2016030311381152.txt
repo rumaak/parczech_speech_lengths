@@ -1,3 +1,3 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VojtechFilip.1955,chair,ps2013,10010.0,65179.99999999999,73980.0,73980.0,73980.0,24,3
-JanZahradnik.1949,regular,ps2013,372430.0,582930.0,636140.0,665600.0,665600.0,958,77
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechFilip.1955,chair,ps2013,042,03,217,10010.0,65179.99999999999,73980.0,73980.0,73980.0,24,3
+JanZahradnik.1949,regular,ps2013,042,03,217,372430.0,582930.0,636140.0,665600.0,665600.0,958,77

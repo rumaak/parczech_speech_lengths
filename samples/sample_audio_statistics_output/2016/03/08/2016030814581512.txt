@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanHamacek.1978,chair,ps2013,112540.0,120610.0,159360.0,194130.0,194130.0,299,23
-MarekCernoch.1969,regular,ps2013,4240.0,3290.0,6700.0,6700.0,6700.0,15,4
-BohuslavSobotka.1971,guest,ps2013,351770.0,376640.0,400590.0,408640.0,408640.0,827,47
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanHamacek.1978,chair,ps2013,042,05,000,112540.0,120610.0,159360.0,194130.0,194130.0,299,23
+MarekCernoch.1969,regular,ps2013,042,05,000,4240.0,3290.0,6700.0,6700.0,6700.0,15,4
+BohuslavSobotka.1971,guest,ps2013,042,05,000,351770.0,376640.0,400590.0,408640.0,408640.0,827,47

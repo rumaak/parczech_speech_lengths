@@ -1,6 +1,7 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VojtechFilip.1955,chair,ps2013,185300.0,208670.0,276190.0,296990.0,296990.0,515,66
-MiroslavGrebenicek.1947,regular,ps2013,68030.0,84940.0,92160.0,94610.0,94610.0,119,3
-ZuzkaBebarovaRujbrova.1951,regular,ps2013,86150.0,93410.0,100070.0,101160.0,101160.0,200,10
-ZbynekStanjura.1964,regular,ps2013,47240.0,54770.0,56190.0,56810.0,56810.0,129,14
-KarelFiedler.1961,regular,ps2013,16340.0,20930.0,21730.0,21730.0,21730.0,37,4
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechFilip.1955,chair,ps2013,042,07,214,35920.0,38150.0,41960.0,45450.0,45450.0,96,11
+MiroslavGrebenicek.1947,regular,ps2013,042,07,214,68030.0,84940.0,92160.0,94610.0,94610.0,119,3
+VojtechFilip.1955,chair,ps2013,42,7,213,149380.0,170520.0,234230.0,251540.0,251540.0,419,55
+ZuzkaBebarovaRujbrova.1951,regular,ps2013,42,7,213,86150.0,93410.0,100070.0,101160.0,101160.0,200,10
+ZbynekStanjura.1964,regular,ps2013,42,7,213,47240.0,54770.0,56190.0,56810.0,56810.0,129,14
+KarelFiedler.1961,regular,ps2013,42,7,213,16340.0,20930.0,21730.0,21730.0,21730.0,37,4

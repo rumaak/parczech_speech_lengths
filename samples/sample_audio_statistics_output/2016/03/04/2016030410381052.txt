@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-BohuslavSobotka.1971,guest,ps2013,91550.0,93340.0,100660.0,102250.0,102250.0,274,28
-PetrGazdik.1974,chair,ps2013,21940.0,19030.0,24050.0,24050.0,24050.0,69,5
-MiroslavKalousek.1960,regular,ps2013,250210.0,309310.0,342880.0,354620.0,354620.0,743,57
-KarlaSlechtova.1977,regular,ps2013,113870.0,122650.0,133720.0,136200.0,136200.0,310,19
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+BohuslavSobotka.1971,guest,ps2013,042,04,163,91550.0,93340.0,100660.0,102250.0,102250.0,274,28
+PetrGazdik.1974,chair,ps2013,042,04,163,21940.0,19030.0,24050.0,24050.0,24050.0,69,5
+MiroslavKalousek.1960,regular,ps2013,042,04,163,250210.0,309310.0,342880.0,354620.0,354620.0,743,57
+KarlaSlechtova.1977,regular,ps2013,042,04,163,113870.0,122650.0,133720.0,136200.0,136200.0,310,19

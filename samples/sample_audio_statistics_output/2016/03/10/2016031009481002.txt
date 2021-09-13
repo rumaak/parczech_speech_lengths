@@ -1,7 +1,9 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JaroslavaPokornaJermanova.1970,chair,ps2013,121570.0,121930.0,158890.0,180040.0,180040.0,304,26
-AndrejBabis.1954,guest,ps2013,104540.0,120620.0,126790.0,129500.0,129500.0,300,33
-JanaFischerova.1955,regular,ps2013,74060.0,82540.0,83600.0,86100.0,86100.0,151,12
-MiloslavaVostra.1965,regular,ps2013,24020.0,53010.0,53450.0,53450.0,53450.0,65,6
-DanTok.1959,regular,ps2013,71560.0,77740.0,86200.0,88560.0,88560.0,170,11
-PavelHolik.1957,regular,ps2013,44560.0,48440.0,50290.0,52040.0,52040.0,111,7
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,07,134,4990.0,4290.0,6360.0,6680.0,6680.0,12,0
+JaroslavaPokornaJermanova.1970,chair,ps2013,42,7,136,47980.0,48800.0,67470.0,68190.0,68190.0,121,12
+AndrejBabis.1954,guest,ps2013,42,7,136,104540.0,120620.0,126790.0,129500.0,129500.0,300,33
+JanaFischerova.1955,regular,ps2013,42,7,136,74060.0,82540.0,83600.0,86100.0,86100.0,151,12
+MiloslavaVostra.1965,regular,ps2013,42,7,136,24020.0,53010.0,53450.0,53450.0,53450.0,65,6
+JaroslavaPokornaJermanova.1970,chair,ps2013,42,7,135,68600.0,68840.0,85060.0,105170.0,105170.0,171,14
+DanTok.1959,regular,ps2013,42,7,135,71560.0,77740.0,86200.0,88560.0,88560.0,170,11
+PavelHolik.1957,regular,ps2013,42,7,135,44560.0,48440.0,50290.0,52040.0,52040.0,111,7

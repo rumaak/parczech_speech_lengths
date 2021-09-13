@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VojtechFilip.1955,chair,ps2013,23650.0,28500.0,29900.0,30720.0,30720.0,59,1
-JanaCernochova.1973,regular,ps2013,337980.0,421520.0,439860.0,446180.0,446180.0,826,47
-PetrGazdik.1974,chair,ps2013,12590.0,13270.0,18750.0,18750.0,18750.0,36,4
-BohuslavChalupa.1960,regular,ps2013,32740.0,34550.0,38200.0,38200.0,38200.0,100,6
-DavidKadner.1976,regular,ps2013,34240.0,44030.0,46260.0,47860.0,47860.0,94,6
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechFilip.1955,chair,ps2013,042,09,202,23650.0,28500.0,29900.0,30720.0,30720.0,59,1
+JanaCernochova.1973,regular,ps2013,042,09,202,337980.0,421520.0,439860.0,446180.0,446180.0,826,47
+PetrGazdik.1974,chair,ps2013,042,09,202,12590.0,13270.0,18750.0,18750.0,18750.0,36,4
+BohuslavChalupa.1960,regular,ps2013,042,09,202,32740.0,34550.0,38200.0,38200.0,38200.0,100,6
+DavidKadner.1976,regular,ps2013,042,09,202,34240.0,44030.0,46260.0,47860.0,47860.0,94,6

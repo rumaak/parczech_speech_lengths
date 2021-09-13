@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-LudvikHovorka.1963,regular,ps2013,70110.0,86550.0,90310.0,92800.0,92800.0,184,14
-JanHamacek.1978,chair,ps2013,22170.0,21000.0,24760.0,24760.0,24760.0,64,7
-LeosHeger.1948,regular,ps2013,92710.0,109510.0,115970.0,117150.0,117150.0,208,9
-SvatoplukNemecek.1972,regular,ps2013,251370.0,278120.0,287250.0,294960.0,294960.0,608,31
-PavelAntonin.1962,regular,ps2013,12200.0,14240.0,14240.0,14240.0,14240.0,33,1
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+LudvikHovorka.1963,regular,ps2013,042,06,158,70110.0,86550.0,90310.0,92800.0,92800.0,184,14
+JanHamacek.1978,chair,ps2013,042,06,158,22170.0,21000.0,24760.0,24760.0,24760.0,64,7
+LeosHeger.1948,regular,ps2013,042,06,158,92710.0,109510.0,115970.0,117150.0,117150.0,208,9
+SvatoplukNemecek.1972,regular,ps2013,042,06,158,251370.0,278120.0,287250.0,294960.0,294960.0,608,31
+PavelAntonin.1962,regular,ps2013,042,06,158,12200.0,14240.0,14240.0,14240.0,14240.0,33,1

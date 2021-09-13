@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-HelenaValkova.1951,regular,ps2013,119790.0,147830.0,157730.0,160500.0,160500.0,316,21
-PetrGazdik.1974,chair,ps2013,20760.0,18300.0,23600.0,23600.0,23600.0,57,1
-JanKlan.1982,regular,ps2013,70790.0,77980.0,89850.0,91680.0,91680.0,240,19
-JiriStetina.1941,regular,ps2013,123300.0,144790.0,169660.0,184270.0,184270.0,314,8
-VitKankovsky.1970,regular,ps2013,85120.0,95190.0,103830.0,106860.0,106860.0,230,14
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+HelenaValkova.1951,regular,ps2013,042,05,015,119790.0,147830.0,157730.0,160500.0,160500.0,316,21
+PetrGazdik.1974,chair,ps2013,042,05,015,20760.0,18300.0,23600.0,23600.0,23600.0,57,1
+JanKlan.1982,regular,ps2013,042,05,015,70790.0,77980.0,89850.0,91680.0,91680.0,240,19
+JiriStetina.1941,regular,ps2013,042,05,015,123300.0,144790.0,169660.0,184270.0,184270.0,314,8
+VitKankovsky.1970,regular,ps2013,042,05,015,85120.0,95190.0,103830.0,106860.0,106860.0,230,14

@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-AndrejBabis.1954,guest,ps2013,144830.0,160490.0,177320.0,182650.0,182650.0,388,27
-VojtechFilip.1955,chair,ps2013,20460.0,122870.0,180510.0,180510.0,180510.0,59,4
-SonaMarkova.1963,regular,ps2013,298650.0,335950.0,369270.0,382860.0,382860.0,667,28
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+AndrejBabis.1954,guest,ps2013,042,02,149,144830.0,160490.0,177320.0,182650.0,182650.0,388,27
+VojtechFilip.1955,chair,ps2013,042,02,149,20460.0,122870.0,180510.0,180510.0,180510.0,59,4
+SonaMarkova.1963,regular,ps2013,042,02,149,298650.0,335950.0,369270.0,382860.0,382860.0,667,28

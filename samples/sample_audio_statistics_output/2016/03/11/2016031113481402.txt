@@ -1,3 +1,3 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-MarekBenda.1968,regular,ps2013,416770.0,514630.0,571560.0,584010.0,584010.0,1101,62
-JanBartosek.1971,chair,ps2013,7660.0,10170.0,10690.0,10690.0,10690.0,20,2
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+MarekBenda.1968,regular,ps2013,042,08,067,416770.0,514630.0,571560.0,584010.0,584010.0,1101,62
+JanBartosek.1971,chair,ps2013,042,08,067,7660.0,10170.0,10690.0,10690.0,10690.0,20,2

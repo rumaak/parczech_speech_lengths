@@ -1,4 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VojtechFilip.1955,chair,ps2013,202180.0,238360.0,339980.0,365450.0,365450.0,526,53
-PetrBendl.1966,regular,ps2013,43580.0,60280.0,67460.0,71700.0,71700.0,105,5
-HelenaValkova.1951,regular,ps2013,86660.0,120840.0,124340.0,133030.0,133030.0,241,38
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechFilip.1955,chair,ps2013,042,10,172,64110.0,73730.0,83360.0,85000.0,85000.0,161,15
+PetrBendl.1966,regular,ps2013,042,10,172,43580.0,60280.0,67460.0,71700.0,71700.0,105,5
+VojtechFilip.1955,chair,ps2013,42,10,154,138070.0,164630.0,256620.0,280450.0,280450.0,365,38
+HelenaValkova.1951,regular,ps2013,42,10,154,86660.0,120840.0,124340.0,133030.0,133030.0,241,38

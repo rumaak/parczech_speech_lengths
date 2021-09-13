@@ -1,6 +1,7 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanBartosek.1971,chair,ps2013,40380.0,39590.0,60380.0,70620.0,70620.0,106,6
-VojtechFilip.1955,chair,ps2013,51950.0,75650.0,86600.0,87010.0,87010.0,182,45
-MichaelaMarksova.1969,regular,ps2013,58200.0,64860.0,71760.0,73140.0,73140.0,144,10
-VitKankovsky.1970,regular,ps2013,75580.0,88600.0,94030.0,96770.0,96770.0,183,18
-JanaHnykova.1963,regular,ps2013,186850.0,201060.0,211210.0,217790.0,217790.0,360,15
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanBartosek.1971,chair,ps2013,042,06,051,40380.0,39590.0,60380.0,70620.0,70620.0,106,6
+VojtechFilip.1955,chair,ps2013,042,06,051,5640.0,6880.0,7240.0,7240.0,7240.0,15,2
+VojtechFilip.1955,chair,ps2013,42,6,14,46310.0,68770.0,79360.0,79770.0,79770.0,167,43
+MichaelaMarksova.1969,regular,ps2013,42,6,14,58200.0,64860.0,71760.0,73140.0,73140.0,144,10
+VitKankovsky.1970,regular,ps2013,42,6,14,75580.0,88600.0,94030.0,96770.0,96770.0,183,18
+JanaHnykova.1963,regular,ps2013,42,6,14,186850.0,201060.0,211210.0,217790.0,217790.0,360,15

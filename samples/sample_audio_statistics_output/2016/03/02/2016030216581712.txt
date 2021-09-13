@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-FrantisekVacha.1966,regular,ps2013,21510.0,32270.0,34990.0,35330.0,35330.0,60,6
-PetrGazdik.1974,chair,ps2013,18560.0,16960.0,23850.0,23850.0,23850.0,54,1
-MartinKolovratnik.1975,regular,ps2013,147080.0,169060.0,179010.0,180820.0,180820.0,442,30
-JiriJunek.1973,regular,ps2013,32930.0,45670.0,49310.0,49310.0,49310.0,125,17
-JanZahradnik.1949,regular,ps2013,159350.0,202200.0,220710.0,229490.0,229490.0,394,32
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+FrantisekVacha.1966,regular,ps2013,042,02,061,21510.0,32270.0,34990.0,35330.0,35330.0,60,6
+PetrGazdik.1974,chair,ps2013,042,02,061,18560.0,16960.0,23850.0,23850.0,23850.0,54,1
+MartinKolovratnik.1975,regular,ps2013,042,02,061,147080.0,169060.0,179010.0,180820.0,180820.0,442,30
+JiriJunek.1973,regular,ps2013,042,02,061,32930.0,45670.0,49310.0,49310.0,49310.0,125,17
+JanZahradnik.1949,regular,ps2013,042,02,061,159350.0,202200.0,220710.0,229490.0,229490.0,394,32

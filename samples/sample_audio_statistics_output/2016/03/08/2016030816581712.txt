@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanaPastuchova.1965,regular,ps2013,94790.0,104150.0,107700.0,109770.0,109770.0,195,12
-PetrGazdik.1974,chair,ps2013,13470.0,12150.0,14640.0,14640.0,14640.0,40,1
-JiriPetru.1956,regular,ps2013,271160.0,316990.0,344380.0,354390.0,354390.0,738,61
-LudvikHovorka.1963,regular,ps2013,63060.0,83840.0,86520.0,88030.0,88030.0,156,13
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanaPastuchova.1965,regular,ps2013,042,05,015,94790.0,104150.0,107700.0,109770.0,109770.0,195,12
+PetrGazdik.1974,chair,ps2013,042,05,015,13470.0,12150.0,14640.0,14640.0,14640.0,40,1
+JiriPetru.1956,regular,ps2013,042,05,015,271160.0,316990.0,344380.0,354390.0,354390.0,738,61
+LudvikHovorka.1963,regular,ps2013,042,05,015,63060.0,83840.0,86520.0,88030.0,88030.0,156,13

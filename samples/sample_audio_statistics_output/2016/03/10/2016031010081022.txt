@@ -1,5 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JaroslavaPokornaJermanova.1970,chair,ps2013,176520.0,283260.0,331580.0,383980.0,383980.0,403,25
-VladimirKonicek.1964,regular,ps2013,27020.0,29010.0,29490.0,29490.0,29490.0,64,3
-ZbynekStanjura.1964,regular,ps2013,136710.0,154280.0,166210.0,168950.0,168950.0,376,36
-AndrejBabis.1954,guest,ps2013,83410.0,102460.0,123130.0,125010.0,125010.0,234,31
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,07,139,107690.0,109340.0,129680.0,147400.0,147400.0,243,14
+VladimirKonicek.1964,regular,ps2013,042,07,139,27020.0,29010.0,29490.0,29490.0,29490.0,64,3
+JaroslavaPokornaJermanova.1970,chair,ps2013,42,7,131,68830.0,173920.0,201900.0,236580.0,236580.0,160,11
+ZbynekStanjura.1964,regular,ps2013,42,7,131,136710.0,154280.0,166210.0,168950.0,168950.0,376,36
+AndrejBabis.1954,guest,ps2013,42,7,131,83410.0,102460.0,123130.0,125010.0,125010.0,234,31

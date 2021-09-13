@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-AndrejBabis.1954,guest,ps2013,40440.0,56400.0,66900.0,89690.0,89690.0,146,34
-PetrGazdik.1974,chair,ps2013,34740.0,30840.0,37330.0,37330.0,37330.0,105,7
-MiroslavKalousek.1960,regular,ps2013,174970.0,203610.0,232150.0,233230.0,233230.0,503,57
-ZbynekStanjura.1964,regular,ps2013,127500.0,143360.0,162460.0,164780.0,164780.0,325,23
-KarelRais.1949,regular,ps2013,50710.0,64450.0,73740.0,75360.0,75360.0,147,22
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+AndrejBabis.1954,guest,ps2013,042,02,151,40440.0,56400.0,66900.0,89690.0,89690.0,146,34
+PetrGazdik.1974,chair,ps2013,042,02,151,34740.0,30840.0,37330.0,37330.0,37330.0,105,7
+MiroslavKalousek.1960,regular,ps2013,042,02,151,174970.0,203610.0,232150.0,233230.0,233230.0,503,57
+ZbynekStanjura.1964,regular,ps2013,042,02,151,127500.0,143360.0,162460.0,164780.0,164780.0,325,23
+KarelRais.1949,regular,ps2013,042,02,151,50710.0,64450.0,73740.0,75360.0,75360.0,147,22

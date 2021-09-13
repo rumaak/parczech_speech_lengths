@@ -1,4 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanBartosek.1971,chair,ps2013,130370.0,166540.0,200800.0,235250.0,511920.0,328,47
-RomanSklenak.1970,regular,ps2013,10410.0,12870.0,13760.0,13760.0,13760.0,33,5
-VojtechFilip.1955,chair,ps2013,77490.0,101140.0,106910.0,108810.0,108810.0,176,13
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanBartosek.1971,chair,ps2013,042,06,160,46820.0,64620.0,86800.0,97110.0,97110.0,114,27
+JanBartosek.1971,chair,ps2013,42,6,73,83550.0,101920.0,114000.0,138140.0,414810.0,214,20
+RomanSklenak.1970,regular,ps2013,42,6,73,10410.0,12870.0,13760.0,13760.0,13760.0,33,5
+VojtechFilip.1955,chair,ps2013,42,6,73,77490.0,101140.0,106910.0,108810.0,108810.0,176,13

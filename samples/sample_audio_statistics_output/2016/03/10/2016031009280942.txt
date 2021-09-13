@@ -1,6 +1,7 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JaroslavaPokornaJermanova.1970,chair,ps2013,146690.0,147890.0,184210.0,227180.0,227180.0,370,29
-MilanChovanec.1970,regular,ps2013,91540.0,97500.0,103810.0,106440.0,106440.0,222,19
-LeoLuzar.1964,regular,ps2013,54230.0,61940.0,65449.99999999999,65770.0,65770.0,140,13
-IgorJakubcik.1967,regular,ps2013,69020.0,85400.0,89510.0,90800.0,90800.0,197,32
-MiloslavaVostra.1965,regular,ps2013,41720.0,49370.0,50400.0,55420.0,55420.0,119,22
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,07,133,92900.0,96180.0,118350.0,131280.0,131280.0,241,20
+MilanChovanec.1970,regular,ps2013,042,07,133,91540.0,97500.0,103810.0,106440.0,106440.0,222,19
+LeoLuzar.1964,regular,ps2013,042,07,133,54230.0,61940.0,65449.99999999999,65770.0,65770.0,140,13
+IgorJakubcik.1967,regular,ps2013,042,07,133,69020.0,85400.0,89510.0,90800.0,90800.0,197,32
+JaroslavaPokornaJermanova.1970,chair,ps2013,42,7,132,53790.0,51710.0,65860.0,95900.0,95900.0,129,9
+MiloslavaVostra.1965,regular,ps2013,42,7,132,41720.0,49370.0,50400.0,55420.0,55420.0,119,22

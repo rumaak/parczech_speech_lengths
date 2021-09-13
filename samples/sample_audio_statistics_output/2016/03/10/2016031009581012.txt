@@ -1,6 +1,10 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-MiloslavaVostra.1965,regular,ps2013,23420.0,25110.0,28260.0,28840.0,28840.0,60,6
-JaroslavaPokornaJermanova.1970,chair,ps2013,232070.0,303320.0,335170.0,403040.0,403040.0,537,40
-DanTok.1959,regular,ps2013,66610.0,68880.0,75230.0,76290.0,76290.0,143,12
-ReneCip.1974,regular,ps2013,49470.0,54150.0,60500.0,60500.0,60500.0,117,9
-MilanChovanec.1970,regular,ps2013,67330.0,70530.0,76480.0,79290.0,79290.0,177,13
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+MiloslavaVostra.1965,regular,ps2013,042,07,136,23420.0,25110.0,28260.0,28840.0,28840.0,60,6
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,07,136,50190.0,51120.0,62330.0,90470.0,90470.0,111,5
+JaroslavaPokornaJermanova.1970,chair,ps2013,42,7,137,64960.0,72310.0,78830.0,98240.0,98240.0,159,20
+DanTok.1959,regular,ps2013,42,7,137,66610.0,68880.0,75230.0,76290.0,76290.0,143,12
+ReneCip.1974,regular,ps2013,42,7,137,24980.0,26310.0,29020.0,29020.0,29020.0,57,2
+JaroslavaPokornaJermanova.1970,chair,ps2013,42,7,138,77570.0,77320.0,90050.0,109680.0,109680.0,180,9
+MilanChovanec.1970,regular,ps2013,42,7,138,67330.0,70530.0,76480.0,79290.0,79290.0,177,13
+ReneCip.1974,regular,ps2013,42,7,138,24490.0,27840.0,31480.0,31480.0,31480.0,60,7
+JaroslavaPokornaJermanova.1970,chair,ps2013,42,7,131,39350.0,102570.0,103960.0,104650.0,104650.0,87,6

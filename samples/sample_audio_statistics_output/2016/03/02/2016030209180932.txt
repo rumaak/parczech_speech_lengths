@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JiriSkalicky.1954,regular,ps2013,381950.0,437230.0,476660.0,491370.0,491370.0,860,56
-VojtechFilip.1955,chair,ps2013,32950.0,34000.0,46700.0,47330.0,47330.0,86,7
-PetrBendl.1966,regular,ps2013,53060.0,70260.0,73360.0,74600.0,74600.0,135,11
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JiriSkalicky.1954,regular,ps2013,042,02,149,381950.0,437230.0,476660.0,491370.0,491370.0,860,56
+VojtechFilip.1955,chair,ps2013,042,02,149,32950.0,34000.0,46700.0,47330.0,47330.0,86,7
+PetrBendl.1966,regular,ps2013,042,02,149,53060.0,70260.0,73360.0,74600.0,74600.0,135,11

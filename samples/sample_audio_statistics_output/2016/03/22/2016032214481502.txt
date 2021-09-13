@@ -1,5 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JaroslavaPokornaJermanova.1970,chair,ps2013,137540.0,148400.0,177570.0,202210.0,202210.0,339,27
-FrantisekLaudat.1960,regular,ps2013,11540.0,11520.0,14010.0,14010.0,14010.0,37,5
-KaterinaValachova.1976,regular,ps2013,141020.0,156940.0,167940.0,171490.0,171490.0,343,27
-JiriHolecek.1972,regular,ps2013,148240.0,185610.0,190600.0,203140.0,203140.0,346,21
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,09,221,85040.0,94220.0,114730.0,139000.0,139000.0,202,19
+FrantisekLaudat.1960,regular,ps2013,042,09,221,11540.0,11520.0,14010.0,14010.0,14010.0,37,5
+JaroslavaPokornaJermanova.1970,chair,ps2013,42,9,17,52500.0,54180.0,62840.0,63210.0,63210.0,137,8
+KaterinaValachova.1976,regular,ps2013,42,9,17,141020.0,156940.0,167940.0,171490.0,171490.0,343,27
+JiriHolecek.1972,regular,ps2013,42,9,17,148240.0,185610.0,190600.0,203140.0,203140.0,346,21

@@ -1,6 +1,8 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-PetrGazdik.1974,chair,ps2013,154450.0,176780.0,205390.0,228400.0,228400.0,438,50
-MilanChovanec.1970,regular,ps2013,203620.0,229770.0,236440.0,243540.0,243540.0,468,22
-BronislavSchwarz.1966,regular,ps2013,27470.0,30700.0,34470.0,34470.0,34470.0,102,14
-JanaCernochova.1973,regular,ps2013,4290.0,3910.0,4080.0,4080.0,4080.0,16,0
-RomanSklenak.1970,regular,ps2013,10760.0,11170.0,12290.0,12290.0,12290.0,34,1
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+PetrGazdik.1974,chair,ps2013,042,10,044,97060.0,119280.0,136780.0,146510.0,146510.0,259,22
+MilanChovanec.1970,regular,ps2013,042,10,044,203620.0,229770.0,236440.0,243540.0,243540.0,468,22
+BronislavSchwarz.1966,regular,ps2013,042,10,044,27470.0,30700.0,34470.0,34470.0,34470.0,102,14
+JanaCernochova.1973,regular,ps2013,042,10,044,4290.0,3910.0,4080.0,4080.0,4080.0,16,0
+RomanSklenak.1970,regular,ps2013,042,10,044,10760.0,11170.0,12290.0,12290.0,12290.0,34,1
+PetrGazdik.1974,chair,ps2013,42,10,53,56220.0,56620.0,67730.0,80700.0,80700.0,176,28
+PetrGazdik.1974,chair,ps2013,42,10,52,1170.0,880.0,880.0,1190.0,1190.0,3,0

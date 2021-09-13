@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-BohuslavSobotka.1971,guest,ps2013,237750.0,269230.0,286730.0,291260.0,291260.0,606,38
-JanHamacek.1978,chair,ps2013,19960.0,20110.0,22460.0,22460.0,22460.0,65,4
-PetrBendl.1966,regular,ps2013,28870.0,35900.0,39190.0,39380.0,39380.0,79,6
-JosefNekl.1953,regular,ps2013,127960.0,136050.0,150360.0,152170.0,152170.0,385,26
-VeraKovarova.1964,regular,ps2013,41480.0,46360.0,52540.0,52540.0,52540.0,104,4
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+BohuslavSobotka.1971,guest,ps2013,042,03,224,237750.0,269230.0,286730.0,291260.0,291260.0,606,38
+JanHamacek.1978,chair,ps2013,042,03,224,19960.0,20110.0,22460.0,22460.0,22460.0,65,4
+PetrBendl.1966,regular,ps2013,042,03,224,28870.0,35900.0,39190.0,39380.0,39380.0,79,6
+JosefNekl.1953,regular,ps2013,042,03,224,127960.0,136050.0,150360.0,152170.0,152170.0,385,26
+VeraKovarova.1964,regular,ps2013,042,03,224,41480.0,46360.0,52540.0,52540.0,52540.0,104,4

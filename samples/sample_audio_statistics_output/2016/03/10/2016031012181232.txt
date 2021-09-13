@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VojtechFilip.1955,chair,ps2013,38250.0,41570.0,49840.0,49840.0,49840.0,103,11
-RomanVana.1966,regular,ps2013,19590.0,20230.0,21910.0,21910.0,21910.0,57,3
-OndrejBenesik.1976,regular,ps2013,88940.0,95880.0,110140.0,112890.0,112890.0,227,17
-KarelFiedler.1961,regular,ps2013,297330.0,340530.0,365070.0,372490.0,372490.0,757,53
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechFilip.1955,chair,ps2013,042,07,213,38250.0,41570.0,49840.0,49840.0,49840.0,103,11
+RomanVana.1966,regular,ps2013,042,07,213,19590.0,20230.0,21910.0,21910.0,21910.0,57,3
+OndrejBenesik.1976,regular,ps2013,042,07,213,88940.0,95880.0,110140.0,112890.0,112890.0,227,17
+KarelFiedler.1961,regular,ps2013,042,07,213,297330.0,340530.0,365070.0,372490.0,372490.0,757,53

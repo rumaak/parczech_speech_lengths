@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-BohuslavSvoboda.1944,regular,ps2013,182640.0,242300.0,256230.0,264330.0,264330.0,422,27
-JanBartosek.1971,chair,ps2013,31580.0,32560.0,57880.0,57880.0,57880.0,93,6
-LeosHeger.1948,regular,ps2013,91960.0,114250.0,119860.0,119860.0,119860.0,182,6
-PetrBendl.1966,regular,ps2013,73260.0,105100.0,115230.0,116610.0,116610.0,219,23
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+BohuslavSvoboda.1944,regular,ps2013,042,10,173,182640.0,242300.0,256230.0,264330.0,264330.0,422,27
+JanBartosek.1971,chair,ps2013,042,10,173,31580.0,32560.0,57880.0,57880.0,57880.0,93,6
+LeosHeger.1948,regular,ps2013,042,10,173,91960.0,114250.0,119860.0,119860.0,119860.0,182,6
+PetrBendl.1966,regular,ps2013,042,10,173,73260.0,105100.0,115230.0,116610.0,116610.0,219,23

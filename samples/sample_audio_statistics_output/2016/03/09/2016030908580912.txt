@@ -1,5 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanHamacek.1978,chair,ps2013,245740.0,284630.0,338520.0,387910.0,387910.0,708,78
-ZbynekStanjura.1964,regular,ps2013,75910.0,86800.0,101940.0,106460.0,106460.0,215,23
-VojtechFilip.1955,chair,ps2013,21040.0,21990.0,23350.0,23350.0,23350.0,56,6
-RomanSklenak.1970,regular,ps2013,19520.0,23080.0,24830.0,24830.0,24830.0,48,2
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanHamacek.1978,chair,ps2013,042,06,163,30690.0,28410.0,32330.0,40190.0,40190.0,86,11
+ZbynekStanjura.1964,regular,ps2013,042,06,163,75910.0,86800.0,101940.0,106460.0,106460.0,215,23
+JanHamacek.1978,chair,ps2013,42,6,0,215050.0,256220.0,306190.0,347720.0,347720.0,622,67
+VojtechFilip.1955,chair,ps2013,42,6,0,21040.0,21990.0,23350.0,23350.0,23350.0,56,6
+RomanSklenak.1970,regular,ps2013,42,6,0,19520.0,23080.0,24830.0,24830.0,24830.0,48,2

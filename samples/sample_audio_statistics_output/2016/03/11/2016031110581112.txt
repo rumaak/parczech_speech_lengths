@@ -1,3 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanHamacek.1978,chair,ps2013,33380.0,35340.0,35690.0,143940.0,143940.0,72,0
-MilosZeman.1944,guest,ps2013,191320.0,291660.0,318500.0,331370.0,331370.0,395,40
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanHamacek.1978,chair,ps2013,042,08,067,10490.0,9960.0,10310.0,12070.0,12070.0,21,0
+MilosZeman.1944,guest,ps2013,042,08,067,191320.0,291660.0,318500.0,331370.0,331370.0,395,40
+JanHamacek.1978,chair,ps2013,42,8,18,22890.0,25380.0,25380.0,131870.0,131870.0,51,0

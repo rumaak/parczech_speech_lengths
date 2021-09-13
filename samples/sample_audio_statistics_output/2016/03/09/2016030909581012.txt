@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-BohuslavSvoboda.1944,regular,ps2013,109720.0,143360.0,148840.0,149940.0,149940.0,266,22
-JanHamacek.1978,chair,ps2013,26780.0,182430.0,186070.0,186070.0,186070.0,66,4
-MilanBrazdil.1962,regular,ps2013,72340.0,77760.0,86290.0,87030.0,87030.0,199,12
-RostislavVyzula.1952,regular,ps2013,232110.0,273010.0,307310.0,316340.0,316340.0,558,35
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+BohuslavSvoboda.1944,regular,ps2013,042,06,158,109720.0,143360.0,148840.0,149940.0,149940.0,266,22
+JanHamacek.1978,chair,ps2013,042,06,158,26780.0,182430.0,186070.0,186070.0,186070.0,66,4
+MilanBrazdil.1962,regular,ps2013,042,06,158,72340.0,77760.0,86290.0,87030.0,87030.0,199,12
+RostislavVyzula.1952,regular,ps2013,042,06,158,232110.0,273010.0,307310.0,316340.0,316340.0,558,35

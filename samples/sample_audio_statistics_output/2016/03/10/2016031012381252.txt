@@ -1,3 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-MiroslavGrebenicek.1947,regular,ps2013,271820.0,311630.0,327460.0,333880.0,333880.0,465,12
-VojtechFilip.1955,chair,ps2013,147050.0,171080.0,230750.0,239740.0,239740.0,374,34
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+MiroslavGrebenicek.1947,regular,ps2013,042,07,214,271820.0,311630.0,327460.0,333880.0,333880.0,465,12
+VojtechFilip.1955,chair,ps2013,042,07,214,124690.0,147170.0,204180.0,212890.0,212890.0,320,30
+VojtechFilip.1955,chair,ps2013,42,7,215,22360.0,23910.0,26570.0,26850.0,26850.0,54,4

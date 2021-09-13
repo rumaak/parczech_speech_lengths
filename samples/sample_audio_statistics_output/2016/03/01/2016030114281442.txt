@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-FrantisekLaudat.1960,regular,ps2013,388560.0,459190.0,499110.0,513740.0,513740.0,841,50
-JanHamacek.1978,chair,ps2013,5320.0,4450.0,5450.0,5450.0,5450.0,12,0
-JanFarsky.1979,regular,ps2013,60660.0,70870.0,78250.0,80770.0,80770.0,157,6
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+FrantisekLaudat.1960,regular,ps2013,042,01,000,388560.0,459190.0,499110.0,513740.0,513740.0,841,50
+JanHamacek.1978,chair,ps2013,042,01,000,5320.0,4450.0,5450.0,5450.0,5450.0,12,0
+JanFarsky.1979,regular,ps2013,042,01,000,60660.0,70870.0,78250.0,80770.0,80770.0,157,6

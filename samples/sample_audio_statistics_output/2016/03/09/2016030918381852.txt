@@ -1,6 +1,8 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-PetrGazdik.1974,chair,ps2013,134240.0,141110.0,165990.0,204750.0,204750.0,381,40
-AndrejBabis.1954,guest,ps2013,39700.0,41770.0,44210.0,45540.0,45540.0,97,10
-KristynaZelienkova.1974,regular,ps2013,78900.0,83890.0,88200.0,89520.0,89520.0,214,25
-JeronymTejc.1977,regular,ps2013,9990.0,10610.0,10610.0,10610.0,10610.0,31,4
-JiriDienstbier.1969,regular,ps2013,186810.0,202630.0,207260.0,214150.0,214150.0,473,32
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+PetrGazdik.1974,chair,ps2013,042,06,042,105650.0,105830.0,129350.0,166650.0,166650.0,296,29
+AndrejBabis.1954,guest,ps2013,042,06,042,39700.0,41770.0,44210.0,45540.0,45540.0,97,10
+KristynaZelienkova.1974,regular,ps2013,042,06,042,78900.0,83890.0,88200.0,89520.0,89520.0,214,25
+JeronymTejc.1977,regular,ps2013,042,06,042,9990.0,10610.0,10610.0,10610.0,10610.0,31,4
+PetrGazdik.1974,chair,ps2013,42,6,41,1440.0,1140.0,1140.0,1470.0,1470.0,5,1
+PetrGazdik.1974,chair,ps2013,42,6,43,27150.0,34140.0,35500.0,36630.0,36630.0,80,10
+JiriDienstbier.1969,regular,ps2013,42,6,43,186810.0,202630.0,207260.0,214150.0,214150.0,473,32

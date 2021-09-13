@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-MartinPlisek.1974,regular,ps2013,255260.0,311880.0,326300.0,333130.0,333130.0,617,43
-JanBartosek.1971,chair,ps2013,18140.0,13840.0,26050.0,26050.0,26050.0,48,3
-JiriDienstbier.1969,regular,ps2013,53450.0,62490.0,68350.0,69650.0,69650.0,166,14
-MartinLank.1976,regular,ps2013,134860.0,153020.0,164340.0,170290.0,170290.0,390,29
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+MartinPlisek.1974,regular,ps2013,042,08,067,255260.0,311880.0,326300.0,333130.0,333130.0,617,43
+JanBartosek.1971,chair,ps2013,042,08,067,18140.0,13840.0,26050.0,26050.0,26050.0,48,3
+JiriDienstbier.1969,regular,ps2013,042,08,067,53450.0,62490.0,68350.0,69650.0,69650.0,166,14
+MartinLank.1976,regular,ps2013,042,08,067,134860.0,153020.0,164340.0,170290.0,170290.0,390,29

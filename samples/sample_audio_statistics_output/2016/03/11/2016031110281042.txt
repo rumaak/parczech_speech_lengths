@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-SimeonKaramazov.1963,regular,ps2013,199350.0,203760.0,234520.0,240660.0,240660.0,520,18
-JaroslavaPokornaJermanova.1970,chair,ps2013,13030.0,14270.0,15190.0,16200.0,16200.0,42,5
-MarekBenda.1968,regular,ps2013,213950.0,250870.0,279190.0,282100.0,282100.0,564,35
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+SimeonKaramazov.1963,regular,ps2013,042,08,018,199350.0,203760.0,234520.0,240660.0,240660.0,520,18
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,08,018,13030.0,14270.0,15190.0,16200.0,16200.0,42,5
+MarekBenda.1968,regular,ps2013,042,08,018,213950.0,250870.0,279190.0,282100.0,282100.0,564,35

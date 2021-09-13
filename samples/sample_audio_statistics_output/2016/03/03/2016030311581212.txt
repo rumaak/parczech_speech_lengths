@@ -1,6 +1,7 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-PetrBendl.1966,regular,ps2013,71390.0,89980.0,93270.0,94810.0,94810.0,176,14
-JanHamacek.1978,chair,ps2013,74690.0,83610.0,97610.0,108980.0,108980.0,207,12
-RichardBrabec.1966,regular,ps2013,223100.0,272230.0,291420.0,300720.0,300720.0,635,39
-JosefNekl.1953,regular,ps2013,8750.0,11100.0,12930.0,12930.0,12930.0,22,1
-ZdenekOndracek.1969,regular,ps2013,39420.0,49980.0,53260.0,53260.0,53260.0,104,7
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+PetrBendl.1966,regular,ps2013,042,03,217,71390.0,89980.0,93270.0,94810.0,94810.0,176,14
+JanHamacek.1978,chair,ps2013,042,03,217,51580.0,58220.0,70740.0,80750.0,80750.0,140,6
+RichardBrabec.1966,regular,ps2013,042,03,217,223100.0,272230.0,291420.0,300720.0,300720.0,635,39
+JosefNekl.1953,regular,ps2013,042,03,217,8750.0,11100.0,12930.0,12930.0,12930.0,22,1
+JanHamacek.1978,chair,ps2013,42,3,77,23110.0,25390.0,26870.0,28230.0,28230.0,67,6
+ZdenekOndracek.1969,regular,ps2013,42,3,77,39420.0,49980.0,53260.0,53260.0,53260.0,104,7

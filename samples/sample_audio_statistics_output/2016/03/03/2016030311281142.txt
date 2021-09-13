@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-RichardBrabec.1966,regular,ps2013,108050.0,121450.0,131120.0,138560.0,138560.0,264,21
-VojtechFilip.1955,chair,ps2013,12280.0,12010.0,13290.0,13290.0,13290.0,34,2
-JosefNekl.1953,regular,ps2013,350400.0,408260.0,439600.0,452850.0,452850.0,907,66
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+RichardBrabec.1966,regular,ps2013,042,03,217,108050.0,121450.0,131120.0,138560.0,138560.0,264,21
+VojtechFilip.1955,chair,ps2013,042,03,217,12280.0,12010.0,13290.0,13290.0,13290.0,34,2
+JosefNekl.1953,regular,ps2013,042,03,217,350400.0,408260.0,439600.0,452850.0,452850.0,907,66

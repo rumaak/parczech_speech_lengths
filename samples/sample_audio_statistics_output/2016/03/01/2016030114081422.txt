@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanHamacek.1978,chair,ps2013,26800.0,27830.0,28450.0,29710.0,29710.0,87,16
-DanielHerman.1963,regular,ps2013,31480.0,33680.0,36030.0,36030.0,36030.0,82,4
-OlgaHavlova.1953,regular,ps2013,127190.0,135130.0,153830.0,156660.0,156660.0,303,11
-VojtechFilip.1955,chair,ps2013,140780.0,167200.0,178090.0,186260.0,186260.0,317,20
-MarekCernoch.1969,regular,ps2013,102630.0,109790.0,121450.0,125170.0,125170.0,275,8
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanHamacek.1978,chair,ps2013,042,01,000,26800.0,27830.0,28450.0,29710.0,29710.0,87,16
+DanielHerman.1963,regular,ps2013,042,01,000,31480.0,33680.0,36030.0,36030.0,36030.0,82,4
+OlgaHavlova.1953,regular,ps2013,042,01,000,127190.0,135130.0,153830.0,156660.0,156660.0,303,11
+VojtechFilip.1955,chair,ps2013,042,01,000,140780.0,167200.0,178090.0,186260.0,186260.0,317,20
+MarekCernoch.1969,regular,ps2013,042,01,000,102630.0,109790.0,121450.0,125170.0,125170.0,275,8

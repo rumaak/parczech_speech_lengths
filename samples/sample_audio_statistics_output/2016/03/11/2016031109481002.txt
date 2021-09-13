@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JiriDienstbier.1969,regular,ps2013,184560.0,222680.0,234710.0,247370.0,247370.0,392,11
-JaroslavaPokornaJermanova.1970,chair,ps2013,71480.0,74040.0,87920.0,87920.0,87920.0,183,6
-LukasPleticha.1974,regular,ps2013,147540.0,192210.0,211290.0,216060.0,216060.0,347,23
-ZuzkaBebarovaRujbrova.1951,regular,ps2013,44470.0,49440.0,54820.0,54820.0,54820.0,91,7
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JiriDienstbier.1969,regular,ps2013,042,08,018,184560.0,222680.0,234710.0,247370.0,247370.0,392,11
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,08,018,71480.0,74040.0,87920.0,87920.0,87920.0,183,6
+LukasPleticha.1974,regular,ps2013,042,08,018,147540.0,192210.0,211290.0,216060.0,216060.0,347,23
+ZuzkaBebarovaRujbrova.1951,regular,ps2013,042,08,018,44470.0,49440.0,54820.0,54820.0,54820.0,91,7

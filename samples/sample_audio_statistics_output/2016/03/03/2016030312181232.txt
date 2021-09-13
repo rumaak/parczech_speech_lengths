@@ -1,4 +1,8 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanHamacek.1978,chair,ps2013,177050.0,202320.0,247980.0,276430.0,276430.0,510,49
-RichardBrabec.1966,regular,ps2013,160790.0,183300.0,197350.0,204030.0,204030.0,428,26
-VaclavZemek.1974,regular,ps2013,56680.0,70860.0,82550.0,87670.0,87670.0,182,28
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanHamacek.1978,chair,ps2013,042,03,146,50520.0,52950.0,65460.0,79470.0,79470.0,140,12
+RichardBrabec.1966,regular,ps2013,042,03,146,97070.0,112410.0,119790.0,125760.0,125760.0,259,23
+VaclavZemek.1974,regular,ps2013,042,03,146,26130.0,31250.0,37060.0,38910.0,38910.0,86,15
+JanHamacek.1978,chair,ps2013,42,3,144,104640.0,124560.0,154340.0,168340.0,168340.0,304,30
+RichardBrabec.1966,regular,ps2013,42,3,144,63720.0,70890.0,77560.0,78270.0,78270.0,169,3
+VaclavZemek.1974,regular,ps2013,42,3,144,30550.0,39610.0,45490.0,48760.0,48760.0,96,13
+JanHamacek.1978,chair,ps2013,42,3,77,21890.0,24810.0,28180.0,28620.0,28620.0,66,7

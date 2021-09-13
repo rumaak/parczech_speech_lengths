@@ -1,6 +1,8 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VojtechFilip.1955,chair,ps2017,319340.0,344490.0,507950.0,532190.0,532190.0,842,91
-JaroslavFaltynek.1962,regular,ps2017,7460.0,6470.0,7810.0,7810.0,7810.0,23,2
-ZbynekStanjura.1964,regular,ps2017,32610.0,39850.0,41550.0,42450.0,42450.0,90,11
-LeoLuzar.1964,regular,ps2017,16240.0,18640.0,20450.0,20450.0,20450.0,54,5
-JanChvojka.1980,regular,ps2017,3850.0,4860.0,5590.0,5590.0,5590.0,10,1
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechFilip.1955,chair,ps2017,002,01,008,186730.0,197460.0,281060.0,295150.0,295150.0,479,51
+JaroslavFaltynek.1962,regular,ps2017,002,01,008,3000.0,2790.0,3530.0,3530.0,3530.0,10,1
+ZbynekStanjura.1964,regular,ps2017,002,01,008,32610.0,39850.0,41550.0,42450.0,42450.0,90,11
+LeoLuzar.1964,regular,ps2017,002,01,008,16240.0,18640.0,20450.0,20450.0,20450.0,54,5
+JaroslavFaltynek.1962,regular,ps2017,2,1,7,4460.0,3680.0,4280.0,4280.0,4280.0,13,1
+VojtechFilip.1955,chair,ps2017,2,1,7,132610.0,147030.0,226890.0,237040.0,237040.0,363,40
+JanChvojka.1980,regular,ps2017,2,1,7,3850.0,4860.0,5590.0,5590.0,5590.0,10,1

@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanHamacek.1978,chair,ps2013,19360.0,24010.0,24870.0,24870.0,24870.0,58,3
-TomioOkamura.1972,regular,ps2013,146940.0,160780.0,171540.0,172000.0,172000.0,443,27
-BohuslavSobotka.1971,guest,ps2013,187620.0,205440.0,218020.0,222290.0,222290.0,542,34
-HelenaLangsadlova.1963,regular,ps2013,97680.0,104300.0,114420.0,115570.0,115570.0,215,13
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanHamacek.1978,chair,ps2013,042,03,224,19360.0,24010.0,24870.0,24870.0,24870.0,58,3
+TomioOkamura.1972,regular,ps2013,042,03,224,146940.0,160780.0,171540.0,172000.0,172000.0,443,27
+BohuslavSobotka.1971,guest,ps2013,042,03,224,187620.0,205440.0,218020.0,222290.0,222290.0,542,34
+HelenaLangsadlova.1963,regular,ps2013,042,03,224,97680.0,104300.0,114420.0,115570.0,115570.0,215,13

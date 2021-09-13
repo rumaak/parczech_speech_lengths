@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-FrantisekLaudat.1960,regular,ps2013,124750.0,138540.0,154160.0,155340.0,155340.0,328,13
-JanHamacek.1978,chair,ps2013,50580.0,65220.0,88620.0,189610.0,189610.0,173,28
-FrantisekBublan.1951,guest,ps2013,164510.0,211630.0,230870.0,240170.0,240170.0,481,48
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+FrantisekLaudat.1960,regular,ps2013,042,02,031,124750.0,138540.0,154160.0,155340.0,155340.0,328,13
+JanHamacek.1978,chair,ps2013,042,02,031,50580.0,65220.0,88620.0,189610.0,189610.0,173,28
+FrantisekBublan.1951,guest,ps2013,042,02,031,164510.0,211630.0,230870.0,240170.0,240170.0,481,48

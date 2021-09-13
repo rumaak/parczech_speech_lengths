@@ -1,4 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JaroslavaPokornaJermanova.1970,chair,ps2013,115430.0,123910.0,139340.0,170980.0,435480.0,282,32
-MichaelaMarksova.1969,regular,ps2013,62390.0,70890.0,73550.0,75350.0,75350.0,159,16
-JanaPastuchova.1965,regular,ps2013,72220.0,78020.0,79400.0,80910.0,80910.0,163,21
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,07,134,113680.0,122520.0,137950.0,169190.0,433690.0,277,32
+MichaelaMarksova.1969,regular,ps2013,042,07,134,62390.0,70890.0,73550.0,75350.0,75350.0,159,16
+JanaPastuchova.1965,regular,ps2013,042,07,134,72220.0,78020.0,79400.0,80910.0,80910.0,163,21
+JaroslavaPokornaJermanova.1970,chair,ps2013,42,7,133,1750.0,1390.0,1390.0,1790.0,1790.0,5,0

@@ -1,6 +1,7 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JaroslavaPokornaJermanova.1970,chair,ps2013,256550.0,281670.0,320370.0,359430.0,359430.0,578,59
-MichaelaMarksova.1969,regular,ps2013,57920.0,69110.0,76080.0,78330.0,78330.0,134,2
-JiriMihola.1972,regular,ps2013,25890.0,27660.0,29590.0,29590.0,29590.0,56,2
-VaclavKlucka.1953,regular,ps2013,15960.0,17300.0,19380.0,19380.0,19380.0,35,5
-RomanSklenak.1970,regular,ps2013,26340.0,29180.0,33040.0,33040.0,33040.0,67,5
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,07,142,32650.0,30700.0,32300.0,33260.0,33260.0,72,4
+MichaelaMarksova.1969,regular,ps2013,042,07,142,57920.0,69110.0,76080.0,78330.0,78330.0,134,2
+JiriMihola.1972,regular,ps2013,042,07,142,25890.0,27660.0,29590.0,29590.0,29590.0,56,2
+JaroslavaPokornaJermanova.1970,chair,ps2013,42,7,0,223900.0,250970.0,288070.0,326170.0,326170.0,506,55
+VaclavKlucka.1953,regular,ps2013,42,7,0,15960.0,17300.0,19380.0,19380.0,19380.0,35,5
+RomanSklenak.1970,regular,ps2013,42,7,0,26340.0,29180.0,33040.0,33040.0,33040.0,67,5

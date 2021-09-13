@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VojtechFilip.1955,chair,ps2017,382270.0,598880.0,638890.0,660000.0,660000.0,973,62
-VojtechPikal.1987,chair,ps2017,15240.0,15510.0,19340.0,19340.0,19340.0,49,6
-JaroslavFaltynek.1962,regular,ps2017,6020.0,6740.0,6740.0,6740.0,6740.0,24,2
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechFilip.1955,chair,ps2017,002,01,005,382270.0,598880.0,638890.0,660000.0,660000.0,973,62
+VojtechPikal.1987,chair,ps2017,002,01,005,15240.0,15510.0,19340.0,19340.0,19340.0,49,6
+JaroslavFaltynek.1962,regular,ps2017,002,01,005,6020.0,6740.0,6740.0,6740.0,6740.0,24,2

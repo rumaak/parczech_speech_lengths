@@ -1,4 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanBartosek.1971,chair,ps2013,49940.0,54570.0,60910.0,67270.0,67270.0,138,14
-MarianJurecka.1981,regular,ps2013,325370.0,385740.0,411300.0,482760.0,482760.0,792,54
-PavelKovacik.1955,regular,ps2013,99990.0,112190.0,118280.0,126830.0,126830.0,252,27
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanBartosek.1971,chair,ps2013,042,01,007,40020.0,45270.0,49520.0,50140.0,50140.0,108,11
+MarianJurecka.1981,regular,ps2013,042,01,007,300830.0,328460.0,352080.0,360970.0,360970.0,726,49
+PavelKovacik.1955,regular,ps2013,042,01,007,99990.0,112190.0,118280.0,126830.0,126830.0,252,27
+MarianJurecka.1981,regular,ps2013,42,1,6,24540.0,57280.0,59220.0,121790.0,121790.0,66,5
+JanBartosek.1971,chair,ps2013,42,1,6,9920.0,9300.0,11390.0,17130.0,17130.0,30,3

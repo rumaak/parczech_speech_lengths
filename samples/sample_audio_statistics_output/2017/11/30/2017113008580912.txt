@@ -1,3 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-RadekVondracek.1973,chair,ps2017,345980.0,482070.0,542330.0,585910.0,585910.0,888,67
-JanBartosek.1971,regular,ps2017,12460.0,12520.0,13760.0,13760.0,13760.0,41,7
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+RadekVondracek.1973,chair,ps2017,002,02,018,138000.0,217290.0,254940.0,262110.0,262110.0,343,16
+JanBartosek.1971,regular,ps2017,002,02,018,12460.0,12520.0,13760.0,13760.0,13760.0,41,7
+RadekVondracek.1973,chair,ps2017,2,2,0,207980.0,264780.0,287390.0,323800.0,323800.0,545,51

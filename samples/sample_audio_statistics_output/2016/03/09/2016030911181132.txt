@@ -1,4 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-NinaNovakova.1954,regular,ps2013,112820.0,137910.0,147430.0,154050.0,154050.0,268,9
-JaroslavaPokornaJermanova.1970,chair,ps2013,6320.0,5710.0,11730.0,11730.0,11730.0,16,1
-MartaSemelova.1960,regular,ps2013,347680.0,409470.0,439190.0,443630.0,443630.0,825,48
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+NinaNovakova.1954,regular,ps2013,042,06,160,112820.0,137910.0,147430.0,154050.0,154050.0,268,9
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,06,160,6320.0,5710.0,11730.0,11730.0,11730.0,16,1
+MartaSemelova.1960,regular,ps2013,042,06,160,347680.0,409470.0,439190.0,443630.0,443630.0,825,48

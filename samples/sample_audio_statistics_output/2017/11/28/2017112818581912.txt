@@ -1,5 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VojtechPikal.1987,chair,ps2017,78170.0,148890.0,164300.0,175740.0,175740.0,218,20
-ZbynekStanjura.1964,regular,ps2017,54040.0,60370.0,66390.0,66480.0,66480.0,164,16
-LeoLuzar.1964,regular,ps2017,100700.0,112990.0,124340.0,125330.0,125330.0,325,25
-VojtechFilip.1955,chair,ps2017,231860.0,252070.0,306270.0,313720.0,313720.0,692,51
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechPikal.1987,chair,ps2017,002,01,014,38220.0,108100.0,112260.0,115250.0,115250.0,98,10
+ZbynekStanjura.1964,regular,ps2017,2,1,13,54040.0,60370.0,66390.0,66480.0,66480.0,164,16
+VojtechPikal.1987,chair,ps2017,2,1,13,39950.0,40790.0,52040.0,60490.0,60490.0,120,10
+LeoLuzar.1964,regular,ps2017,2,1,13,100700.0,112990.0,124340.0,125330.0,125330.0,325,25
+VojtechFilip.1955,chair,ps2017,2,1,13,231860.0,252070.0,306270.0,313720.0,313720.0,692,51

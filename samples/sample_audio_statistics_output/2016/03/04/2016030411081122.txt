@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-PetrGazdik.1974,chair,ps2013,22430.0,19780.0,30740.0,30740.0,30740.0,66,5
-HerbertPavera.1958,regular,ps2013,77470.0,97290.0,104120.0,107890.0,107890.0,224,15
-JiriKoubek.1976,regular,ps2013,251760.0,274580.0,304180.0,315880.0,315880.0,723,44
-JanFarsky.1979,regular,ps2013,78500.0,91560.0,97990.0,99930.0,99930.0,183,10
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+PetrGazdik.1974,chair,ps2013,042,04,163,22430.0,19780.0,30740.0,30740.0,30740.0,66,5
+HerbertPavera.1958,regular,ps2013,042,04,163,77470.0,97290.0,104120.0,107890.0,107890.0,224,15
+JiriKoubek.1976,regular,ps2013,042,04,163,251760.0,274580.0,304180.0,315880.0,315880.0,723,44
+JanFarsky.1979,regular,ps2013,042,04,163,78500.0,91560.0,97990.0,99930.0,99930.0,183,10

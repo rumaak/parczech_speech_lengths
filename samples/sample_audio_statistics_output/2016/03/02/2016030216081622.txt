@@ -1,2 +1,2 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanZahradnik.1949,regular,ps2013,389590.0,662070.0,708480.0,729630.0,729630.0,1075,118
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanZahradnik.1949,regular,ps2013,042,02,061,389590.0,662070.0,708480.0,729630.0,729630.0,1075,118

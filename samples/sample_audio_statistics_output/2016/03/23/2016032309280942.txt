@@ -1,5 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanBartosek.1971,chair,ps2013,140070.0,163310.0,190020.0,221780.0,221780.0,371,28
-MartinPlisek.1974,regular,ps2013,192150.0,220920.0,233420.0,240030.0,240030.0,437,23
-MarieBenesova.1948,regular,ps2013,37670.0,44390.0,48640.0,48640.0,48640.0,73,10
-LudvikHovorka.1963,regular,ps2013,39900.0,52900.0,55160.0,55160.0,55160.0,101,2
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanBartosek.1971,chair,ps2013,042,10,153,58220.0,63010.0,82930.0,86880.0,86880.0,159,8
+MartinPlisek.1974,regular,ps2013,042,10,153,192150.0,220920.0,233420.0,240030.0,240030.0,437,23
+MarieBenesova.1948,regular,ps2013,042,10,153,37670.0,44390.0,48640.0,48640.0,48640.0,73,10
+LudvikHovorka.1963,regular,ps2013,042,10,153,39900.0,52900.0,55160.0,55160.0,55160.0,101,2
+JanBartosek.1971,chair,ps2013,42,10,0,81850.0,100300.0,107090.0,134900.0,134900.0,212,20

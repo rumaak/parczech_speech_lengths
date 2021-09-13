@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-StepanStupcuk.1976,regular,ps2013,159640.0,193100.0,218500.0,221910.0,221910.0,411,22
-PetrGazdik.1974,chair,ps2013,17560.0,15720.0,22070.0,22070.0,22070.0,50,2
-MiroslavKalousek.1960,regular,ps2013,63560.0,78770.0,86440.0,89160.0,89160.0,167,10
-HelenaValkova.1951,regular,ps2013,176740.0,224140.0,230590.0,235370.0,235370.0,456,33
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+StepanStupcuk.1976,regular,ps2013,042,05,015,159640.0,193100.0,218500.0,221910.0,221910.0,411,22
+PetrGazdik.1974,chair,ps2013,042,05,015,17560.0,15720.0,22070.0,22070.0,22070.0,50,2
+MiroslavKalousek.1960,regular,ps2013,042,05,015,63560.0,78770.0,86440.0,89160.0,89160.0,167,10
+HelenaValkova.1951,regular,ps2013,042,05,015,176740.0,224140.0,230590.0,235370.0,235370.0,456,33

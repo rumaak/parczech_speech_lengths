@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-RichardBrabec.1966,regular,ps2013,34290.0,42810.0,43640.0,44850.0,44850.0,99,4
-PetrGazdik.1974,chair,ps2013,13030.0,11420.0,13780.0,13780.0,13780.0,41,1
-VaclavZemek.1974,regular,ps2013,168510.0,229770.0,255520.0,265800.0,265800.0,497,74
-JanZahradnik.1949,regular,ps2013,145430.0,281170.0,294720.0,300400.0,300400.0,385,47
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+RichardBrabec.1966,regular,ps2013,042,02,061,34290.0,42810.0,43640.0,44850.0,44850.0,99,4
+PetrGazdik.1974,chair,ps2013,042,02,061,13030.0,11420.0,13780.0,13780.0,13780.0,41,1
+VaclavZemek.1974,regular,ps2013,042,02,061,168510.0,229770.0,255520.0,265800.0,265800.0,497,74
+JanZahradnik.1949,regular,ps2013,042,02,061,145430.0,281170.0,294720.0,300400.0,300400.0,385,47

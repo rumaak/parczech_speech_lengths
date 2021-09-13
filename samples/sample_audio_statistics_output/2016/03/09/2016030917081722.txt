@@ -1,5 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VojtechFilip.1955,chair,ps2013,175570.0,187710.0,258380.0,276100.0,276100.0,464,51
-VaclavVotava.1956,regular,ps2013,222570.0,265740.0,282090.0,286640.0,286640.0,470,22
-IvanPilny.1944,regular,ps2013,5210.0,5330.0,5810.0,5810.0,5810.0,13,0
-PavelSramek.1965,regular,ps2013,14050.0,15980.0,21870.0,21870.0,21870.0,37,3
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechFilip.1955,chair,ps2013,042,06,037,32930.0,37310.0,39890.0,41920.0,41920.0,90,12
+VaclavVotava.1956,regular,ps2013,042,06,037,222570.0,265740.0,282090.0,286640.0,286640.0,470,22
+VojtechFilip.1955,chair,ps2013,42,6,36,142640.0,150400.0,218490.0,234180.0,234180.0,374,39
+IvanPilny.1944,regular,ps2013,42,6,36,5210.0,5330.0,5810.0,5810.0,5810.0,13,0
+PavelSramek.1965,regular,ps2013,42,6,36,14050.0,15980.0,21870.0,21870.0,21870.0,37,3

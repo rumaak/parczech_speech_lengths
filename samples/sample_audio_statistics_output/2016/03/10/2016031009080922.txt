@@ -1,7 +1,9 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JaroslavaPokornaJermanova.1970,chair,ps2013,231590.0,229740.0,295690.0,343820.0,343820.0,574,59
-AndrejBabis.1954,guest,ps2013,101960.0,112800.0,123150.0,126120.0,126120.0,278,21
-PavelSramek.1965,regular,ps2013,26800.0,35860.0,38710.0,38710.0,38710.0,67,5
-MichaelaMarksova.1969,regular,ps2013,39300.0,42890.0,46250.0,46250.0,46250.0,94,5
-ReneCip.1974,regular,ps2013,10380.0,10120.0,11020.0,11020.0,11020.0,24,1
-JiriMihola.1972,regular,ps2013,30210.0,31880.0,36170.0,37270.0,37270.0,67,7
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,07,145,74290.0,76670.0,101210.0,112450.0,112450.0,192,19
+AndrejBabis.1954,guest,ps2013,042,07,145,101960.0,112800.0,123150.0,126120.0,126120.0,278,21
+PavelSramek.1965,regular,ps2013,042,07,145,26800.0,35860.0,38710.0,38710.0,38710.0,67,5
+JaroslavaPokornaJermanova.1970,chair,ps2013,42,7,143,78030.0,71680.0,95420.0,113240.0,113240.0,189,21
+MichaelaMarksova.1969,regular,ps2013,42,7,143,39300.0,42890.0,46250.0,46250.0,46250.0,94,5
+ReneCip.1974,regular,ps2013,42,7,143,10380.0,10120.0,11020.0,11020.0,11020.0,24,1
+JiriMihola.1972,regular,ps2013,42,7,142,30210.0,31880.0,36170.0,37270.0,37270.0,67,7
+JaroslavaPokornaJermanova.1970,chair,ps2013,42,7,142,79270.0,81390.0,99060.0,118130.0,118130.0,193,19

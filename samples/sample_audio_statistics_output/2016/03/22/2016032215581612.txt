@@ -1,3 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanBartosek.1971,chair,ps2013,74470.0,84720.0,100030.0,116640.0,116640.0,193,16
-BohuslavSobotka.1971,guest,ps2013,424620.0,460860.0,500580.0,520809.99999999994,520809.99999999994,982,72
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanBartosek.1971,chair,ps2013,042,09,202,36940.0,39540.0,45050.0,51990.0,51990.0,88,4
+BohuslavSobotka.1971,guest,ps2013,042,09,202,424620.0,460860.0,500580.0,520809.99999999994,520809.99999999994,982,72
+JanBartosek.1971,chair,ps2013,42,9,17,37530.0,45180.0,54980.0,64650.00000000001,64650.00000000001,105,12

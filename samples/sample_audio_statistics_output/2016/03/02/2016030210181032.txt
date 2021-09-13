@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-RomanKubicek.1963,regular,ps2013,156770.0,186690.0,210170.0,210170.0,210170.0,429,44
-VojtechFilip.1955,chair,ps2013,104680.0,105070.0,199090.0,210050.0,210050.0,286,28
-VladislavVilimec.1963,regular,ps2013,58630.0,73310.0,79630.0,81330.0,81330.0,187,33
-LudvikHovorka.1963,regular,ps2013,15460.0,19280.0,22630.0,22630.0,22630.0,53,4
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+RomanKubicek.1963,regular,ps2013,042,02,149,156770.0,186690.0,210170.0,210170.0,210170.0,429,44
+VojtechFilip.1955,chair,ps2013,042,02,149,104680.0,105070.0,199090.0,210050.0,210050.0,286,28
+VladislavVilimec.1963,regular,ps2013,042,02,149,58630.0,73310.0,79630.0,81330.0,81330.0,187,33
+LudvikHovorka.1963,regular,ps2013,042,02,149,15460.0,19280.0,22630.0,22630.0,22630.0,53,4

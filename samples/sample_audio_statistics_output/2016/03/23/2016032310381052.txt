@@ -1,3 +1,4 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-VojtechFilip.1955,chair,ps2013,102290.0,138010.0,159340.0,167570.0,167570.0,270,40
-MartinPlisek.1974,regular,ps2013,192330.0,235980.0,249350.0,253930.0,253930.0,446,21
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+VojtechFilip.1955,chair,ps2013,042,10,153,48190.0,70320.0,84660.0,89570.0,89570.0,125,25
+VojtechFilip.1955,chair,ps2013,42,10,154,54100.0,67690.0,74680.0,78000.0,78000.0,145,15
+MartinPlisek.1974,regular,ps2013,42,10,154,192330.0,235980.0,249350.0,253930.0,253930.0,446,21

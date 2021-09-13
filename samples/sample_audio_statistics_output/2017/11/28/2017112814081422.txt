@@ -1,4 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-RadekVondracek.1973,chair,ps2017,146330.0,166720.0,207830.0,236420.0,236420.0,399,34
-MartinKolovratnik.1975,regular,ps2017,80210.0,94770.0,95610.0,97150.0,97150.0,209,11
-JaroslavFaltynek.1962,regular,ps2017,168000.0,235640.0,267820.0,278050.0,278050.0,459,39
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+RadekVondracek.1973,chair,ps2017,002,01,990,126480.0,145210.0,177270.0,204020.0,204020.0,343,27
+RadekVondracek.1973,chair,ps2017,2,1,1,19850.0,21510.0,30560.0,32400.0,32400.0,56,7
+MartinKolovratnik.1975,regular,ps2017,2,1,1,80210.0,94770.0,95610.0,97150.0,97150.0,209,11
+JaroslavFaltynek.1962,regular,ps2017,2,1,1,168000.0,235640.0,267820.0,278050.0,278050.0,459,39

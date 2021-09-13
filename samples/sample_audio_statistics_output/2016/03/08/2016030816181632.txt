@@ -1,3 +1,3 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JaroslavaPokornaJermanova.1970,chair,ps2013,10640.0,10230.0,12750.0,12750.0,12750.0,32,2
-JanKlan.1982,regular,ps2013,412710.0,484980.0,523000.0,530660.0,530660.0,1234,116
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JaroslavaPokornaJermanova.1970,chair,ps2013,042,05,015,10640.0,10230.0,12750.0,12750.0,12750.0,32,2
+JanKlan.1982,regular,ps2013,042,05,015,412710.0,484980.0,523000.0,530660.0,530660.0,1234,116

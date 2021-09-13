@@ -1,6 +1,6 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-PetrBendl.1966,regular,ps2013,12850.0,15670.0,17200.0,17200.0,17200.0,43,0
-JanBartosek.1971,chair,ps2013,89820.0,99860.0,138070.0,153770.0,153770.0,283,59
-JiriKoubek.1976,regular,ps2013,8690.0,7340.0,10190.0,10190.0,10190.0,25,4
-JaroslavKrakora.1955,regular,ps2013,124610.0,141640.0,152440.0,154670.0,154670.0,293,20
-SvatoplukNemecek.1972,regular,ps2013,132830.0,152740.0,161280.0,164570.0,164570.0,362,17
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+PetrBendl.1966,regular,ps2013,042,05,015,12850.0,15670.0,17200.0,17200.0,17200.0,43,0
+JanBartosek.1971,chair,ps2013,042,05,015,89820.0,99860.0,138070.0,153770.0,153770.0,283,59
+JiriKoubek.1976,regular,ps2013,042,05,015,8690.0,7340.0,10190.0,10190.0,10190.0,25,4
+JaroslavKrakora.1955,regular,ps2013,042,05,015,124610.0,141640.0,152440.0,154670.0,154670.0,293,20
+SvatoplukNemecek.1972,regular,ps2013,042,05,015,132830.0,152740.0,161280.0,164570.0,164570.0,362,17

@@ -1,5 +1,5 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-JanBartosek.1971,chair,ps2013,235740.0,256670.0,336090.0,399590.0,399590.0,655,70
-LukasPleticha.1974,regular,ps2013,108430.0,135360.0,201220.0,205370.0,205370.0,274,32
-ZdenekOndracek.1969,regular,ps2013,6630.0,5360.0,7440.0,7440.0,7440.0,20,2
-NinaNovakova.1954,regular,ps2013,10490.0,11670.0,13060.0,13060.0,13060.0,29,2
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+JanBartosek.1971,chair,ps2013,042,04,163,235740.0,256670.0,336090.0,399590.0,399590.0,655,70
+LukasPleticha.1974,regular,ps2013,042,04,163,108430.0,135360.0,201220.0,205370.0,205370.0,274,32
+ZdenekOndracek.1969,regular,ps2013,042,04,163,6630.0,5360.0,7440.0,7440.0,7440.0,20,2
+NinaNovakova.1954,regular,ps2013,042,04,163,10490.0,11670.0,13060.0,13060.0,13060.0,29,2

@@ -1,3 +1,3 @@
-speaker,role,election_period,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
-PetrGazdik.1974,chair,ps2013,7450.0,7630.0,12590.0,12590.0,12590.0,22,1
-LukasPleticha.1974,regular,ps2013,395900.0,466490.0,516280.0,588790.0,588790.0,1094,145
+speaker,role,election_period,meeting,sitting,agenda,word,sentence,paragraph,utterance,continuous,word_count,no_anchor
+PetrGazdik.1974,chair,ps2013,042,04,163,7450.0,7630.0,12590.0,12590.0,12590.0,22,1
+LukasPleticha.1974,regular,ps2013,042,04,163,395900.0,466490.0,516280.0,588790.0,588790.0,1094,145
