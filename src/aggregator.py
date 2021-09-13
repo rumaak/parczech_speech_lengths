@@ -17,6 +17,8 @@ class Aggregator:
         self.relative_diff = dict()
         self.words = dict()
 
+        self.index_filename = "audio_index.pkl"
+
     def aggregate(self):
         # accumulate the data from audio files
         for audio in self.correct_audios():
@@ -259,6 +261,10 @@ class IntervalAggregator(Aggregator):
         return after_start and before_end
 
     def check_year(self, year):
+        # We only want audio files
+        if year == self.index_filename:
+            return False
+
         # Year
         after_start = self.start.year <= int(year)
         before_end = int(year) <= self.end.year
@@ -282,8 +288,9 @@ class TermAggregator(Aggregator):
     def correct_audios(self):
         for dirpath,dirnames,filenames in os.walk(self.input_dir):
             for filename in filenames:
-                audio = os.path.join(dirpath, filename)
-                yield audio
+                if filename != self.index_filename:
+                    audio = os.path.join(dirpath, filename)
+                    yield audio
 
     def resolve_output_dir(self):
         path_to_dir = os.path.join(self.output_dir, "precomputed")
