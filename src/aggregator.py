@@ -17,7 +17,7 @@ class Aggregator:
         self.relative_diff = dict()
         self.words = dict()
 
-        self.index_filename = "audio_index.pkl"
+        self.index_filename = "audio_index.csv"
 
     def aggregate(self):
         # accumulate the data from audio files
