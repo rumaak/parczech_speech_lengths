@@ -169,33 +169,97 @@ class Aggregator:
     def resolve_output_dir(self):
         raise NotImplementedError
 
-class IntervalAggregator(Aggregator):
-    def __init__(self, input_dir, output_dir, start, end):
+class TermAggregator(Aggregator):
+    def __init__(self, input_dir, output_dir):
         super().__init__(input_dir, output_dir)
-        self.start = datetime.strptime(start, "%Y-%m-%dT%H:%M:%S")
-        self.end = datetime.strptime(end, "%Y-%m-%dT%H:%M:%S")
+
+    def correct_audios(self):
+        for dirpath,dirnames,filenames in os.walk(self.input_dir):
+            for filename in filenames:
+                if filename != self.index_filename:
+                    audio = os.path.join(dirpath, filename)
+                    yield audio
+
+    def resolve_output_dir(self):
+        path_to_dir = os.path.join(self.output_dir, "precomputed")
+        return path_to_dir
+
+# TODO not finished yet
+
+class CustomAggregator(Aggregator):
+    def __init__(self, input_dir, output_dir, start=None, end=None, term=None,
+        meeting=None, sitting=None, agenda=None):
+        super().__init__(input_dir, output_dir)
+
+        self.n_constraints = self.number_constraints(term, meeting, sitting, agenda)
+        if self.n_constraints > 1:
+            raise ValueError(
+                "only one of (term, meeting, sitting, agenda) can be " \
+                "passed as an argument"
+            )
+
+        self.start, self.end = self.fill_interval(start, end)
+
+        self.term = term
+        self.meeting = meeting
+        self.sitting = sitting
+        self.agenda = agenda
+
+    def number_constraints(self, *args):
+        n_constraints = 0
+        for arg in args:
+            if arg is not None:
+                n_constraints += 1
+
+        return n_constraints
+
+    def fill_interval(self, start, end):
+        if start is None:
+            start = datetime.min
+
+        if end is None:
+            end = datetime.max
+
+        return start, end
 
     # TODO this looks bad, don't know how to make prettier yet simple
     def correct_audios(self):
-        # Years
-        for year_dir in os.listdir(self.input_dir):
-            if self.check_year(year_dir):
-                year_path = os.path.join(self.input_dir, year_dir)
+        if self.n_constraints == 0:
+            # Years
+            for year_dir in os.listdir(self.input_dir):
+                if self.check_year(year_dir):
+                    year_path = os.path.join(self.input_dir, year_dir)
 
-                # Months
-                for month_dir in os.listdir(year_path):
-                    if self.check_month(year_dir, month_dir):
-                        month_path = os.path.join(year_path, month_dir)
+                    # Months
+                    for month_dir in os.listdir(year_path):
+                        if self.check_month(year_dir, month_dir):
+                            month_path = os.path.join(year_path, month_dir)
 
-                        # Days
-                        for day_dir in os.listdir(month_path):
-                            if self.check_day(year_dir, month_dir, day_dir):
-                                day_path = os.path.join(month_path, day_dir)
+                            # Days
+                            for day_dir in os.listdir(month_path):
+                                if self.check_day(year_dir, month_dir, day_dir):
+                                    day_path = os.path.join(month_path, day_dir)
 
-                                # Audio files
-                                for audio in os.listdir(day_path):
-                                    if self.check_audio(audio):
-                                        yield os.path.join(day_path, audio)
+                                    # Audio files
+                                    for audio in os.listdir(day_path):
+                                        if self.check_audio(audio):
+                                            yield os.path.join(day_path, audio)
+        else:
+            # acquire index of the audio files
+            path = os.path.join(self.input_dir, self.index_filename)
+            index_df = pd.read_csv(path)
+
+            # filter only relevant audio files
+            index_df = self.filter_term(index_df)
+            index_df = self.filter_meeting(index_df)
+            index_df = self.filter_sitting(index_df)
+            index_df = self.filter_agenda(index_df)
+
+            # retain only those in specified interval
+            for file_path in set(index_df["filename"]):
+                filename = os.path.basename(file_path)
+                if self.check_audio(filename):
+                    yield file_path
 
     # TODO this time of time striping is used in both script, consider
     #      creating a shared helper module
@@ -281,18 +345,52 @@ class IntervalAggregator(Aggregator):
 
         return path_to_dir
 
-class TermAggregator(Aggregator):
-    def __init__(self, input_dir, output_dir):
-        super().__init__(input_dir, output_dir)
+    def filter_term(self, index_df):
+        if self.term is not None:
+            return index_df.loc[index_df["election_period"] == self.term]
 
-    def correct_audios(self):
-        for dirpath,dirnames,filenames in os.walk(self.input_dir):
-            for filename in filenames:
-                if filename != self.index_filename:
-                    audio = os.path.join(dirpath, filename)
-                    yield audio
+        return index_df
 
-    def resolve_output_dir(self):
-        path_to_dir = os.path.join(self.output_dir, "precomputed")
-        return path_to_dir
+    def filter_meeting(self, index_df):
+        if self.meeting is not None:
+            parts = self.meeting.split("/")
+            term = parts[0]
+            meeting = int(parts[1])
+
+            term_df = index_df.loc[index_df["election_period"] == term]
+            meeting_df = term_df.loc[term_df["meeting"] == meeting]
+
+            return meeting_df
+
+        return index_df
+
+    def filter_sitting(self, index_df):
+        if self.sitting is not None:
+            parts = self.sitting.split("/")
+            term = parts[0]
+            meeting = int(parts[1])
+            sitting = int(parts[2])
+
+            term_df = index_df.loc[index_df["election_period"] == term]
+            meeting_df = term_df.loc[term_df["meeting"] == meeting]
+            sitting_df = meeting_df.loc[meeting_df["sitting"] == sitting]
+
+            return sitting_df
+
+        return index_df
+
+    def filter_agenda(self, index_df):
+        if self.agenda is not None:
+            parts = self.agenda.split("/")
+            term = parts[0]
+            meeting = int(parts[1])
+            agenda = int(parts[2])
+
+            term_df = index_df.loc[index_df["election_period"] == term]
+            meeting_df = term_df.loc[term_df["meeting"] == meeting]
+            agenda_df = meeting_df.loc[meeting_df["agenda"] == agenda]
+
+            return agenda_df
+
+        return index_df
 
