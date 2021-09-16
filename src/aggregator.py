@@ -23,9 +23,7 @@ class Aggregator:
         # accumulate the data from audio files
         for audio in self.correct_audios():
             data_df = pd.read_csv(audio)
-            data_df.apply(self.compute_total_length, axis=1)
-            data_df.apply(self.compute_relative_difference, axis=1)
-            data_df.apply(self.compute_word_statistics, axis=1)
+            data_df.apply(self.aggregate_row, axis=1)
 
         # create a file with accumulated values
         statistics_df = pd.DataFrame()
@@ -69,6 +67,12 @@ class Aggregator:
         statistics_df.to_csv(path, index=False)
 
         return statistics_df
+
+    def aggregate_row(self, row):
+        if self.check_row(row):
+            self.compute_total_length(row)
+            self.compute_relative_difference(row)
+            self.compute_word_statistics(row)
 
     def to_minutes(self, length):
         seconds = length / 1000
@@ -166,6 +170,9 @@ class Aggregator:
     def correct_audios(self):
         raise NotImplementedError
 
+    def check_row(self, row):
+        raise NotImplementedError
+
     def resolve_output_dir(self):
         raise NotImplementedError
 
@@ -179,6 +186,9 @@ class TermAggregator(Aggregator):
                 if filename != self.index_filename:
                     audio = os.path.join(dirpath, filename)
                     yield audio
+
+    def check_row(self, row):
+        return True
 
     def resolve_output_dir(self):
         path_to_dir = os.path.join(self.output_dir, "precomputed")
@@ -333,6 +343,36 @@ class CustomAggregator(Aggregator):
         after_start = self.start.year <= int(year)
         before_end = int(year) <= self.end.year
         return after_start and before_end
+
+    def check_row(self, row):
+        if self.n_constraints > 0:
+            if self.term is not None:
+                return row["election_period"] == self.term
+
+            elif self.meeting is not None:
+                parts = self.meeting.split("/")
+                term = parts[0]
+                meeting = int(parts[1])
+
+                return row["meeting"] == meeting
+
+            elif self.sitting is not None:
+                parts = self.sitting.split("/")
+                term = parts[0]
+                meeting = int(parts[1])
+                sitting = int(parts[2])
+
+                return row["sitting"] == sitting
+
+            else:
+                parts = self.agenda.split("/")
+                term = parts[0]
+                meeting = int(parts[1])
+                agenda = int(parts[2])
+
+                return row["agenda"] == agenda
+
+        return True
 
     def resolve_output_dir(self):
         start = self.start.strftime("%Y%m%d%H%M")
