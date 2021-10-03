@@ -122,7 +122,7 @@ def update_unanchored(response: Response, row: Series) -> None:
 def update_wpm(response: Response, row: Series) -> None:
     role = row["role"]
     if role not in response["wpm"]:
-        response["wpm"][role] = [["Speaker", "Words per mminute"]]
+        response["wpm"][role] = [["Speaker", "Words per minute"]]
 
     response["wpm"][role].append([
         row["speaker"],

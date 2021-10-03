@@ -21,7 +21,7 @@ export function Header() {
           bgcolor: '#39688b'
         }}>
           <Box>
-            <Typography variant='h6'>
+            <Typography variant='h6' sx={{color: 'white'}}>
               Header
             </Typography>
           </Box>

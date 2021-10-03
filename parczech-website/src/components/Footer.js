@@ -20,7 +20,7 @@ export function Footer() {
           height: '100%',
           bgcolor: '#07426e'
         }}>
-          <Typography variant='h6'>
+          <Typography variant='h6' sx={{color: 'white'}}>
             Footer
           </Typography>
         </Box>

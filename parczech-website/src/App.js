@@ -1,13 +1,14 @@
-import { headerHeight, Header } from './components/Header';
+import DateAdapter from '@mui/lab/AdapterDateFns';
+import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-import Box from '@mui/material/Box';
 import { Grid } from '@mui/material';
 import { Main } from './components/Main';
+import { LocalizationProvider } from '@mui/lab';
 import './App.css'
 
 function App() {
   return (
-    <>
+    <LocalizationProvider dateAdapter={DateAdapter}>
       <Header/>
 
       <Grid container>
@@ -19,7 +20,7 @@ function App() {
       </Grid>
 
       <Footer/>
-    </>
+    </LocalizationProvider>
   );
 }
 

@@ -1,5 +1,7 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
+import numpy as np
 
 from src.aggregator import IntervalAggregator
 
@@ -10,8 +12,28 @@ import src.server.top.interval as ti
 
 app = FastAPI()
 
+origins = {
+    "http://localhost:3000"
+}
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
+
 # TODO refactoring
 
+
+def aggregate(series):
+    use_average = ['unanchored', 'words_per_minute']
+
+    if series.name in use_average:
+        return np.average(series)
+    else:
+        return np.sum(series)
 
 @app.post("/single/precomputed", response_model=sp.Response)
 async def single_precomputed(request: sp.Request):
@@ -31,7 +53,7 @@ async def single_precomputed(request: sp.Request):
     return sp.Response(**response)
 
 @app.post("/single/interval", response_model=si.Response)
-async def single_precomputed(request: si.Request):
+async def single_interval(request: si.Request):
     input_dir = "samples/sample_audio_statistics_output/"
     output_dir = "samples/sample_statistics_output/"
     start = request.start.strftime("%Y-%m-%dT%H:%M:%S")
@@ -56,7 +78,7 @@ async def single_precomputed(request: si.Request):
 #   - speakers - MoPs
 #   - data - interval
 @app.post("/multiple/interval", response_model=mi.Response)
-async def single_precomputed(request: mi.Request):
+async def multiple_interval(request: mi.Request):
     # aggregate corresponding data
     input_dir = "samples/sample_audio_statistics_output/"
     output_dir = "samples/sample_statistics_output/"
@@ -79,6 +101,17 @@ async def single_precomputed(request: mi.Request):
     else:
         speaker_df = data_df
 
+    # get rid of the election_period column
+    if "election_period" in speaker_df:
+        speaker_df = speaker_df.drop("election_period", axis=1)
+
+        # TODO this is just a temporary solution - we cannot take an average
+        #      over election periods; the statistics have to be calculated
+        #      differently (i.e. provide number of words)
+        speaker_df = speaker_df.groupby(["speaker", "role"]).agg(aggregate)
+
+        speaker_df.reset_index(inplace=True)
+
     # create response
     response = {
         "speaking_time": dict(),
@@ -92,7 +125,7 @@ async def single_precomputed(request: mi.Request):
     return mi.Response(**response)
 
 @app.post("/top/interval", response_model=ti.Response)
-async def single_precomputed(request: ti.Request):
+async def top_interval(request: ti.Request):
     input_dir = "samples/sample_audio_statistics_output/"
     output_dir = "samples/sample_statistics_output/"
     start = request.start.strftime("%Y-%m-%dT%H:%M:%S")
