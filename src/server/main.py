@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 import numpy as np
+import json
+import os
 
 from src.aggregator import IntervalAggregator
 
@@ -9,6 +11,7 @@ import src.server.single.precomputed as sp
 import src.server.single.interval as si
 import src.server.multiple.interval as mi
 import src.server.top.interval as ti
+import src.server.data.speakers as ds
 
 app = FastAPI()
 
@@ -143,3 +146,20 @@ async def top_interval(request: ti.Request):
 
     ti.update_response(data_df, response)
     return ti.Response(**response)
+
+@app.get("/data/speakers", response_model=ds.Response)
+async def data_speakers():
+    input_dir = "samples/sample_personal_data_output/"
+    path = os.path.join(input_dir, "ParCzech.ana.json")
+
+    data = None
+    with open(path, 'r') as file:
+        raw_data = file.read()
+        data = json.loads(raw_data)
+
+    response = {
+        "speakers": list(data.keys())
+    }
+
+    return ds.Response(**response)
+
