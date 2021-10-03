@@ -1,5 +1,5 @@
 node_modules/
-data/
+/data/
 out/
 __pycache__/
 *.egg-info/
