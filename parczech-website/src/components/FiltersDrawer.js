@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useTheme } from '@mui/material/styles';
 import { Button, Typography } from '@mui/material';
 import { Box } from '@mui/material';
@@ -13,14 +13,10 @@ import { Chip } from '@mui/material';
 import { MenuItem } from '@mui/material';
 import { DateTimePicker } from '@mui/lab';
 import { formatISO } from 'date-fns';
+import { FixedSizeList } from 'react-window';
 
 const requestUrl = 'http://127.0.0.1:8000/multiple/interval'
-
-const speakers = [
-    'JanHamacek.1978',
-    'JaroslavFaltynek.1962',
-    'TomioOkamura.1972'
-]
+const speakerDataUrl = 'http://127.0.0.1:8000/data/speakers'
 
 function styleSelectedSpeakers(speaker, speakersFiltered, theme) {
   return {
@@ -69,14 +65,68 @@ const onSubmit = async (filters, setStatistics) => {
     setStatistics(stats)
 }
 
+const defaultFilters = {
+    speakers: [
+        'JanHamacek.1978',
+        'JaroslavFaltynek.1962',
+        'TomioOkamura.1972',
+        'VojtechFilip.1955',
+        'IvanBartos.1980'
+    ],
+    dateStart: new Date(2015, 1, 1),
+    dateEnd: new Date()
+}
+
 export function FiltersDrawer({ drawerOpen, setDrawerOpen, setStatistics }) {
     const theme = useTheme();
 
-    const [speakersFiltered, setSpeakersFiltered] = React.useState([]);
-    const [dateStart, setDateStart] = React.useState(new Date());
-    const [dateEnd, setDateEnd] = React.useState(new Date());
+    const [speakers, setSpeakers] = React.useState([]);
+    const [speakersFiltered, setSpeakersFiltered] = React.useState(
+        defaultFilters['speakers']
+    );
+    const [dateStart, setDateStart] = React.useState(
+        defaultFilters['dateStart']
+    );
+    const [dateEnd, setDateEnd] = React.useState(
+        defaultFilters['dateEnd']
+    );
 
     const filters = { speakersFiltered, dateStart, dateEnd }
+
+    // load speakers from backend
+    useEffect(() => {
+        fetch(speakerDataUrl)
+            .then((response) => { return response.json() })
+            .then(({ speakers }) => {
+                setSpeakers(speakers)
+                onSubmit(filters, setStatistics)
+            })
+    // eslint-disable-next-line react-hooks/exhaustive-deps            
+    }, [])
+
+    const SpeakerRow = ({ index, style }) => (
+        <div style={style}>
+            {
+                <MenuItem
+                    key={speakers[index]}
+                    value={speakers[index]}
+                    onClick={() => {
+                        const idx = speakersFiltered.indexOf(speakers[index])
+                        let newFiltered = [...speakersFiltered]
+                        if (idx > -1) {
+                            newFiltered.splice(idx, 1)
+                        } else {
+                            newFiltered.push(speakers[index])
+                        }
+                        setSpeakersFiltered(newFiltered)
+                    }}
+                    style={styleSelectedSpeakers(speakers[index], speakersFiltered, theme)}
+                >
+                    {speakers[index]}
+                </MenuItem>
+            }
+        </div>
+    );
 
     return (
         <Drawer
@@ -112,25 +162,24 @@ export function FiltersDrawer({ drawerOpen, setDrawerOpen, setStatistics }) {
                                 return (
                                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
                                     {selected.map((value) => (
-                                        <Chip key={value} label={value} />
+                                        <Chip
+                                            key={value} 
+                                            label={value} 
+                                        />
                                     ))}
                                     </Box>
                                 )
                             }}
                         >
-                        {
-                            speakers.map((speaker) => {
-                                return (
-                                    <MenuItem
-                                        key={speaker}
-                                        value={speaker}
-                                        style={styleSelectedSpeakers(speaker, speakersFiltered, theme)}
-                                    >
-                                        {speaker}
-                                    </MenuItem>
-                                )
-                            })
-                        }
+                            <FixedSizeList
+                                itemCount={speakers.length}
+                                height={300}
+                                width={300}
+                                itemSize={46}
+                                overscanCount={5}
+                            >
+                                { SpeakerRow }
+                            </FixedSizeList>
                         </Select>
                     </FormControl>
                 </Box>
@@ -152,7 +201,7 @@ export function FiltersDrawer({ drawerOpen, setDrawerOpen, setStatistics }) {
                         onChange={(newValue) => { setDateEnd(newValue); }}
                     />
                 </Box>
-                <Box sx={{pt: "20px"}}>
+                <Box sx={{py: "20px"}}>
                     <Button
                         variant='contained'
                         onClick={() => { onSubmit(filters, setStatistics) }}
