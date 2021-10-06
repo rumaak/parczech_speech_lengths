@@ -95,14 +95,12 @@ async def multiple_interval(request: mi.Request):
         data_df = aggregator.aggregate()
 
     # filter out irrelevant speakers
-    speaker_df = None
+    speaker_df = data_df
     if request.speakers is not None:
         if request.speakers.static is not None:
             speakers = request.speakers.static.MoPs
-            if speakers is not None:
+            if (speakers is not None) and ("speaker" in data_df) :
                 speaker_df = data_df.loc[data_df["speaker"].isin(speakers)]
-    else:
-        speaker_df = data_df
 
     # get rid of the election_period column
     if "election_period" in speaker_df:
