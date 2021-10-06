@@ -2,12 +2,41 @@ import React from 'react'
 import {  Typography } from '@mui/material';
 import { Box } from '@mui/material';
 import { ToggleButton } from '@mui/material';
+import { CircularProgress } from '@mui/material';
 import { FiltersDrawer } from './FiltersDrawer';
 import { StatisticPaper } from './StatisticPaper';
+
+const statisticPapers = (statistics) => {
+    return Object.keys(statistics).map((stat) => {
+        return (
+            <StatisticPaper
+                id={'statistic-' + stat}
+                name={stat}
+                statistics={statistics[stat]}
+            />
+        )
+    })
+}
+
+const statisticsWaiting = () => {
+    return (
+        <Box sx={{
+            pt: '50px'
+        }}>
+            <Box sx={{
+                display: 'flex',
+                justifyContent: 'center'
+            }}>
+                <CircularProgress thickness={5}/>
+            </Box>
+        </Box>
+    )
+}
 
 export function Main() {
     const [drawerOpen, setDrawerOpen] = React.useState(false);
     const [statistics, setStatistics] = React.useState({});
+    const [loading, setLoading] = React.useState(false);
 
     return (
         <>
@@ -15,6 +44,7 @@ export function Main() {
                 drawerOpen={drawerOpen}
                 setDrawerOpen={setDrawerOpen}
                 setStatistics={setStatistics}
+                setLoading={setLoading}
             />
             <Box sx={{
                 py: '50px',
@@ -60,15 +90,7 @@ export function Main() {
                 </Box>
 
                 {
-                    Object.keys(statistics).map((stat) => {
-                        return (
-                            <StatisticPaper
-                                id={'statistic-' + stat}
-                                name={stat}
-                                statistics={statistics[stat]}
-                            />
-                        )
-                    })
+                    loading ? statisticsWaiting() : statisticPapers(statistics)
                 }
 
             </Box>

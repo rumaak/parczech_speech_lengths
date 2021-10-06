@@ -48,7 +48,9 @@ const createRequest = async ({ speakersFiltered, dateStart, dateEnd }) => {
     return request
 }
 
-const onSubmit = async (filters, setStatistics) => {
+const onSubmit = async (filters, setStatistics, setLoading) => {
+    setLoading(true);
+
     const request = await createRequest(filters)
 
     const options = {
@@ -63,6 +65,7 @@ const onSubmit = async (filters, setStatistics) => {
     const stats = await res.json()
 
     setStatistics(stats)
+    setLoading(false);
 }
 
 const defaultFilters = {
@@ -77,7 +80,7 @@ const defaultFilters = {
     dateEnd: new Date()
 }
 
-export function FiltersDrawer({ drawerOpen, setDrawerOpen, setStatistics }) {
+export function FiltersDrawer({ drawerOpen, setDrawerOpen, setStatistics, setLoading }) {
     const theme = useTheme();
 
     const [speakers, setSpeakers] = React.useState([]);
@@ -99,7 +102,7 @@ export function FiltersDrawer({ drawerOpen, setDrawerOpen, setStatistics }) {
             .then((response) => { return response.json() })
             .then(({ speakers }) => {
                 setSpeakers(speakers)
-                onSubmit(filters, setStatistics)
+                onSubmit(filters, setStatistics, setLoading)
             })
     // eslint-disable-next-line react-hooks/exhaustive-deps            
     }, [])
@@ -204,7 +207,7 @@ export function FiltersDrawer({ drawerOpen, setDrawerOpen, setStatistics }) {
                 <Box sx={{py: "20px"}}>
                     <Button
                         variant='contained'
-                        onClick={() => { onSubmit(filters, setStatistics) }}
+                        onClick={() => { onSubmit(filters, setStatistics, setLoading) }}
                         fullWidth
                     >
                         Submit
