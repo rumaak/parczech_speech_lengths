@@ -18,10 +18,10 @@ import { FixedSizeList } from 'react-window';
 const requestUrl = 'http://127.0.0.1:8000/multiple/interval'
 const speakerDataUrl = 'http://127.0.0.1:8000/data/speakers'
 
-function styleSelectedSpeakers(speaker, speakersFiltered, theme) {
+function styleSelectedSpeakers(speaker, speakersSelected, theme) {
   return {
     fontWeight:
-      speakersFiltered.indexOf(speaker) === -1
+      !speakersSelected[speaker]
         ? theme.typography.fontWeightRegular
         : theme.typography.fontWeightMedium,
   };
@@ -87,6 +87,7 @@ export function FiltersDrawer({ drawerOpen, setDrawerOpen, setStatistics, setLoa
     const [speakersFiltered, setSpeakersFiltered] = React.useState(
         defaultFilters['speakers']
     );
+    const [speakersSelected, setSpeakersSelected] = React.useState([]);
     const [dateStart, setDateStart] = React.useState(
         defaultFilters['dateStart']
     );
@@ -101,7 +102,22 @@ export function FiltersDrawer({ drawerOpen, setDrawerOpen, setStatistics, setLoa
         fetch(speakerDataUrl)
             .then((response) => { return response.json() })
             .then(({ speakers }) => {
+                // get all speakers from server
                 setSpeakers(speakers)
+
+                // update selected speakers
+                setSpeakersSelected(
+                    speakers.reduce((previous, current) => {
+                        let newSelected = {...previous}
+                        newSelected[current] =
+                            defaultFilters['speakers'].indexOf(current) > -1
+                                ? true
+                                : false
+                        return newSelected
+                    })
+                )
+
+                // get statistics for current filters
                 onSubmit(filters, setStatistics, setLoading)
             })
     // eslint-disable-next-line react-hooks/exhaustive-deps            
@@ -114,16 +130,25 @@ export function FiltersDrawer({ drawerOpen, setDrawerOpen, setStatistics, setLoa
                     key={speakers[index]}
                     value={speakers[index]}
                     onClick={() => {
-                        const idx = speakersFiltered.indexOf(speakers[index])
+                        const name = speakers[index]
+                        const idx = speakersFiltered.indexOf(name)
                         let newFiltered = [...speakersFiltered]
                         if (idx > -1) {
                             newFiltered.splice(idx, 1)
                         } else {
-                            newFiltered.push(speakers[index])
+                            newFiltered.push(name)
                         }
                         setSpeakersFiltered(newFiltered)
+
+                        let newSpeakersSelected = {...speakersSelected}
+                        newSpeakersSelected[name] = !speakersSelected[name]
+                        setSpeakersSelected(newSpeakersSelected)
                     }}
-                    style={styleSelectedSpeakers(speakers[index], speakersFiltered, theme)}
+                    selected={speakersSelected[speakers[index]]}
+                    sx={{
+                        ...styleSelectedSpeakers(speakers[index], speakersSelected, theme),
+                        height: '46px'
+                    }}
                 >
                     {speakers[index]}
                 </MenuItem>
@@ -156,10 +181,6 @@ export function FiltersDrawer({ drawerOpen, setDrawerOpen, setStatistics, setLoa
                             label='Speakers'
                             multiple
                             value={speakersFiltered}
-                            onChange={(event) => {
-                                const { target: { value } } = event;
-                                setSpeakersFiltered(value);
-                            }}
                             input={<OutlinedInput id="select-speakers" label="Speakers" />}
                             renderValue={(selected) => { 
                                 return (
